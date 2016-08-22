@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C21D6AA7C800236253 /* XYConst.m */; };
+		1CA5C1C51D6AA7C800236253 /* XYModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -42,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeiboJingXuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA5C1C01D6AA79A00236253 /* MacroFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFunc.h; sourceTree = "<group>"; };
+		1CA5C1C11D6AA7C800236253 /* XYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYConst.h; sourceTree = "<group>"; };
+		1CA5C1C21D6AA7C800236253 /* XYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYConst.m; sourceTree = "<group>"; };
+		1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYModelConfig.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,6 +237,10 @@
 			children = (
 				1CD3960F1D6A9AC0001CA85D /* main.m */,
 				1CF7D5AD1D6AA634006212D3 /* PrefixHeader.pch */,
+				1CA5C1C01D6AA79A00236253 /* MacroFunc.h */,
+				1CA5C1C11D6AA7C800236253 /* XYConst.h */,
+				1CA5C1C21D6AA7C800236253 /* XYConst.m */,
+				1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -646,9 +656,11 @@
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
 				1CF7D59D1D6AA55B006212D3 /* XYEssenceViewController.m in Sources */,
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
+				1CA5C1C51D6AA7C800236253 /* XYModelConfig.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
+				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,8 @@
 #ifdef __OBJC__
 
 // 导入我的头文件
+#import "MacroFunc.h"
+#import "XYConst.h"
 #import "UIView+XYFrameExtension.h"
 
 
