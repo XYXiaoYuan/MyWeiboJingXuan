@@ -12,6 +12,7 @@
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
 		1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD396081D6A9AC0001CA85D /* AppDelegate.m */; };
 		1CD3962A1D6A9AC0001CA85D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3960F1D6A9AC0001CA85D /* main.m */; };
+		8869953BE5B68E7D5A6F2194 /* libPods-MyWeiboJingXuan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeiboJingXuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		1CD396071D6A9AC0001CA85D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CD396081D6A9AC0001CA85D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1CD3960F1D6A9AC0001CA85D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A708664E684576AA6816641 /* Pods-MyWeiboJingXuan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.release.xcconfig"; sourceTree = "<group>"; };
+		FF1CBAE2FC1719DF957EE960 /* Pods-MyWeiboJingXuan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8869953BE5B68E7D5A6F2194 /* libPods-MyWeiboJingXuan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 				1CD395EB1D6A97DC001CA85D /* MyWeiboJingXuanTests */,
 				1CD395F61D6A97DC001CA85D /* MyWeiboJingXuanUITests */,
 				1CD395D01D6A97DB001CA85D /* Products */,
+				805832CF4FFC47D25E1A1080 /* Pods */,
+				F074C43E100CA8EAD5DBCFEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,9 +207,9 @@
 				1CD396111D6A9AC0001CA85D /* Advertisement(广告) */,
 				1CD396151D6A9AC0001CA85D /* Comment(评论) */,
 				1CD396191D6A9AC0001CA85D /* Essence(精华) */,
+				1CD396251D6A9AC0001CA85D /* New(新帖) */,
 				1CD3961D1D6A9AC0001CA85D /* FriendTrends(关注) */,
 				1CD396211D6A9AC0001CA85D /* Mine(我的) */,
-				1CD396251D6A9AC0001CA85D /* New(新帖) */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -393,6 +400,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		805832CF4FFC47D25E1A1080 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF1CBAE2FC1719DF957EE960 /* Pods-MyWeiboJingXuan.debug.xcconfig */,
+				4A708664E684576AA6816641 /* Pods-MyWeiboJingXuan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F074C43E100CA8EAD5DBCFEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,9 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CD395FC1D6A97DC001CA85D /* Build configuration list for PBXNativeTarget "MyWeiboJingXuan" */;
 			buildPhases = (
+				B6F2C517E207E44286D7A536 /* [CP] Check Pods Manifest.lock */,
 				1CD395CB1D6A97DB001CA85D /* Sources */,
 				1CD395CC1D6A97DB001CA85D /* Frameworks */,
 				1CD395CD1D6A97DB001CA85D /* Resources */,
+				A78E81EFB0F86D545A61DC1D /* [CP] Embed Pods Frameworks */,
+				BCBD0ACA5A6B37001C97256C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -516,6 +543,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A78E81EFB0F86D545A61DC1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F2C517E207E44286D7A536 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBD0ACA5A6B37001C97256C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CD395CB1D6A97DB001CA85D /* Sources */ = {
@@ -643,6 +718,7 @@
 		};
 		1CD395FD1D6A97DC001CA85D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1CBAE2FC1719DF957EE960 /* Pods-MyWeiboJingXuan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -658,6 +734,7 @@
 		};
 		1CD395FE1D6A97DC001CA85D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A708664E684576AA6816641 /* Pods-MyWeiboJingXuan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -736,6 +813,7 @@
 				1CD395FE1D6A97DC001CA85D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CD395FF1D6A97DC001CA85D /* Build configuration list for PBXNativeTarget "MyWeiboJingXuanTests" */ = {
 			isa = XCConfigurationList;
@@ -744,6 +822,7 @@
 				1CD396011D6A97DC001CA85D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CD396021D6A97DC001CA85D /* Build configuration list for PBXNativeTarget "MyWeiboJingXuanUITests" */ = {
 			isa = XCConfigurationList;
@@ -752,6 +831,7 @@
 				1CD396041D6A97DC001CA85D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

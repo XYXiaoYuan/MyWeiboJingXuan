@@ -1,0 +1,14 @@
+platform :ios, "8.0"
+
+target 'MyWeiboJingXuan' do
+
+pod "AFNetworking"
+pod "MJExtension"
+pod "MJRefresh"
+pod "SDWebImage"
+pod "SVProgressHUD"
+pod "DACircularProgress"
+pod "Masonry"
+pod "FMDB"
+
+end
