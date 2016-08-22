@@ -58,19 +58,51 @@ static NSString * const XYTopicCellId = @"topic";
     // 数据刷新
     [self setupRefresh];
     
+    // 注册通知
+    [self setupNote];
     
 }
 
-// 初始化tableView
+- (void)setupNote
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XYTitleButtonDidRepeatClickNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 监听
+#pragma mark - 监听TabBar按钮的重复点击
+- (void)tabBarButtonDidRepeatClick
+{
+    // 如果当前控制器的view不在window上，就直接返回
+    if (self.view.window == nil) return;
+    
+    // 如果当前控制器的view跟window没有重叠，就直接返回
+    if (![self.view intersectWithView:self.view.window]) return;
+    
+    // 进行下拉刷新
+    [self.tableView.mj_header beginRefreshing];
+}
+
+#pragma mark - 监听标题按钮的重复点击
+- (void)titleButtonDidRepeatClick
+{
+    [self tabBarButtonDidRepeatClick];
+}
+
+
+#pragma mark -  初始化tableView
 - (void)setupTable
 {
-    self.tableView.backgroundColor = XYCommonBgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    // 注册
+    // 注册xib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTopicCell class]) bundle:nil] forCellReuseIdentifier:XYTopicCellId];
-    //    self.tableView.rowHeight = 300;
 }
 
 

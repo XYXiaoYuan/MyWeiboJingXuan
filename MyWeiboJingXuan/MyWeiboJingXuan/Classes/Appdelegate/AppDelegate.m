@@ -10,11 +10,24 @@
 #import "XYTabBarController.h"
 #import "XYScrollToTopWindow.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <UITabBarControllerDelegate>
+/** 记录上一次选中的子控制器的索引 */
+@property (nonatomic, assign) NSUInteger lastSelectedIndex;
 @end
 
 @implementation AppDelegate
+
+#pragma mark - <UITabBarControllerDelegate>
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    if (tabBarController.selectedIndex == self.lastSelectedIndex) { // 重复点击了同一个TabBar按钮
+        // 发出通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:XYTabBarButtonDidRepeatClickNotification object:nil];
+    }
+    
+    // 记录目前选中的索引
+    self.lastSelectedIndex = tabBarController.selectedIndex;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,7 +35,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     // 2.创建窗口的根控制器
-    self.window.rootViewController = [[XYTabBarController alloc] init];
+    XYTabBarController *rootVc = [[XYTabBarController alloc] init];
+    rootVc.delegate = self;
+    self.window.rootViewController = rootVc;
     
     // 3.显示窗口
     [self.window makeKeyAndVisible];

@@ -29,4 +29,10 @@ NSString *const XYUserSexMale = @"m";
 /** XYUser - sex - female */
 NSString *const XYUserSexFemale = @"f";
 
+/*** 通知 ***/
+/** TabBar按钮被重复点击的通知 */
+NSString * const XYTabBarButtonDidRepeatClickNotification = @"XYTabBarButtonDidRepeatClickNotification";
+/** 标题按钮被重复点击的通知 */
+NSString * const XYTitleButtonDidRepeatClickNotification = @"XYTitleButtonDidRepeatClickNotification";
+
 

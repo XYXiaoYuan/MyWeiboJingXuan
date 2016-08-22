@@ -157,7 +157,11 @@
 #pragma mark - 标题按钮的点击
 - (void)titleButtonClick:(XYTitleButton *)titleButton
 {
-    
+    // 某个标题按钮被重复点击
+    if (titleButton == self.selectedTitleButton) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:XYTitleButtonDidRepeatClickNotification object:nil];
+    }
+
     // 按钮交替选中三步曲
     self.selectedTitleButton.selected = NO;
     titleButton.selected = YES;
