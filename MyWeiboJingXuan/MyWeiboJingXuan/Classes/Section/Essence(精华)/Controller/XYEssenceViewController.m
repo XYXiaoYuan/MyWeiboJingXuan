@@ -216,8 +216,6 @@
 #pragma mark -   设置导航条
 - (void)setupNav
 {
-    self.view.backgroundColor = XYCommonBgColor;
-    
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
 }
 
@@ -225,7 +223,7 @@
 - (void)tagClick
 {
     XYTagViewController *tag = [[XYTagViewController alloc] init];
-    
+    tag.title = @"标签订阅";
     [self.navigationController pushViewController:tag animated:YES];
 }
 

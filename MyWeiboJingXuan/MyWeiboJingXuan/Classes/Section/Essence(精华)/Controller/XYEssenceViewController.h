@@ -6,8 +6,8 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYBaseViewController.h"
 
-@interface XYEssenceViewController : UIViewController
+@interface XYEssenceViewController : XYBaseViewController
 
 @end

@@ -25,9 +25,6 @@ static NSString * const XYTagCellId = @"tag";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置nav
-    [self setupNav];
-    
     // 设置table
     [self seupTable];
     
@@ -66,9 +63,8 @@ static NSString * const XYTagCellId = @"tag";
     [XYTagTool tagWithParam:param success:^(XYTagItem *result) {
         // 成功
         // 字典数据 -> 模型数据
-        XYLog(@"%@",result);
         weakSelf.tags = [XYTagItem mj_objectArrayWithKeyValuesArray:result];
-        
+
         // 刷新数据
         [weakSelf.tableView reloadData];
         
@@ -87,12 +83,6 @@ static NSString * const XYTagCellId = @"tag";
     }];
 }
 
-- (void)setupNav
-{
-    self.navigationItem.title = @"标签订阅";
-    
-    self.view.backgroundColor = XYCommonBgColor;
-}
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
