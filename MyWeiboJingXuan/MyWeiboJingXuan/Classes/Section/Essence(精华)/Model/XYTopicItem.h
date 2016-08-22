@@ -24,8 +24,8 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 } ;
 
 
-@class XYComment;
-@interface XYTopic : NSObject
+@class XYCommentItem;
+@interface XYTopicItem : NSObject
 
 // 用户 -- 发帖者
 /** id */
@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 @property (nonatomic, assign) NSInteger comment;
 
 /** 最热评论 */
-@property(nonatomic,strong) XYComment *top_cmt;
+@property(nonatomic,strong) XYCommentItem *top_cmt;
 
 /** 类型 */
 @property(nonatomic,assign) XYTopicType type;

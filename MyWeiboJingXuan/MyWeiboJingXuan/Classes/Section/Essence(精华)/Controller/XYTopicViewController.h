@@ -8,7 +8,7 @@
 
 #import "XYBaseTableViewController.h"
 
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 
 @interface XYTopicViewController : XYBaseTableViewController
 - (XYTopicType)type;

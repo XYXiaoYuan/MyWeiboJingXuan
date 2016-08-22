@@ -12,8 +12,8 @@
 #import <MJExtension.h>
 #import "XYCommentSectionHeader.h"
 #import "XYCommentCell.h"
-#import "XYComment.h"
-#import "XYTopic.h"
+#import "XYCommentItem.h"
+#import "XYTopicItem.h"
 #import "XYTopicCell.h"
 
 @interface XYCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -22,13 +22,13 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /** 热门评论 */
-@property(nonatomic,strong) NSArray<XYComment *> *hotestComments;
+@property(nonatomic,strong) NSArray<XYCommentItem *> *hotestComments;
 
 /** 最新评论 */
-@property(nonatomic,strong) NSMutableArray<XYComment *> *latestComments;
+@property(nonatomic,strong) NSMutableArray<XYCommentItem *> *latestComments;
 
 /** 最热评论 */
-@property (nonatomic, strong) XYComment *savedTopCmt;
+@property (nonatomic, strong) XYCommentItem *savedTopCmt;
 
 @end
 

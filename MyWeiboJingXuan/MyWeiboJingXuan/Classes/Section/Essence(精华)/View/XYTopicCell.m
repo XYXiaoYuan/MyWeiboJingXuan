@@ -7,10 +7,10 @@
 //
 
 #import "XYTopicCell.h"
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 
-#import "XYUser.h"
-#import "XYComment.h"
+#import "XYUserItem.h"
+#import "XYCommentItem.h"
 
 #import "XYTopicVideoView.h"
 #import "XYTopicVoiceView.h"
@@ -79,7 +79,7 @@
 /**
  *  设置模型
  */
-- (void)setTopic:(XYTopic *)topic
+- (void)setTopic:(XYTopicItem *)topic
 {
     _topic = topic;
     

@@ -8,7 +8,7 @@
 
 #import "XYSeeBigPictureViewController.h"
 
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import <Photos/Photos.h>
 #import <SVProgressHUD.h>

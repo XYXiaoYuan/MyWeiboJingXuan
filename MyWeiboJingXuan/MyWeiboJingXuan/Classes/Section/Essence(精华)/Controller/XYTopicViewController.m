@@ -12,9 +12,7 @@
 #import "XYRefreshNormalHeader.h"
 #import "XYEssenceTool.h"
 #import <MJExtension.h>
-#import "XYEssenceResult.h"
-#import "XYEssenceInfoItem.h"
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 #import "XYTopicCell.h"
 #import "XYNewViewController.h"
 #import "XYCommentViewController.h"
@@ -25,7 +23,7 @@
 @property (nonatomic, copy) NSString *maxtime;
 
 /** topics模型数据 */
-@property(nonatomic,strong) NSMutableArray<XYTopic *> *topics;
+@property(nonatomic,strong) NSMutableArray<XYTopicItem *> *topics;
 
 
 /** 声明这个方法的目的 : 为了能够使用点语法的智能提示 */
@@ -108,7 +106,7 @@ static NSString * const XYTopicCellId = @"topic";
         self.maxtime = result[@"info"][@"maxtime"];
         
         // 字典数据 -> 模型数组
-        weakSelf.topics = [XYTopic mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        weakSelf.topics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result[@"list"]];
         
         // 刷新数据
         [weakSelf.tableView reloadData];
@@ -142,7 +140,7 @@ static NSString * const XYTopicCellId = @"topic";
         self.maxtime = result[@"info"][@"maxtime"];
         
         // 字典数据 -> 模型数组
-        NSArray<XYTopic *> *moreTopics = [XYTopic mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        NSArray<XYTopicItem *> *moreTopics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result[@"list"]];
         [self.topics addObjectsFromArray:moreTopics];
         
         // 刷新数据

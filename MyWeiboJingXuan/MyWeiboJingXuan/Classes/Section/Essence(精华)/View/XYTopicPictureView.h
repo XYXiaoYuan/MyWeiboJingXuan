@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYTopic;
+@class XYTopicItem;
 @interface XYTopicPictureView : UIView
 
 // 模型数据
-@property(nonatomic,strong) XYTopic *topic;
+@property(nonatomic,strong) XYTopicItem *topic;
 
 @end

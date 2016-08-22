@@ -6,12 +6,12 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 
-#import "XYUser.h"
-#import "XYComment.h"
+#import "XYUserItem.h"
+#import "XYCommentItem.h"
 
-@implementation XYTopic
+@implementation XYTopicItem
 
 static NSDateFormatter *fmt_;
 

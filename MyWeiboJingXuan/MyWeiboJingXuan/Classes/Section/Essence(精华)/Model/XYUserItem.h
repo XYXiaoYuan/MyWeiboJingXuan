@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYUser : NSObject
+@interface XYUserItem : NSObject
 
 /** 用户名 */
 @property(nonatomic,copy) NSString *username;

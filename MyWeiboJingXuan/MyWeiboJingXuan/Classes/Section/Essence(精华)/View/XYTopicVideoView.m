@@ -7,7 +7,7 @@
 //
 
 #import "XYTopicVideoView.h"
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import "XYSeeBigPictureViewController.h"
 
@@ -38,7 +38,7 @@
 }
 
 
-- (void)setTopic:(XYTopic *)topic
+- (void)setTopic:(XYTopicItem *)topic
 {
     _topic = topic;
     

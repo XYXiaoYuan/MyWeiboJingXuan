@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class XYUser;
-@interface XYComment : NSObject
+@class XYUserItem;
+@interface XYCommentItem : NSObject
 
 /** 评论内容 */
 @property(nonatomic,copy) NSString *content;
 
 /** 用户 */
-@property(nonatomic,strong) XYUser *user;
+@property(nonatomic,strong) XYUserItem *user;
 
 /** id */
 @property(nonatomic,copy) NSString *ID;

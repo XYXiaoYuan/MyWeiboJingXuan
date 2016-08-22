@@ -7,8 +7,8 @@
 //
 
 #import "XYCommentCell.h"
-#import "XYComment.h"
-#import "XYUser.h"
+#import "XYCommentItem.h"
+#import "XYUserItem.h"
 
 @interface XYCommentCell ()
 /** 头像 */
@@ -28,7 +28,7 @@
 
 @implementation XYCommentCell
 
-- (void)setComment:(XYComment *)comment
+- (void)setComment:(XYCommentItem *)comment
 {
     _comment = comment;
     

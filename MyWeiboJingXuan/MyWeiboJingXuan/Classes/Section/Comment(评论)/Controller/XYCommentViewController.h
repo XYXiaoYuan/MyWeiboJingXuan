@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYTopic;
+@class XYTopicItem;
 @interface XYCommentViewController : UIViewController
 
 /** 帖子数据模型 */
-@property(nonatomic,strong) XYTopic *topic;
+@property(nonatomic,strong) XYTopicItem *topic;
 
 
 @end

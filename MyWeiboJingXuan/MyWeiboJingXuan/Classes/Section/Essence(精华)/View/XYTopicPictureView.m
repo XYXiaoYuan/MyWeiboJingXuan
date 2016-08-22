@@ -7,7 +7,7 @@
 //
 
 #import "XYTopicPictureView.h"
-#import "XYTopic.h"
+#import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
 #import "XYSeeBigPictureViewController.h"
@@ -48,7 +48,7 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBig animated:YES completion:nil];
 }
 
-- (void)setTopic:(XYTopic *)topic
+- (void)setTopic:(XYTopicItem *)topic
 {
     _topic = topic;
     // 设置背景图片,同时设置进度条
