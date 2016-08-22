@@ -101,7 +101,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)setupRefresh
 {
     // 下拉刷新
-    self.tableView.mj_header = [XYRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
+    self.tableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
     
     // 上拉加载更多
