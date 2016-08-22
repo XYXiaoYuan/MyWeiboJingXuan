@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */; };
+		1C763C111D6B64B800CEF1E8 /* KRVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */; };
+		1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */; };
+		1C763C131D6B64B800CEF1E8 /* XFVociePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */; };
+		1C763C141D6B64B800CEF1E8 /* XFVociePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */; };
+		1C763C161D6B64E000CEF1E8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */; };
+		1C763C181D6B64EB00CEF1E8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */; };
+		1C763C1A1D6B64F400CEF1E8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */; };
+		1C763C1D1D6B6B7E00CEF1E8 /* NSString+XFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C1C1D6B6B7E00CEF1E8 /* NSString+XFTime.m */; };
 		1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C21D6AA7C800236253 /* XYConst.m */; };
 		1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */; };
 		1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */; };
@@ -94,6 +102,18 @@
 		09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeiboJingXuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C16BE921D6B527500F528A8 /* XYScrollToTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYScrollToTopWindow.h; sourceTree = "<group>"; };
 		1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYScrollToTopWindow.m; sourceTree = "<group>"; };
+		1C763C0A1D6B64B800CEF1E8 /* KRVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRVideoPlayerController.h; sourceTree = "<group>"; };
+		1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerController.m; sourceTree = "<group>"; };
+		1C763C0C1D6B64B800CEF1E8 /* KRVideoPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRVideoPlayerControlView.h; sourceTree = "<group>"; };
+		1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerControlView.m; sourceTree = "<group>"; };
+		1C763C0E1D6B64B800CEF1E8 /* XFVociePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVociePlayerController.h; sourceTree = "<group>"; };
+		1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVociePlayerController.m; sourceTree = "<group>"; };
+		1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFVociePlayerController.xib; sourceTree = "<group>"; };
+		1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1C763C1B1D6B6B7E00CEF1E8 /* NSString+XFTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XFTime.h"; sourceTree = "<group>"; };
+		1C763C1C1D6B6B7E00CEF1E8 /* NSString+XFTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XFTime.m"; sourceTree = "<group>"; };
 		1CA5C1C01D6AA79A00236253 /* MacroFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFunc.h; sourceTree = "<group>"; };
 		1CA5C1C11D6AA7C800236253 /* XYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYConst.h; sourceTree = "<group>"; };
 		1CA5C1C21D6AA7C800236253 /* XYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYConst.m; sourceTree = "<group>"; };
@@ -224,6 +244,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C763C1A1D6B64F400CEF1E8 /* AudioToolbox.framework in Frameworks */,
+				1C763C181D6B64EB00CEF1E8 /* MediaPlayer.framework in Frameworks */,
+				1C763C161D6B64E000CEF1E8 /* AVFoundation.framework in Frameworks */,
 				8869953BE5B68E7D5A6F2194 /* libPods-MyWeiboJingXuan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +268,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C763C091D6B64B800CEF1E8 /* KRVideoPlayerController */ = {
+			isa = PBXGroup;
+			children = (
+				1C763C0A1D6B64B800CEF1E8 /* KRVideoPlayerController.h */,
+				1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */,
+				1C763C0C1D6B64B800CEF1E8 /* KRVideoPlayerControlView.h */,
+				1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */,
+				1C763C0E1D6B64B800CEF1E8 /* XFVociePlayerController.h */,
+				1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */,
+				1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */,
+			);
+			path = KRVideoPlayerController;
+			sourceTree = "<group>";
+		};
 		1CA5C1F41D6ACF2C00236253 /* HttpTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +321,7 @@
 		1CA5C20B1D6AD7BB00236253 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1C763C091D6B64B800CEF1E8 /* KRVideoPlayerController */,
 				1CA5C20E1D6AD7CB00236253 /* XYBaseViewController.h */,
 				1CA5C20F1D6AD7CB00236253 /* XYBaseViewController.m */,
 				1CA5C2111D6AD80700236253 /* XYBaseTableViewController.h */,
@@ -412,6 +450,8 @@
 				1CA5C1D01D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m */,
 				1CA5C1D11D6AA86F00236253 /* NSDate+XYGetLatelyDate.h */,
 				1CA5C1D21D6AA86F00236253 /* NSDate+XYGetLatelyDate.m */,
+				1C763C1B1D6B6B7E00CEF1E8 /* NSString+XFTime.h */,
+				1C763C1C1D6B6B7E00CEF1E8 /* NSString+XFTime.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -740,6 +780,9 @@
 		F074C43E100CA8EAD5DBCFEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */,
+				1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */,
+				1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */,
 				09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */,
 			);
 			name = Frameworks;
@@ -858,6 +901,7 @@
 				1CA5C2361D6AE94100236253 /* XYSeeBigPictureViewController.xib in Resources */,
 				1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */,
 				1CA5C2261D6AE92100236253 /* XYTopicVideoView.xib in Resources */,
+				1C763C141D6B64B800CEF1E8 /* XFVociePlayerController.xib in Resources */,
 				1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */,
 				1CA5C2241D6AE92100236253 /* XYTopicPictureView.xib in Resources */,
 				1CA5C2221D6AE92100236253 /* XYTopicCell.xib in Resources */,
@@ -934,9 +978,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C763C111D6B64B800CEF1E8 /* KRVideoPlayerController.m in Sources */,
 				1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */,
 				1CA5C2301D6AE92D00236253 /* XYCommentItem.m in Sources */,
 				1CA5C24F1D6AEA0D00236253 /* XYEssenceTool.m in Sources */,
+				1C763C1D1D6B6B7E00CEF1E8 /* NSString+XFTime.m in Sources */,
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
 				1CA5C2051D6AD05E00236253 /* XYBaseTool.m in Sources */,
 				1CA5C1E71D6AC43100236253 /* XYVideoViewController.m in Sources */,
@@ -961,6 +1007,7 @@
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
+				1C763C131D6B64B800CEF1E8 /* XFVociePlayerController.m in Sources */,
 				1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
 				1CA5C2091D6AD0E500236253 /* XYTagTool.m in Sources */,
@@ -975,6 +1022,7 @@
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
+				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
 				1CA5C2311D6AE92D00236253 /* XYTopicItem.m in Sources */,
 				1CA5C22F1D6AE92D00236253 /* XYUserItem.m in Sources */,
 				1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */,

@@ -13,5 +13,6 @@
 
 // 模型数据
 @property(nonatomic,strong) XYTopicItem *topic;
+- (void)reset;
 
 @end

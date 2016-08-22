@@ -41,6 +41,16 @@
 @end
 
 @implementation XYTopicCell
+
+// 从队列里面复用时调用
+- (void)prepareForReuse {
+    
+    [super prepareForReuse];
+    [_videoView reset];
+    [_voiceView reset];
+}
+
+
 #pragma mark - 懒加载
 /** voiceView */
 - (XYTopicVoiceView *)voiceView

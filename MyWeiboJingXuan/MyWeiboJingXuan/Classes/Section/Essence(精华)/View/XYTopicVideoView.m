@@ -10,12 +10,15 @@
 #import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import "XYSeeBigPictureViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "KRVideoPlayerController.h"
 
 @interface XYTopicVideoView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
-
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (nonatomic, strong) KRVideoPlayerController *videoController;
 @end
 
 @implementation XYTopicVideoView
@@ -52,6 +55,30 @@
     
     // 设置视频时长
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",minute,second];
+}
+
+#pragma mark - 播放视频
+- (IBAction)playBtnClick:(UIButton *)sender
+{
+    [self playVideoWithURL:[NSURL URLWithString:self.topic.videouri]];
+    [self addSubview:self.videoController.view];
+}
+
+- (void)playVideoWithURL:(NSURL *)url {
+    if (!self.videoController) {
+        self.videoController = [[KRVideoPlayerController alloc] initWithFrame:self.imageView.bounds];
+        XYWeakSelf;
+        [self.videoController setDimissCompleteBlock:^{
+            weakSelf.videoController = nil;
+        }];
+    }
+    self.videoController.contentURL = url;
+}
+
+//停止视频的播放
+- (void)reset {
+    [self.videoController dismiss];
+    self.videoController = nil;
 }
 
 
