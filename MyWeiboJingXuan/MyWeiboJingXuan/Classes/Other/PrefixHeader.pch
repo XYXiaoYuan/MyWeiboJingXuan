@@ -20,7 +20,12 @@
 #import "MacroFunc.h"
 #import "XYConst.h"
 #import "UIView+XYFrameExtension.h"
-
+#import "UIBarButtonItem+XYExtension.h"
+#import "UITextField+XYLoginTextField.h"
+#import "UIImage+XYImageExtension.h"
+#import "UIImageView+XYIconImageExtension.h"
+#import "NSCalendar+XYCalendarExtension.h"
+#import "NSDate+XYGetLatelyDate.h"
 
 
 #endif

@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C21D6AA7C800236253 /* XYConst.m */; };
-		1CA5C1C51D6AA7C800236253 /* XYModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */; };
+		1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */; };
+		1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */; };
+		1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CC1D6AA86F00236253 /* UIImageView+XYIconImageExtension.m */; };
+		1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CE1D6AA86F00236253 /* UIImage+XYImageExtension.m */; };
+		1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1D01D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m */; };
+		1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1D21D6AA86F00236253 /* NSDate+XYGetLatelyDate.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -47,7 +52,18 @@
 		1CA5C1C01D6AA79A00236253 /* MacroFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFunc.h; sourceTree = "<group>"; };
 		1CA5C1C11D6AA7C800236253 /* XYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYConst.h; sourceTree = "<group>"; };
 		1CA5C1C21D6AA7C800236253 /* XYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYConst.m; sourceTree = "<group>"; };
-		1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYModelConfig.m; sourceTree = "<group>"; };
+		1CA5C1C71D6AA86F00236253 /* UIBarButtonItem+XYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYExtension.h"; sourceTree = "<group>"; };
+		1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYExtension.m"; sourceTree = "<group>"; };
+		1CA5C1C91D6AA86F00236253 /* UITextField+XYLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XYLoginTextField.h"; sourceTree = "<group>"; };
+		1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XYLoginTextField.m"; sourceTree = "<group>"; };
+		1CA5C1CB1D6AA86F00236253 /* UIImageView+XYIconImageExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XYIconImageExtension.h"; sourceTree = "<group>"; };
+		1CA5C1CC1D6AA86F00236253 /* UIImageView+XYIconImageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XYIconImageExtension.m"; sourceTree = "<group>"; };
+		1CA5C1CD1D6AA86F00236253 /* UIImage+XYImageExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYImageExtension.h"; sourceTree = "<group>"; };
+		1CA5C1CE1D6AA86F00236253 /* UIImage+XYImageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYImageExtension.m"; sourceTree = "<group>"; };
+		1CA5C1CF1D6AA86F00236253 /* NSCalendar+XYCalendarExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+XYCalendarExtension.h"; sourceTree = "<group>"; };
+		1CA5C1D01D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+XYCalendarExtension.m"; sourceTree = "<group>"; };
+		1CA5C1D11D6AA86F00236253 /* NSDate+XYGetLatelyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XYGetLatelyDate.h"; sourceTree = "<group>"; };
+		1CA5C1D21D6AA86F00236253 /* NSDate+XYGetLatelyDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XYGetLatelyDate.m"; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +208,18 @@
 			children = (
 				1CF7D5AA1D6AA611006212D3 /* UIView+XYFrameExtension.h */,
 				1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */,
+				1CA5C1C71D6AA86F00236253 /* UIBarButtonItem+XYExtension.h */,
+				1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */,
+				1CA5C1C91D6AA86F00236253 /* UITextField+XYLoginTextField.h */,
+				1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */,
+				1CA5C1CB1D6AA86F00236253 /* UIImageView+XYIconImageExtension.h */,
+				1CA5C1CC1D6AA86F00236253 /* UIImageView+XYIconImageExtension.m */,
+				1CA5C1CD1D6AA86F00236253 /* UIImage+XYImageExtension.h */,
+				1CA5C1CE1D6AA86F00236253 /* UIImage+XYImageExtension.m */,
+				1CA5C1CF1D6AA86F00236253 /* NSCalendar+XYCalendarExtension.h */,
+				1CA5C1D01D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m */,
+				1CA5C1D11D6AA86F00236253 /* NSDate+XYGetLatelyDate.h */,
+				1CA5C1D21D6AA86F00236253 /* NSDate+XYGetLatelyDate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -240,7 +268,6 @@
 				1CA5C1C01D6AA79A00236253 /* MacroFunc.h */,
 				1CA5C1C11D6AA7C800236253 /* XYConst.h */,
 				1CA5C1C21D6AA7C800236253 /* XYConst.m */,
-				1CA5C1C31D6AA7C800236253 /* XYModelConfig.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -650,18 +677,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
 				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,
+				1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */,
 				1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */,
 				1CF7D5A61D6AA5A0006212D3 /* XYMineViewController.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
 				1CF7D59D1D6AA55B006212D3 /* XYEssenceViewController.m in Sources */,
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
-				1CA5C1C51D6AA7C800236253 /* XYModelConfig.m in Sources */,
+				1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */,
+				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
+				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
+				1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
