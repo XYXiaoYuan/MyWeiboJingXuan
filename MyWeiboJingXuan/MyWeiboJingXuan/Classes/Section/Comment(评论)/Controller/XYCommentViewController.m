@@ -18,19 +18,16 @@
 #import "XYTopicCell.h"
 
 @interface XYCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /** 热门评论 */
 @property(nonatomic,strong) NSArray<XYCommentItem *> *hotestComments;
-
 /** 最新评论 */
 @property(nonatomic,strong) NSMutableArray<XYCommentItem *> *latestComments;
-
 /** 最热评论 */
 @property (nonatomic, strong) XYCommentItem *savedTopCmt;
-
+/** 存储请求结果的总评论数 */
+@property(nonatomic,assign) NSInteger total;
 @end
 
 @implementation XYCommentViewController
@@ -177,18 +174,15 @@ static NSString * const XYCommentCellHeaderId = @"header";
         NSArray<XYCommentItem *> *moreComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
         [self.latestComments addObjectsFromArray:moreComments];
         
+        // 记录下拉到最后加载到的总最新评论条数
+        self.total = [result[@"total"] intValue];;
+        
         // 刷新数据
         [weakSelf.tableView reloadData];
         
+        // 结束刷新
+        [weakSelf.tableView.mj_footer endRefreshing];
         
-        int total = [result[@"total"] intValue];;
-        if (weakSelf.latestComments.count == total) { // 提示用户:没有更多数据了
-            weakSelf.tableView.mj_footer.hidden = YES;
-        } else { // 还没有加载完全
-            // 结束刷新
-            [weakSelf.tableView.mj_footer endRefreshing];
-        }
-
     } failure:^(NSError *error) {
         // 结束刷新
         [weakSelf.tableView.mj_footer endRefreshing];
@@ -241,6 +235,9 @@ static NSString * const XYCommentCellHeaderId = @"header";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // 隐藏footer
+    self.tableView.mj_footer.hidden = (self.latestComments.count == self.total);
+    
     // 第0组 && 有最热评论数据
     if (section == 0 && self.hotestComments.count) {
         return self.hotestComments.count;

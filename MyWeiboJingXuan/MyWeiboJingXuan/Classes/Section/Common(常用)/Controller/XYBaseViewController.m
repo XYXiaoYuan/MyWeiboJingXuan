@@ -20,19 +20,23 @@
     self.view.backgroundColor = XYCommonBgColor;
 }
 
-- (void)didReceiveMemoryWarning {
+/** 重写dealloc方法,看控制器有没有销毁 */
+- (void)dealloc
+{
+    XYLog(@"%@控制器被销毁了",[self class]);
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    XYLog(@"%@控制器接收到了内存警告",[self class]);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
-*/
+
 
 @end

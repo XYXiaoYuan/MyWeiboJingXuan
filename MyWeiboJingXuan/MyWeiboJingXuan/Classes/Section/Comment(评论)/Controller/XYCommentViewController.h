@@ -6,10 +6,10 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYBaseViewController.h"
 
 @class XYTopicItem;
-@interface XYCommentViewController : UIViewController
+@interface XYCommentViewController : XYBaseViewController
 
 /** 帖子数据模型 */
 @property(nonatomic,strong) XYTopicItem *topic;
