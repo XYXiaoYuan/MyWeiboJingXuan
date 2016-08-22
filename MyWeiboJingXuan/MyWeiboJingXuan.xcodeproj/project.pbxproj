@@ -16,6 +16,7 @@
 		1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1D21D6AA86F00236253 /* NSDate+XYGetLatelyDate.m */; };
 		1CA5C1DB1D6AA8E700236253 /* XYNavSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1DA1D6AA8E700236253 /* XYNavSelectedView.m */; };
 		1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1DD1D6AB26C00236253 /* XYTagViewController.m */; };
+		1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1E01D6AB9B800236253 /* XYTitleButton.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -70,6 +71,8 @@
 		1CA5C1DA1D6AA8E700236253 /* XYNavSelectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavSelectedView.m; sourceTree = "<group>"; };
 		1CA5C1DC1D6AB26C00236253 /* XYTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagViewController.h; sourceTree = "<group>"; };
 		1CA5C1DD1D6AB26C00236253 /* XYTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagViewController.m; sourceTree = "<group>"; };
+		1CA5C1DF1D6AB9B800236253 /* XYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTitleButton.h; sourceTree = "<group>"; };
+		1CA5C1E01D6AB9B800236253 /* XYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTitleButton.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 			children = (
 				1CA5C1D91D6AA8E700236253 /* XYNavSelectedView.h */,
 				1CA5C1DA1D6AA8E700236253 /* XYNavSelectedView.m */,
+				1CA5C1DF1D6AB9B800236253 /* XYTitleButton.h */,
+				1CA5C1E01D6AB9B800236253 /* XYTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -704,6 +709,7 @@
 				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
+				1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */,
 				1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,
 			);

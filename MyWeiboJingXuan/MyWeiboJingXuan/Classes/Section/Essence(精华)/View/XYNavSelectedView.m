@@ -7,11 +7,12 @@
 //
 
 #import "XYNavSelectedView.h"
+#import "XYTitleButton.h"
 
 @interface XYNavSelectedView ()
 @property (nonatomic, weak)UIView *underLine;
-@property (nonatomic, strong)UIButton *selectedBtn;
-@property (nonatomic, weak)UIButton *allBtn;
+@property (nonatomic, strong)XYTitleButton *selectedBtn;
+@property (nonatomic, weak)XYTitleButton *allBtn;
 @end
 
 
@@ -20,7 +21,7 @@
 - (UIView *)underLine
 {
     if (!_underLine) {
-        UIView *underLine = [[UIView alloc] initWithFrame:CGRectMake(15, self.xy_height-4, Home_Seleted_Item_W + DefaultMargin, 2)];
+        UIView *underLine = [[UIView alloc] initWithFrame:CGRectMake(45, self.xy_height, 50, 2)];
         underLine.backgroundColor = [UIColor redColor];
         [self addSubview:underLine];
         _underLine = underLine;
@@ -38,11 +39,11 @@
 
 - (void)setup
 {
-    UIButton *allBtn = [self createBtn:@"全部" tag:XYNavTypeTypeAll];
-    UIButton *videoBtn = [self createBtn:@"视频" tag:XYNavTypeTypeVideo];
-    UIButton *voiceBtn = [self createBtn:@"声音" tag:XYNavTypeTypeVoice];
-    UIButton *picBtn = [self createBtn:@"图片" tag:XYNavTypeTypePicture];
-    UIButton *wordBtn = [self createBtn:@"段子" tag:XYNavTypeTypeWord];
+    XYTitleButton *allBtn = [self createBtn:@"全部" tag:XYNavTypeTypeAll];
+    XYTitleButton *videoBtn = [self createBtn:@"视频" tag:XYNavTypeTypeVideo];
+    XYTitleButton *voiceBtn = [self createBtn:@"声音" tag:XYNavTypeTypeVoice];
+    XYTitleButton *picBtn = [self createBtn:@"图片" tag:XYNavTypeTypePicture];
+    XYTitleButton *wordBtn = [self createBtn:@"段子" tag:XYNavTypeTypeWord];
     
     [self addSubview:allBtn];
     [self addSubview:videoBtn];
@@ -95,20 +96,18 @@
     
 }
 
-- (UIButton *)createBtn:(NSString *)title tag:(XYNavType)tag
+- (XYTitleButton *)createBtn:(NSString *)title tag:(XYNavType)tag
 {
-    UIButton *btn = [[UIButton alloc] init];
+    XYTitleButton *btn = [XYTitleButton buttonWithType:UIButtonTypeCustom];
     btn.titleLabel.font = [UIFont systemFontOfSize:17];
     [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     btn.tag = tag;
     [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
 
 // 点击事件
-- (void)click:(UIButton *)btn
+- (void)click:(XYTitleButton *)btn
 {
     self.selectedBtn.selected = NO;
     btn.selected = YES;
