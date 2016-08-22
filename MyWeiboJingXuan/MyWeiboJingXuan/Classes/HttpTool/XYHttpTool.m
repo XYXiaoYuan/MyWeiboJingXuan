@@ -9,11 +9,12 @@
 #import "XYHttpTool.h"
 
 @implementation XYHttpTool
+implementationSingle(XYHttpTool);
 
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure;
 {
     // 1.获得请求管理者
-    AFHTTPSessionManager *mgr = [self getRequstManager];
+    AFHTTPSessionManager *mgr = [self manager];
     
     // 2.发送GET请求
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -36,7 +37,7 @@
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure
 {
     // 1.获得请求管理者
-    AFHTTPSessionManager *mgr = [self getRequstManager];
+    AFHTTPSessionManager *mgr = [self manager];
     
     // 2.发送POST请求
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -55,7 +56,7 @@
 }
 
 #pragma mark- AFHTTPSessionManager 初始化 网络超时设置 请求头 BaseUrl
-+ (AFHTTPSessionManager *)getRequstManager
++ (AFHTTPSessionManager *)manager
 {
     static AFHTTPSessionManager *mgr = nil;
     static dispatch_once_t onceToken;

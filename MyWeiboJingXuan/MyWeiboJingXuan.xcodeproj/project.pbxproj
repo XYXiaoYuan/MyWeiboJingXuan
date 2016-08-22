@@ -113,6 +113,7 @@
 		1CA5C20F1D6AD7CB00236253 /* XYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseViewController.m; sourceTree = "<group>"; };
 		1CA5C2111D6AD80700236253 /* XYBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseTableViewController.h; sourceTree = "<group>"; };
 		1CA5C2121D6AD80700236253 /* XYBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseTableViewController.m; sourceTree = "<group>"; };
+		1CA5C2141D6AE78400236253 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -360,6 +361,7 @@
 			children = (
 				1CD3960F1D6A9AC0001CA85D /* main.m */,
 				1CF7D5AD1D6AA634006212D3 /* PrefixHeader.pch */,
+				1CA5C2141D6AE78400236253 /* Singleton.h */,
 				1CA5C1C01D6AA79A00236253 /* MacroFunc.h */,
 				1CA5C1C11D6AA7C800236253 /* XYConst.h */,
 				1CA5C1C21D6AA7C800236253 /* XYConst.m */,

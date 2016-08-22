@@ -32,12 +32,9 @@ static NSString * const XYTagCellId = @"tag";
     [self loadTags];
 }
 
-// 设置table
+#pragma mark - 设置tableView
 - (void)seupTable
 {
-    // 设置tableView的背景颜色为统一的灰色
-    self.view.backgroundColor = XYCommonBgColor;
-    
     // 设置行高
     self.tableView.rowHeight = 70;
     
@@ -48,6 +45,7 @@ static NSString * const XYTagCellId = @"tag";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTagCell class]) bundle:nil] forCellReuseIdentifier:XYTagCellId];
 }
 
+#pragma mark - 加载标签数据
 - (void)loadTags
 {
     // 显示加载的圈圈
@@ -79,10 +77,8 @@ static NSString * const XYTagCellId = @"tag";
         } else{
             [SVProgressHUD showErrorWithStatus:@"正在加载中,请稍候"];
         }
-
     }];
 }
-
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -99,5 +95,16 @@ static NSString * const XYTagCellId = @"tag";
     return cell;
 }
 
+/** 控制的view即将消失的时候调用 */
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 停止请求
+    [XYTagTool cancelTasks];
+    
+    // 移除弹框
+    [SVProgressHUD dismiss];
+}
 
 @end

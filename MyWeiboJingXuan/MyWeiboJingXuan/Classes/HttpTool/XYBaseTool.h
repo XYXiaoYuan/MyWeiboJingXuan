@@ -15,4 +15,6 @@
 
 + (void)postWithUrl:(NSString *)url param:(id)param resultClass:(Class)resultClass success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
 
++ (void)cancelTasks;
+
 @end

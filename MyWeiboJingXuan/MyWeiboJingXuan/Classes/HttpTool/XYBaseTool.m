@@ -43,4 +43,12 @@
 }
 
 
+#pragma mark - 结束请求任务
++ (void)cancelTasks
+{
+    XYHttpTool *httpTool = [XYHttpTool shareXYHttpTool];
+    [httpTool.manager invalidateSessionCancelingTasks:YES];
+}
+
+
 @end

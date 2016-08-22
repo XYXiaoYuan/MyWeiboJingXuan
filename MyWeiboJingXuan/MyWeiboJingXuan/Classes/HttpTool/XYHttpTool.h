@@ -7,6 +7,7 @@
 //  网络请求工具类：负责整个项目的所有HTTP请求
 
 #import <Foundation/Foundation.h>
+#import "Singleton.h"
 #import "AFNetworking.h"
 
 /* 当request成功后的 responseSuccessBlock */
@@ -15,6 +16,7 @@ typedef void (^responseSuccessBlock)(id responseObj);
 typedef void (^requestFailureBlock)(NSError *error);
 
 @interface XYHttpTool : NSObject
+interfaceSingle(XYHttpTool);
 
 /**
  *  发送一个GET请求
@@ -28,5 +30,6 @@ typedef void (^requestFailureBlock)(NSError *error);
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure;
 
-
+/** manager */
+@property(nonatomic,weak,readonly) AFHTTPSessionManager *manager;
 @end
