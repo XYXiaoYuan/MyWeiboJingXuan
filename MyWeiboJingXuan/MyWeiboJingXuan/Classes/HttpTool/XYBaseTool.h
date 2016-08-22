@@ -15,6 +15,9 @@
 
 + (void)postWithUrl:(NSString *)url param:(id)param resultClass:(Class)resultClass success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
 
-+ (void)cancelTasks;
+/** 控制器死的时候让请求失效 */
++ (void)invalidateSessionCancelingTasks;
+/** 取消任务 */
++ (void)cancel;
 
 @end

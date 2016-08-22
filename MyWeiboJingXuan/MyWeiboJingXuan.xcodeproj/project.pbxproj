@@ -31,6 +31,31 @@
 		1CA5C2091D6AD0E500236253 /* XYTagTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2081D6AD0E500236253 /* XYTagTool.m */; };
 		1CA5C2101D6AD7CB00236253 /* XYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C20F1D6AD7CB00236253 /* XYBaseViewController.m */; };
 		1CA5C2131D6AD80700236253 /* XYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2121D6AD80700236253 /* XYBaseTableViewController.m */; };
+		1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2161D6AE92100236253 /* XYTopicCell.m */; };
+		1CA5C2221D6AE92100236253 /* XYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2171D6AE92100236253 /* XYTopicCell.xib */; };
+		1CA5C2231D6AE92100236253 /* XYTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2191D6AE92100236253 /* XYTopicPictureView.m */; };
+		1CA5C2241D6AE92100236253 /* XYTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C21A1D6AE92100236253 /* XYTopicPictureView.xib */; };
+		1CA5C2251D6AE92100236253 /* XYTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C21C1D6AE92100236253 /* XYTopicVideoView.m */; };
+		1CA5C2261D6AE92100236253 /* XYTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C21D1D6AE92100236253 /* XYTopicVideoView.xib */; };
+		1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C21F1D6AE92100236253 /* XYTopicVoiceView.m */; };
+		1CA5C2281D6AE92100236253 /* XYTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2201D6AE92100236253 /* XYTopicVoiceView.xib */; };
+		1CA5C22F1D6AE92D00236253 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C22A1D6AE92D00236253 /* XYUser.m */; };
+		1CA5C2301D6AE92D00236253 /* XYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C22C1D6AE92D00236253 /* XYComment.m */; };
+		1CA5C2311D6AE92D00236253 /* XYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C22E1D6AE92D00236253 /* XYTopic.m */; };
+		1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2331D6AE94100236253 /* XYSeeBigPictureViewController.m */; };
+		1CA5C2361D6AE94100236253 /* XYSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2341D6AE94100236253 /* XYSeeBigPictureViewController.xib */; };
+		1CA5C2391D6AE94B00236253 /* XYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2381D6AE94B00236253 /* XYTopicViewController.m */; };
+		1CA5C23E1D6AE97C00236253 /* XYRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */; };
+		1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */; };
+		1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2411D6AE99E00236253 /* XYCommentViewController.m */; };
+		1CA5C2441D6AE99E00236253 /* XYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2421D6AE99E00236253 /* XYCommentViewController.xib */; };
+		1CA5C24A1D6AE9A600236253 /* XYCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2461D6AE9A600236253 /* XYCommentCell.m */; };
+		1CA5C24B1D6AE9A600236253 /* XYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2471D6AE9A600236253 /* XYCommentCell.xib */; };
+		1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */; };
+		1CA5C24F1D6AEA0D00236253 /* XYEssenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */; };
+		1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */; };
+		1CA5C2551D6AEE4900236253 /* XYEssenceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2541D6AEE4900236253 /* XYEssenceResult.m */; };
+		1CA5C2581D6AEEA300236253 /* XYEssenceInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2571D6AEEA300236253 /* XYEssenceInfoItem.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -114,6 +139,49 @@
 		1CA5C2111D6AD80700236253 /* XYBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseTableViewController.h; sourceTree = "<group>"; };
 		1CA5C2121D6AD80700236253 /* XYBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseTableViewController.m; sourceTree = "<group>"; };
 		1CA5C2141D6AE78400236253 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		1CA5C2151D6AE92100236253 /* XYTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicCell.h; sourceTree = "<group>"; };
+		1CA5C2161D6AE92100236253 /* XYTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicCell.m; sourceTree = "<group>"; };
+		1CA5C2171D6AE92100236253 /* XYTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTopicCell.xib; sourceTree = "<group>"; };
+		1CA5C2181D6AE92100236253 /* XYTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicPictureView.h; sourceTree = "<group>"; };
+		1CA5C2191D6AE92100236253 /* XYTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicPictureView.m; sourceTree = "<group>"; };
+		1CA5C21A1D6AE92100236253 /* XYTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTopicPictureView.xib; sourceTree = "<group>"; };
+		1CA5C21B1D6AE92100236253 /* XYTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicVideoView.h; sourceTree = "<group>"; };
+		1CA5C21C1D6AE92100236253 /* XYTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicVideoView.m; sourceTree = "<group>"; };
+		1CA5C21D1D6AE92100236253 /* XYTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTopicVideoView.xib; sourceTree = "<group>"; };
+		1CA5C21E1D6AE92100236253 /* XYTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicVoiceView.h; sourceTree = "<group>"; };
+		1CA5C21F1D6AE92100236253 /* XYTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicVoiceView.m; sourceTree = "<group>"; };
+		1CA5C2201D6AE92100236253 /* XYTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTopicVoiceView.xib; sourceTree = "<group>"; };
+		1CA5C2291D6AE92D00236253 /* XYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYUser.h; sourceTree = "<group>"; };
+		1CA5C22A1D6AE92D00236253 /* XYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYUser.m; sourceTree = "<group>"; };
+		1CA5C22B1D6AE92D00236253 /* XYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYComment.h; sourceTree = "<group>"; };
+		1CA5C22C1D6AE92D00236253 /* XYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYComment.m; sourceTree = "<group>"; };
+		1CA5C22D1D6AE92D00236253 /* XYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopic.h; sourceTree = "<group>"; };
+		1CA5C22E1D6AE92D00236253 /* XYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopic.m; sourceTree = "<group>"; };
+		1CA5C2321D6AE94100236253 /* XYSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		1CA5C2331D6AE94100236253 /* XYSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		1CA5C2341D6AE94100236253 /* XYSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		1CA5C2371D6AE94B00236253 /* XYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicViewController.h; sourceTree = "<group>"; };
+		1CA5C2381D6AE94B00236253 /* XYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicViewController.m; sourceTree = "<group>"; };
+		1CA5C23A1D6AE97C00236253 /* XYRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRefreshNormalHeader.h; sourceTree = "<group>"; };
+		1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRefreshNormalHeader.m; sourceTree = "<group>"; };
+		1CA5C23C1D6AE97C00236253 /* XYRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRefreshAutoFooter.h; sourceTree = "<group>"; };
+		1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRefreshAutoFooter.m; sourceTree = "<group>"; };
+		1CA5C2401D6AE99E00236253 /* XYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentViewController.h; sourceTree = "<group>"; };
+		1CA5C2411D6AE99E00236253 /* XYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentViewController.m; sourceTree = "<group>"; };
+		1CA5C2421D6AE99E00236253 /* XYCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCommentViewController.xib; sourceTree = "<group>"; };
+		1CA5C2451D6AE9A600236253 /* XYCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentCell.h; sourceTree = "<group>"; };
+		1CA5C2461D6AE9A600236253 /* XYCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentCell.m; sourceTree = "<group>"; };
+		1CA5C2471D6AE9A600236253 /* XYCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCommentCell.xib; sourceTree = "<group>"; };
+		1CA5C2481D6AE9A600236253 /* XYCommentSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentSectionHeader.h; sourceTree = "<group>"; };
+		1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentSectionHeader.m; sourceTree = "<group>"; };
+		1CA5C24D1D6AEA0D00236253 /* XYEssenceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceTool.h; sourceTree = "<group>"; };
+		1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceTool.m; sourceTree = "<group>"; };
+		1CA5C2501D6AEA8000236253 /* XYEssenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceParam.h; sourceTree = "<group>"; };
+		1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceParam.m; sourceTree = "<group>"; };
+		1CA5C2531D6AEE4900236253 /* XYEssenceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceResult.h; sourceTree = "<group>"; };
+		1CA5C2541D6AEE4900236253 /* XYEssenceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceResult.m; sourceTree = "<group>"; };
+		1CA5C2561D6AEEA300236253 /* XYEssenceInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceInfoItem.h; sourceTree = "<group>"; };
+		1CA5C2571D6AEEA300236253 /* XYEssenceInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceInfoItem.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +242,10 @@
 		1CA5C1F41D6ACF2C00236253 /* HttpTool */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C23A1D6AE97C00236253 /* XYRefreshNormalHeader.h */,
+				1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */,
+				1CA5C23C1D6AE97C00236253 /* XYRefreshAutoFooter.h */,
+				1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */,
 				1CA5C2001D6AD00600236253 /* XYHttpTool.h */,
 				1CA5C2011D6AD00600236253 /* XYHttpTool.m */,
 				1CA5C2031D6AD05E00236253 /* XYBaseTool.h */,
@@ -187,6 +259,8 @@
 			children = (
 				1CA5C2071D6AD0E500236253 /* XYTagTool.h */,
 				1CA5C2081D6AD0E500236253 /* XYTagTool.m */,
+				1CA5C24D1D6AEA0D00236253 /* XYEssenceTool.h */,
+				1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -427,6 +501,9 @@
 		1CD396161D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C2401D6AE99E00236253 /* XYCommentViewController.h */,
+				1CA5C2411D6AE99E00236253 /* XYCommentViewController.m */,
+				1CA5C2421D6AE99E00236253 /* XYCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +518,11 @@
 		1CD396181D6A9AC0001CA85D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C2451D6AE9A600236253 /* XYCommentCell.h */,
+				1CA5C2461D6AE9A600236253 /* XYCommentCell.m */,
+				1CA5C2471D6AE9A600236253 /* XYCommentCell.xib */,
+				1CA5C2481D6AE9A600236253 /* XYCommentSectionHeader.h */,
+				1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +541,8 @@
 		1CD3961A1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C2371D6AE94B00236253 /* XYTopicViewController.h */,
+				1CA5C2381D6AE94B00236253 /* XYTopicViewController.m */,
 				1CA5C1DC1D6AB26C00236253 /* XYTagViewController.h */,
 				1CA5C1DD1D6AB26C00236253 /* XYTagViewController.m */,
 				1CA5C1F11D6ACB6300236253 /* XYEssenceViewController.h */,
@@ -473,6 +557,9 @@
 				1CA5C1EC1D6AC45500236253 /* XYPictureViewController.m */,
 				1CA5C1EE1D6AC45F00236253 /* XYWordViewController.h */,
 				1CA5C1EF1D6AC45F00236253 /* XYWordViewController.m */,
+				1CA5C2321D6AE94100236253 /* XYSeeBigPictureViewController.h */,
+				1CA5C2331D6AE94100236253 /* XYSeeBigPictureViewController.m */,
+				1CA5C2341D6AE94100236253 /* XYSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -484,6 +571,18 @@
 				1CA5C1F61D6ACF5A00236253 /* XYTagItem.m */,
 				1CA5C1F81D6ACF6200236253 /* XYTagParam.h */,
 				1CA5C1F91D6ACF6200236253 /* XYTagParam.m */,
+				1CA5C2291D6AE92D00236253 /* XYUser.h */,
+				1CA5C22A1D6AE92D00236253 /* XYUser.m */,
+				1CA5C22B1D6AE92D00236253 /* XYComment.h */,
+				1CA5C22C1D6AE92D00236253 /* XYComment.m */,
+				1CA5C22D1D6AE92D00236253 /* XYTopic.h */,
+				1CA5C22E1D6AE92D00236253 /* XYTopic.m */,
+				1CA5C2501D6AEA8000236253 /* XYEssenceParam.h */,
+				1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */,
+				1CA5C2531D6AEE4900236253 /* XYEssenceResult.h */,
+				1CA5C2541D6AEE4900236253 /* XYEssenceResult.m */,
+				1CA5C2561D6AEEA300236253 /* XYEssenceInfoItem.h */,
+				1CA5C2571D6AEEA300236253 /* XYEssenceInfoItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -496,6 +595,18 @@
 				1CA5C1FB1D6ACF9400236253 /* XYTagCell.h */,
 				1CA5C1FC1D6ACF9400236253 /* XYTagCell.m */,
 				1CA5C1FD1D6ACF9400236253 /* XYTagCell.xib */,
+				1CA5C2151D6AE92100236253 /* XYTopicCell.h */,
+				1CA5C2161D6AE92100236253 /* XYTopicCell.m */,
+				1CA5C2171D6AE92100236253 /* XYTopicCell.xib */,
+				1CA5C2181D6AE92100236253 /* XYTopicPictureView.h */,
+				1CA5C2191D6AE92100236253 /* XYTopicPictureView.m */,
+				1CA5C21A1D6AE92100236253 /* XYTopicPictureView.xib */,
+				1CA5C21B1D6AE92100236253 /* XYTopicVideoView.h */,
+				1CA5C21C1D6AE92100236253 /* XYTopicVideoView.m */,
+				1CA5C21D1D6AE92100236253 /* XYTopicVideoView.xib */,
+				1CA5C21E1D6AE92100236253 /* XYTopicVoiceView.h */,
+				1CA5C21F1D6AE92100236253 /* XYTopicVoiceView.m */,
+				1CA5C2201D6AE92100236253 /* XYTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,8 +835,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA5C2281D6AE92100236253 /* XYTopicVoiceView.xib in Resources */,
+				1CA5C24B1D6AE9A600236253 /* XYCommentCell.xib in Resources */,
+				1CA5C2361D6AE94100236253 /* XYSeeBigPictureViewController.xib in Resources */,
 				1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */,
+				1CA5C2261D6AE92100236253 /* XYTopicVideoView.xib in Resources */,
 				1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */,
+				1CA5C2241D6AE92100236253 /* XYTopicPictureView.xib in Resources */,
+				1CA5C2221D6AE92100236253 /* XYTopicCell.xib in Resources */,
+				1CA5C2441D6AE99E00236253 /* XYCommentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +916,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */,
+				1CA5C2301D6AE92D00236253 /* XYComment.m in Sources */,
+				1CA5C24F1D6AEA0D00236253 /* XYEssenceTool.m in Sources */,
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
 				1CA5C2051D6AD05E00236253 /* XYBaseTool.m in Sources */,
 				1CA5C1E71D6AC43100236253 /* XYVideoViewController.m in Sources */,
@@ -805,28 +926,43 @@
 				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,
 				1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */,
 				1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */,
+				1CA5C23E1D6AE97C00236253 /* XYRefreshNormalHeader.m in Sources */,
 				1CF7D5A61D6AA5A0006212D3 /* XYMineViewController.m in Sources */,
+				1CA5C2231D6AE92100236253 /* XYTopicPictureView.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
 				1CA5C2131D6AD80700236253 /* XYBaseTableViewController.m in Sources */,
 				1CA5C1F01D6AC45F00236253 /* XYWordViewController.m in Sources */,
+				1CA5C2391D6AE94B00236253 /* XYTopicViewController.m in Sources */,
+				1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */,
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
+				1CA5C24A1D6AE9A600236253 /* XYCommentCell.m in Sources */,
+				1CA5C2551D6AEE4900236253 /* XYEssenceResult.m in Sources */,
 				1CA5C2021D6AD00600236253 /* XYHttpTool.m in Sources */,
 				1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */,
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
+				1CA5C2581D6AEEA300236253 /* XYEssenceInfoItem.m in Sources */,
+				1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
 				1CA5C2091D6AD0E500236253 /* XYTagTool.m in Sources */,
+				1CA5C2251D6AE92100236253 /* XYTopicVideoView.m in Sources */,
 				1CA5C1F71D6ACF5A00236253 /* XYTagItem.m in Sources */,
 				1CA5C1ED1D6AC45500236253 /* XYPictureViewController.m in Sources */,
 				1CA5C1E41D6AC42200236253 /* XYAllViewController.m in Sources */,
 				1CA5C2101D6AD7CB00236253 /* XYBaseViewController.m in Sources */,
 				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
+				1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */,
+				1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */,
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
+				1CA5C2311D6AE92D00236253 /* XYTopic.m in Sources */,
+				1CA5C22F1D6AE92D00236253 /* XYUser.m in Sources */,
+				1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */,
 				1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */,
 				1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */,
+				1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,
 				1CA5C1FA1D6ACF6200236253 /* XYTagParam.m in Sources */,
 				1CA5C1FE1D6ACF9400236253 /* XYTagCell.m in Sources */,

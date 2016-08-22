@@ -6,8 +6,8 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYTopicViewController.h"
 
-@interface XYWordViewController : UITableViewController
+@interface XYWordViewController : XYTopicViewController
 
 @end

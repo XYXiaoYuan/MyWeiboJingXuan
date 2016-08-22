@@ -43,11 +43,18 @@
 }
 
 
-#pragma mark - 结束请求任务
-+ (void)cancelTasks
+#pragma mark - 控制器死的时候让请求失效
++ (void)invalidateSessionCancelingTasks
 {
     XYHttpTool *httpTool = [XYHttpTool shareXYHttpTool];
     [httpTool.manager invalidateSessionCancelingTasks:YES];
+}
+
+#pragma mark - 取消任务
++ (void)cancel
+{
+    XYHttpTool *httpTool = [XYHttpTool shareXYHttpTool];
+    [httpTool.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 
