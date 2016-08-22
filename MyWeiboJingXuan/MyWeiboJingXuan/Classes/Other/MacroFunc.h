@@ -14,6 +14,9 @@
 // 适配屏幕宽高
 #define XYSCREEN_W [UIScreen mainScreen].bounds.size.width
 #define XYSCREEN_H [UIScreen mainScreen].bounds.size.height
+// 首页的选择器的宽度
+#define Home_Seleted_Item_W 60
+#define DefaultMargin       10
 /** 适配问题 以iPhone5s的图适配所有尺寸的比率 */
 #define XYWidthRatio  (XYSCREEN_W/320)
 #define XYHeightRatio (XYSCREEN_H/568)

@@ -7,9 +7,14 @@
 //
 
 #import "XYEssenceViewController.h"
+#import "XYTagViewController.h"
+#import "XYNavSelectedView.h"
 
 @interface XYEssenceViewController ()
-
+/** 导航栏选择视图 */
+@property(nonatomic,strong) XYNavSelectedView *selectedView;
+/** UIScrollView */
+@property(nonatomic, weak) UIScrollView *scrollView;
 @end
 
 @implementation XYEssenceViewController
@@ -17,82 +22,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 设置导航条
+    [self setupNav];
+
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+#pragma mark -   设置导航条
+- (void)setupNav
+{
+    // 设置导航条左边
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
     
-    // Configure the cell...
+    // 设置顶部选择视图
+    XYNavSelectedView *selectedView = [[XYNavSelectedView alloc] initWithFrame:self.navigationController.navigationBar.bounds];
+    selectedView.xy_x = 45;
+    selectedView.xy_width = XYSCREEN_W - 45 * 2;
+    [selectedView setSelectedBlock:^(XYNavType type) {
+        [self.scrollView setContentOffset:CGPointMake(type * XYSCREEN_W, 0) animated:YES];
+    }];
+    [self.navigationController.navigationBar addSubview:selectedView];
+    _selectedView = selectedView;
+}
+
+#pragma mark - 标签按钮的点击
+- (void)tagClick
+{
+    XYTagViewController *tag = [[XYTagViewController alloc] init];
     
-    return cell;
+    [self.navigationController pushViewController:tag animated:YES];
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
