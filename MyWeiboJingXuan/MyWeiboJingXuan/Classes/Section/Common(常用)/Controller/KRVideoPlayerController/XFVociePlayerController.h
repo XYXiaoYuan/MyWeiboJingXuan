@@ -1,9 +1,9 @@
 //
 //  XFVociePlayerController.h
-//  XFBaiSiBuDeJie
+//  MyWeiboJingXuan
 //
-//  Created by Fay on 16/3/15.
-//  Copyright © 2016年 谢飞. All rights reserved.
+//  Created by 袁小荣 on 16/8/22.
+//  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
 #import <MediaPlayer/MediaPlayer.h>

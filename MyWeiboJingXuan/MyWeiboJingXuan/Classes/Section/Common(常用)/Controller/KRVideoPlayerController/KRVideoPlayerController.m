@@ -1,9 +1,9 @@
 //
 //  KRVideoPlayerController.m
-//  KRKit
+//  MyWeiboJingXuan
 //
-//  Created by aidenluo on 5/23/15.
-//  Copyright (c) 2015 36kr. All rights reserved.
+//  Created by 袁小荣 on 16/8/22.
+//  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
 #import "KRVideoPlayerController.h"
