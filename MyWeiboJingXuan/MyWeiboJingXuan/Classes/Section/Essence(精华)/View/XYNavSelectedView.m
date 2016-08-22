@@ -21,7 +21,14 @@
 - (UIView *)underLine
 {
     if (!_underLine) {
-        UIView *underLine = [[UIView alloc] initWithFrame:CGRectMake(45, self.xy_height, 50, 2)];
+        UIView *underLine = [[UIView alloc] init];
+        
+        // 设置下划线的frame
+        CGFloat underLineX = 0;
+        CGFloat underLineY = self.xy_height;
+        CGFloat underLineW = self.allBtn.titleLabel.xy_width;
+        CGFloat underLineH = 2;
+        underLine.frame = CGRectMake(underLineX, underLineY, underLineW, underLineH);
         underLine.backgroundColor = [UIColor redColor];
         [self addSubview:underLine];
         _underLine = underLine;
@@ -56,7 +63,7 @@
         make.leading.equalTo(self);
         make.top.equalTo(self);
         make.bottom.equalTo(self);
-        make.width.equalTo(@((XYSCREEN_W / 5)));
+        make.width.equalTo(@((XYSCREEN_W - 45 * XYWidthRatio) / 5));
     }];
     
     [videoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,36 +92,35 @@
         make.leading.equalTo(picBtn.mas_trailing);
         make.top.equalTo(self);
         make.bottom.equalTo(self);
-        make.trailing.equalTo(self);
         make.width.equalTo(allBtn.mas_width);
     }];
     
     // 强制更新一次
     [self layoutIfNeeded];
     // 默认选中最热
-    [self click:allBtn];
+    [self titleButtonClick:allBtn];
     
 }
 
 - (XYTitleButton *)createBtn:(NSString *)title tag:(XYNavType)tag
 {
     XYTitleButton *btn = [XYTitleButton buttonWithType:UIButtonTypeCustom];
-    btn.titleLabel.font = [UIFont systemFontOfSize:17];
+    btn.titleLabel.font = XYFont(17);
     [btn setTitle:title forState:UIControlStateNormal];
     btn.tag = tag;
-    [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
 
 // 点击事件
-- (void)click:(XYTitleButton *)btn
+- (void)titleButtonClick:(XYTitleButton *)btn
 {
     self.selectedBtn.selected = NO;
     btn.selected = YES;
     self.selectedBtn = btn;
     
     [UIView animateWithDuration:0.25 animations:^{
-        self.underLine.xy_x = btn.xy_x - DefaultMargin * 0.5;
+        self.underLine.xy_x = btn.xy_x + ((btn.xy_width - btn.titleLabel.xy_width) * 0.5);
     }];
     
     if (self.selectedBlock) {

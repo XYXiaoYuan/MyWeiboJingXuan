@@ -36,12 +36,12 @@
     
     // 设置顶部选择视图
     XYNavSelectedView *selectedView = [[XYNavSelectedView alloc] initWithFrame:self.navigationController.navigationBar.bounds];
-    selectedView.xy_x = 45;
-    selectedView.xy_width = XYSCREEN_W - 45 * 2;
+    selectedView.xy_x = 45 * XYWidthRatio;
+    selectedView.xy_width = XYSCREEN_W - selectedView.xy_x;
     [selectedView setSelectedBlock:^(XYNavType type) {
         [self.scrollView setContentOffset:CGPointMake(type * XYSCREEN_W, 0) animated:YES];
     }];
-    [self.navigationController.navigationBar addSubview:selectedView];
+    self.navigationItem.titleView = selectedView;
     _selectedView = selectedView;
 }
 
