@@ -7,6 +7,7 @@
 //
 
 #import "XYCommentViewController.h"
+#import "XYCommentTool.h"
 #import "XYRefreshNormalHeader.h"
 #import "XYRefreshAutoFooter.h"
 #import <MJExtension.h>
@@ -114,84 +115,84 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)loadNewComments
 {
     //取消任务,防止下拉加载和上拉刷新同时进行
-//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-//    
-//    // 参数
-//    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-//    param[@"a"] = @"dataList";
-//    param[@"c"] = @"comment";
-//    param[@"data_id"] = self.topic.ID;
-//    param[@"hot"] = @1; // @"1"
-//    
-//    XYWeakSelf
-//    // 发送请求
-//    [self.manager GET:XYRequestURL parameters:param success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        // 发送成功
-//        // 没有任何评论数据
-//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-//            // 让刷新控件结束刷新
-//            [weakSelf.tableView.mj_header endRefreshing];
-//            return;
-//        }
-//        
-//        // 字典数据 -> 模型数组
-//        weakSelf.latestComments = [XYComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-//        weakSelf.hotestComments = [XYComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-//        
-//        // 刷新数据
-//        [weakSelf.tableView reloadData];
-//        
-//        // 结束刷新
-//        [weakSelf.tableView.mj_header endRefreshing];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        // 结束刷新
-//        [weakSelf.tableView.mj_header endRefreshing];
-//    }];
-}
+    [XYCommentTool cancel];
+    
+    // 参数
+    XYCommentParam *param = [[XYCommentParam alloc] init];
+    param.a = @"dataList";
+    param.c = @"comment";
+    param.data_id = self.topic.ID;
+    param.hot = 1; // @"1"
+    
+    XYWeakSelf
+    // 发送请求
+    [XYCommentTool commentWithParam:param success:^(NSDictionary *result) {
+        // 发送成功
+        // 没有任何评论数据
+        if (![result isKindOfClass:[NSDictionary class]]) {
+            // 让刷新控件结束刷新
+            [weakSelf.tableView.mj_header endRefreshing];
+            return;
+        }
+        
+        // 字典数据 -> 模型数组
+        weakSelf.latestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
+        weakSelf.hotestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"hot"]];
+        
+        // 刷新数据
+        [weakSelf.tableView reloadData];
+        
+        // 结束刷新
+        [weakSelf.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        // 结束刷新
+        [weakSelf.tableView.mj_header endRefreshing];
+    }];
+    }
 
 - (void)loadMoreComments
 {
-//    //取消任务
-//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-//    
-//    // 参数
-//    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-//    param[@"a"] = @"dataList";
-//    param[@"c"] = @"comment";
-//    param[@"data_id"] = self.topic.ID;
-//    param[@"lastcid"] = self.latestComments.lastObject.ID;
-//    
-//    
-//    XYWeakSelf
-//    // 发送请求
-//    [self.manager GET:XYRequestURL parameters:param success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-//        // 不再有评论数据了
-//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-//            [weakSelf.tableView.mj_footer endRefreshing];
-//            return;
-//        }
-//        
-//        // 字典数据 -> 模型数组
-//        NSArray<XYComment *> *moreComments = [XYComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-//        [self.latestComments addObjectsFromArray:moreComments];
-//        
-//        // 刷新数据
-//        [weakSelf.tableView reloadData];
-//        
-//        
-//        int total = [responseObject[@"total"] intValue];;
-//        if (weakSelf.latestComments.count == total) { // 提示用户:没有更多数据了
-//            weakSelf.tableView.mj_footer.hidden = YES;
-//        } else { // 还没有加载完全
-//            // 结束刷新
-//            [weakSelf.tableView.mj_footer endRefreshing];
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        // 结束刷新
-//        [weakSelf.tableView.mj_footer endRefreshing];
-//    }];
+    //取消任务
+    [XYCommentTool cancel];
 
+    
+    // 参数
+    XYCommentParam *param = [[XYCommentParam alloc] init];
+    param.a = @"dataList";
+    param.c = @"comment";
+    param.data_id = self.topic.ID;
+    param.lastcid = self.latestComments.lastObject.ID;
+    
+    
+    XYWeakSelf
+    // 发送请求
+    [XYCommentTool commentWithParam:param success:^(NSDictionary *result) {
+        // 不再有评论数据了
+        if (![result isKindOfClass:[NSDictionary class]]) {
+            [weakSelf.tableView.mj_footer endRefreshing];
+            return;
+        }
+        
+        // 字典数据 -> 模型数组
+        NSArray<XYCommentItem *> *moreComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
+        [self.latestComments addObjectsFromArray:moreComments];
+        
+        // 刷新数据
+        [weakSelf.tableView reloadData];
+        
+        
+        int total = [result[@"total"] intValue];;
+        if (weakSelf.latestComments.count == total) { // 提示用户:没有更多数据了
+            weakSelf.tableView.mj_footer.hidden = YES;
+        } else { // 还没有加载完全
+            // 结束刷新
+            [weakSelf.tableView.mj_footer endRefreshing];
+        }
+
+    } failure:^(NSError *error) {
+        // 结束刷新
+        [weakSelf.tableView.mj_footer endRefreshing];
+    }];
 }
 
 

@@ -55,6 +55,8 @@
 		1CA5C24F1D6AEA0D00236253 /* XYEssenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */; };
 		1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */; };
 		1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */; };
+		1CA5C25E1D6B151000236253 /* XYCommentParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C25D1D6B151000236253 /* XYCommentParam.m */; };
+		1CA5C2621D6B158600236253 /* XYCommentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2611D6B158600236253 /* XYCommentTool.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -179,6 +181,10 @@
 		1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceParam.m; sourceTree = "<group>"; };
 		1CA5C2591D6B13BC00236253 /* XYModelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYModelConfig.h; sourceTree = "<group>"; };
 		1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYModelConfig.m; sourceTree = "<group>"; };
+		1CA5C25C1D6B151000236253 /* XYCommentParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentParam.h; sourceTree = "<group>"; };
+		1CA5C25D1D6B151000236253 /* XYCommentParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentParam.m; sourceTree = "<group>"; };
+		1CA5C2601D6B158600236253 /* XYCommentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentTool.h; sourceTree = "<group>"; };
+		1CA5C2611D6B158600236253 /* XYCommentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentTool.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,6 +301,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1CA5C25F1D6B157300236253 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1CA5C2601D6B158600236253 /* XYCommentTool.h */,
+				1CA5C2611D6B158600236253 /* XYCommentTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		1CD395C61D6A97DB001CA85D = {
@@ -490,6 +505,7 @@
 		1CD396151D6A9AC0001CA85D /* Comment(评论) */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C25F1D6B157300236253 /* Tool */,
 				1CD396161D6A9AC0001CA85D /* Controller */,
 				1CD396171D6A9AC0001CA85D /* Model */,
 				1CD396181D6A9AC0001CA85D /* View */,
@@ -510,6 +526,8 @@
 		1CD396171D6A9AC0001CA85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1CA5C25C1D6B151000236253 /* XYCommentParam.h */,
+				1CA5C25D1D6B151000236253 /* XYCommentParam.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -932,7 +950,9 @@
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
 				1CA5C24A1D6AE9A600236253 /* XYCommentCell.m in Sources */,
 				1CA5C2021D6AD00600236253 /* XYHttpTool.m in Sources */,
+				1CA5C2621D6B158600236253 /* XYCommentTool.m in Sources */,
 				1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */,
+				1CA5C25E1D6B151000236253 /* XYCommentParam.m in Sources */,
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
