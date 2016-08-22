@@ -36,8 +36,7 @@
     [self setTitle:@"下拉可以刷新" forState:MJRefreshStateIdle];
     [self setTitle:@"松开立即刷新" forState:MJRefreshStatePulling];
     [self setTitle:@"正在刷新..." forState:MJRefreshStateRefreshing];
-    
-    
+
 }
 
 @end
