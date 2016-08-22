@@ -18,5 +18,6 @@
 @property(nonatomic,assign) CGFloat xy_centerY;
 
 + (instancetype)viewFromXib;
-
+#pragma mark - 插入view
+- (BOOL)intersectWithView:(UIView *)view;
 @end

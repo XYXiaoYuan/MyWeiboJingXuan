@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */; };
 		1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C21D6AA7C800236253 /* XYConst.m */; };
 		1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */; };
 		1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */; };
@@ -91,6 +92,8 @@
 
 /* Begin PBXFileReference section */
 		09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyWeiboJingXuan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C16BE921D6B527500F528A8 /* XYScrollToTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYScrollToTopWindow.h; sourceTree = "<group>"; };
+		1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYScrollToTopWindow.m; sourceTree = "<group>"; };
 		1CA5C1C01D6AA79A00236253 /* MacroFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFunc.h; sourceTree = "<group>"; };
 		1CA5C1C11D6AA7C800236253 /* XYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYConst.h; sourceTree = "<group>"; };
 		1CA5C1C21D6AA7C800236253 /* XYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYConst.m; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 			children = (
 				1CF7D5A71D6AA5B6006212D3 /* XYTabBar.h */,
 				1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */,
+				1C16BE921D6B527500F528A8 /* XYScrollToTopWindow.h */,
+				1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -977,6 +982,7 @@
 				1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */,
 				1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */,
 				1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */,
+				1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,
 				1CA5C1FA1D6ACF6200236253 /* XYTagParam.m in Sources */,
 				1CA5C1FE1D6ACF9400236253 /* XYTagCell.m in Sources */,

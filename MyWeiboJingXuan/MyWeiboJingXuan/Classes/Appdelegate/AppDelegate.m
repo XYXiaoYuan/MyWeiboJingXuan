@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XYTabBarController.h"
+#import "XYScrollToTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,9 @@
     
     // 3.显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 4.添加点击状态栏回到顶部功能
+    [XYScrollToTopWindow show];
     
     return YES;
 
