@@ -12,6 +12,14 @@
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
 		1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD396081D6A9AC0001CA85D /* AppDelegate.m */; };
 		1CD3962A1D6A9AC0001CA85D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3960F1D6A9AC0001CA85D /* main.m */; };
+		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
+		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
+		1CF7D59D1D6AA55B006212D3 /* XYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59C1D6AA55B006212D3 /* XYEssenceViewController.m */; };
+		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
+		1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5A21D6AA58E006212D3 /* XYFriendTrednsViewController.m */; };
+		1CF7D5A61D6AA5A0006212D3 /* XYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5A51D6AA5A0006212D3 /* XYMineViewController.m */; };
+		1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */; };
+		1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */; };
 		8869953BE5B68E7D5A6F2194 /* libPods-MyWeiboJingXuan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +54,23 @@
 		1CD396071D6A9AC0001CA85D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CD396081D6A9AC0001CA85D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1CD3960F1D6A9AC0001CA85D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
+		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
+		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
+		1CF7D5981D6AA542006212D3 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		1CF7D59B1D6AA55B006212D3 /* XYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceViewController.h; sourceTree = "<group>"; };
+		1CF7D59C1D6AA55B006212D3 /* XYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceViewController.m; sourceTree = "<group>"; };
+		1CF7D59E1D6AA57A006212D3 /* XYNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNewViewController.h; sourceTree = "<group>"; };
+		1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewViewController.m; sourceTree = "<group>"; };
+		1CF7D5A11D6AA58E006212D3 /* XYFriendTrednsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFriendTrednsViewController.h; sourceTree = "<group>"; };
+		1CF7D5A21D6AA58E006212D3 /* XYFriendTrednsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFriendTrednsViewController.m; sourceTree = "<group>"; };
+		1CF7D5A41D6AA5A0006212D3 /* XYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMineViewController.h; sourceTree = "<group>"; };
+		1CF7D5A51D6AA5A0006212D3 /* XYMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMineViewController.m; sourceTree = "<group>"; };
+		1CF7D5A71D6AA5B6006212D3 /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
+		1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBar.m; sourceTree = "<group>"; };
+		1CF7D5AA1D6AA611006212D3 /* UIView+XYFrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYFrameExtension.h"; sourceTree = "<group>"; };
+		1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYFrameExtension.m"; sourceTree = "<group>"; };
+		1CF7D5AD1D6AA634006212D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4A708664E684576AA6816641 /* Pods-MyWeiboJingXuan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.release.xcconfig"; sourceTree = "<group>"; };
 		FF1CBAE2FC1719DF957EE960 /* Pods-MyWeiboJingXuan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +184,8 @@
 		1CD396091D6A9AC0001CA85D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D5AA1D6AA611006212D3 /* UIView+XYFrameExtension.h */,
+				1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -182,6 +209,10 @@
 		1CD3960C1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D5951D6AA542006212D3 /* XYTabBarController.h */,
+				1CF7D5961D6AA542006212D3 /* XYTabBarController.m */,
+				1CF7D5971D6AA542006212D3 /* XYNavigationController.h */,
+				1CF7D5981D6AA542006212D3 /* XYNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +220,8 @@
 		1CD3960D1D6A9AC0001CA85D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D5A71D6AA5B6006212D3 /* XYTabBar.h */,
+				1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				1CD3960F1D6A9AC0001CA85D /* main.m */,
+				1CF7D5AD1D6AA634006212D3 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -289,6 +323,8 @@
 		1CD3961A1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D59B1D6AA55B006212D3 /* XYEssenceViewController.h */,
+				1CF7D59C1D6AA55B006212D3 /* XYEssenceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +356,8 @@
 		1CD3961E1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D5A11D6AA58E006212D3 /* XYFriendTrednsViewController.h */,
+				1CF7D5A21D6AA58E006212D3 /* XYFriendTrednsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,6 +389,8 @@
 		1CD396221D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D5A41D6AA5A0006212D3 /* XYMineViewController.h */,
+				1CF7D5A51D6AA5A0006212D3 /* XYMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -382,6 +422,8 @@
 		1CD396261D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CF7D59E1D6AA57A006212D3 /* XYNewViewController.h */,
+				1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -482,6 +524,7 @@
 		1CD395C71D6A97DB001CA85D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XY;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = bruceyuan;
 				TargetAttributes = {
@@ -597,8 +640,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,
+				1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */,
+				1CF7D5A61D6AA5A0006212D3 /* XYMineViewController.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
+				1CF7D59D1D6AA55B006212D3 /* XYEssenceViewController.m in Sources */,
+				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
+				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
+				1CF7D5A31D6AA58E006212D3 /* XYFriendTrednsViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
+				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +775,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = MyWeiboJingXuan/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeiboJingXuan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -741,6 +793,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = MyWeiboJingXuan/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeiboJingXuan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  MyWeiboJingXuan
+//
+//  Created by 袁小荣 on 16/8/22.
+//  Copyright © 2016年 bruceyuan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 系统的头文件
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+/**********************   这是OC文件 ******************************/
+#ifdef __OBJC__
+
+// 导入我的头文件
+#import "UIView+XYFrameExtension.h"
+
+
+
+#endif
+/**********************   这是OC文件 ******************************/
+
+#endif /* PrefixHeader_pch */
