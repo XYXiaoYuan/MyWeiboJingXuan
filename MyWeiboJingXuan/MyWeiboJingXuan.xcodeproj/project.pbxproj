@@ -54,6 +54,7 @@
 		1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */; };
 		1CA5C24F1D6AEA0D00236253 /* XYEssenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */; };
 		1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */; };
+		1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -176,6 +177,8 @@
 		1CA5C24E1D6AEA0D00236253 /* XYEssenceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceTool.m; sourceTree = "<group>"; };
 		1CA5C2501D6AEA8000236253 /* XYEssenceParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceParam.h; sourceTree = "<group>"; };
 		1CA5C2511D6AEA8000236253 /* XYEssenceParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceParam.m; sourceTree = "<group>"; };
+		1CA5C2591D6B13BC00236253 /* XYModelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYModelConfig.h; sourceTree = "<group>"; };
+		1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYModelConfig.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -355,8 +358,8 @@
 		1CD396051D6A9AC0001CA85D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5C1F41D6ACF2C00236253 /* HttpTool */,
 				1CD396101D6A9AC0001CA85D /* Section */,
+				1CA5C1F41D6ACF2C00236253 /* HttpTool */,
 				1CD396061D6A9AC0001CA85D /* Appdelegate */,
 				1CD396091D6A9AC0001CA85D /* Category */,
 				1CD3960B1D6A9AC0001CA85D /* Main */,
@@ -433,6 +436,8 @@
 				1CA5C1C01D6AA79A00236253 /* MacroFunc.h */,
 				1CA5C1C11D6AA7C800236253 /* XYConst.h */,
 				1CA5C1C21D6AA7C800236253 /* XYConst.m */,
+				1CA5C2591D6B13BC00236253 /* XYModelConfig.h */,
+				1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -950,6 +955,7 @@
 				1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */,
 				1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */,
 				1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */,
+				1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */,
 				1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,
 				1CA5C1FA1D6ACF6200236253 /* XYTagParam.m in Sources */,
