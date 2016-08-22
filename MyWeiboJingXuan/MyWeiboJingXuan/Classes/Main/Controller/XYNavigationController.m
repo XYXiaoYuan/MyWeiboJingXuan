@@ -18,8 +18,7 @@
     [super viewDidLoad];
     
     // 设置导航条的背景图片
-//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"friendsTrend_login_click"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     
     // 设置侧滑手势的代理
     self.interactivePopGestureRecognizer.delegate = self;
