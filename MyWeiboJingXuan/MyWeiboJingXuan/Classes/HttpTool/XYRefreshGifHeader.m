@@ -6,9 +6,9 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import "XYRefreshNormalHeader.h"
+#import "XYRefreshGifHeader.h"
 
-@implementation XYRefreshNormalHeader
+@implementation XYRefreshGifHeader
 
 - (void)prepare
 {

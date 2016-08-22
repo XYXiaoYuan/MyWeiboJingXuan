@@ -9,7 +9,7 @@
 
 #import "XYTopicViewController.h"
 #import "XYRefreshAutoFooter.h"
-#import "XYRefreshNormalHeader.h"
+#import "XYRefreshGifHeader.h"
 #import "XYEssenceTool.h"
 #import <MJExtension.h>
 #import "XYTopicItem.h"

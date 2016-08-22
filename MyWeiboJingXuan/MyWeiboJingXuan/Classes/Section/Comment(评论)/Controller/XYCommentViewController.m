@@ -8,7 +8,7 @@
 
 #import "XYCommentViewController.h"
 #import "XYCommentTool.h"
-#import "XYRefreshNormalHeader.h"
+#import "XYRefreshGifHeader.h"
 #import "XYRefreshAutoFooter.h"
 #import <MJExtension.h>
 #import "XYCommentSectionHeader.h"

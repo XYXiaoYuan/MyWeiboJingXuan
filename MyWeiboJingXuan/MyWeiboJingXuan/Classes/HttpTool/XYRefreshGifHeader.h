@@ -8,6 +8,6 @@
 
 #import <MJRefresh/MJRefresh.h>
 
-@interface XYRefreshNormalHeader : MJRefreshGifHeader
+@interface XYRefreshGifHeader : MJRefreshGifHeader
 
 @end

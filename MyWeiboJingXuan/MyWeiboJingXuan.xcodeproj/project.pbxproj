@@ -46,7 +46,7 @@
 		1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2331D6AE94100236253 /* XYSeeBigPictureViewController.m */; };
 		1CA5C2361D6AE94100236253 /* XYSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2341D6AE94100236253 /* XYSeeBigPictureViewController.xib */; };
 		1CA5C2391D6AE94B00236253 /* XYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2381D6AE94B00236253 /* XYTopicViewController.m */; };
-		1CA5C23E1D6AE97C00236253 /* XYRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */; };
+		1CA5C23E1D6AE97C00236253 /* XYRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C23B1D6AE97C00236253 /* XYRefreshGifHeader.m */; };
 		1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */; };
 		1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2411D6AE99E00236253 /* XYCommentViewController.m */; };
 		1CA5C2441D6AE99E00236253 /* XYCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2421D6AE99E00236253 /* XYCommentViewController.xib */; };
@@ -166,8 +166,8 @@
 		1CA5C2341D6AE94100236253 /* XYSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		1CA5C2371D6AE94B00236253 /* XYTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTopicViewController.h; sourceTree = "<group>"; };
 		1CA5C2381D6AE94B00236253 /* XYTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTopicViewController.m; sourceTree = "<group>"; };
-		1CA5C23A1D6AE97C00236253 /* XYRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRefreshNormalHeader.h; sourceTree = "<group>"; };
-		1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRefreshNormalHeader.m; sourceTree = "<group>"; };
+		1CA5C23A1D6AE97C00236253 /* XYRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRefreshGifHeader.h; sourceTree = "<group>"; };
+		1CA5C23B1D6AE97C00236253 /* XYRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRefreshGifHeader.m; sourceTree = "<group>"; };
 		1CA5C23C1D6AE97C00236253 /* XYRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRefreshAutoFooter.h; sourceTree = "<group>"; };
 		1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRefreshAutoFooter.m; sourceTree = "<group>"; };
 		1CA5C2401D6AE99E00236253 /* XYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentViewController.h; sourceTree = "<group>"; };
@@ -248,8 +248,8 @@
 		1CA5C1F41D6ACF2C00236253 /* HttpTool */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5C23A1D6AE97C00236253 /* XYRefreshNormalHeader.h */,
-				1CA5C23B1D6AE97C00236253 /* XYRefreshNormalHeader.m */,
+				1CA5C23A1D6AE97C00236253 /* XYRefreshGifHeader.h */,
+				1CA5C23B1D6AE97C00236253 /* XYRefreshGifHeader.m */,
 				1CA5C23C1D6AE97C00236253 /* XYRefreshAutoFooter.h */,
 				1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */,
 				1CA5C2001D6AD00600236253 /* XYHttpTool.h */,
@@ -944,7 +944,7 @@
 				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,
 				1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */,
 				1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */,
-				1CA5C23E1D6AE97C00236253 /* XYRefreshNormalHeader.m in Sources */,
+				1CA5C23E1D6AE97C00236253 /* XYRefreshGifHeader.m in Sources */,
 				1CF7D5A61D6AA5A0006212D3 /* XYMineViewController.m in Sources */,
 				1CA5C2231D6AE92100236253 /* XYTopicPictureView.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
