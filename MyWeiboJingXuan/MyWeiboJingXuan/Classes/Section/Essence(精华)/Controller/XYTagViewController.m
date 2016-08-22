@@ -7,92 +7,107 @@
 //
 
 #import "XYTagViewController.h"
+#import "XYTagTool.h"
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
+#import "XYTagItem.h"
+#import "XYTagCell.h"
 
 @interface XYTagViewController ()
-
+/** tag模型数组 */
+@property(nonatomic,strong) NSMutableArray<XYTagItem *> *tags;
 @end
 
 @implementation XYTagViewController
+// 重用标识
+static NSString * const XYTagCellId = @"tag";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 设置nav
+    [self setupNav];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    // 设置table
+    [self seupTable];
     
-    // Configure the cell...
+    // 加载tags
+    [self loadTags];
+}
+
+// 设置table
+- (void)seupTable
+{
+    // 设置tableView的背景颜色为统一的灰色
+    self.view.backgroundColor = XYCommonBgColor;
+    
+    // 设置行高
+    self.tableView.rowHeight = 70;
+    
+    // 去掉系统自带的分隔线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 注册xib
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTagCell class]) bundle:nil] forCellReuseIdentifier:XYTagCellId];
+}
+
+- (void)loadTags
+{
+    // 显示加载的圈圈
+    [SVProgressHUD show];
+    
+    // 加载标签数据
+    XYTagParam *param = [[XYTagParam alloc] init];
+    param.a = @"tag_recommend";
+    param.action = @"sub";
+    param.c = @"topic";
+    
+    XYWeakSelf;
+    [XYTagTool tagWithParam:param success:^(XYTagItem *result) {
+        // 成功
+        // 字典数据 -> 模型数据
+        XYLog(@"%@",result);
+        weakSelf.tags = [XYTagItem mj_objectArrayWithKeyValuesArray:result];
+        
+        // 刷新数据
+        [weakSelf.tableView reloadData];
+        
+        // 移除弹框
+        [SVProgressHUD dismiss];
+    } failure:^(NSError *error) {
+        // 失败
+        if (error.code == NSURLErrorCancelled) {
+            return ;
+        } else if (error.code == NSURLErrorTimedOut){
+            [SVProgressHUD showErrorWithStatus:@"超时"];
+        } else{
+            [SVProgressHUD showErrorWithStatus:@"正在加载中,请稍候"];
+        }
+
+    }];
+}
+
+- (void)setupNav
+{
+    self.navigationItem.title = @"标签订阅";
+    
+    self.view.backgroundColor = XYCommonBgColor;
+}
+
+#pragma mark - <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tags.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XYTagCell *cell = [tableView dequeueReusableCellWithIdentifier:XYTagCellId];
+    
+    cell.tagModel = self.tags[indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
