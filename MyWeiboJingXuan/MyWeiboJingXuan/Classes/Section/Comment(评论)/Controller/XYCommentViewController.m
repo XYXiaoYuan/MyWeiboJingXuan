@@ -136,6 +136,9 @@ static NSString * const XYCommentCellHeaderId = @"header";
         weakSelf.latestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
         weakSelf.hotestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"hot"]];
         
+        // 记录下就算没有下拉,也有多少条总评论数
+        self.total = [result[@"total"] intValue];
+        
         // 刷新数据
         [weakSelf.tableView reloadData];
         
@@ -175,7 +178,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
         [self.latestComments addObjectsFromArray:moreComments];
         
         // 记录下拉到最后加载到的总最新评论条数
-        self.total = [result[@"total"] intValue];;
+        self.total = [result[@"total"] intValue];
         
         // 刷新数据
         [weakSelf.tableView reloadData];
