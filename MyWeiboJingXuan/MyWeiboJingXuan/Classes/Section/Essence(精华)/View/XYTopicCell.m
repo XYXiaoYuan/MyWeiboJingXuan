@@ -158,7 +158,7 @@
 - (void)setButton:(UIButton *)button number:(NSInteger)number placeholder:(NSString *)placeholder
 {
     if (number >= 10000) {
-        [button setTitle:[NSString stringWithFormat:@"%.1f",number / 10000.0] forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"%.1f万",number / 10000.0] forState:UIControlStateNormal];
     }else if (number > 0){
         [button setTitle:[NSString stringWithFormat:@"%zd",number] forState:UIControlStateNormal];
     }else{
