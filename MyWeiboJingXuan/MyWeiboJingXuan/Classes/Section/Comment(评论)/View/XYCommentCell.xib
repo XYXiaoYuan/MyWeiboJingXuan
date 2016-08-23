@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -44,17 +44,17 @@
                         <state key="normal" image="commentLikeButton"/>
                         <state key="highlighted" image="commentLikeButtonClick"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-tc-0ak" userLabel="点赞数量">
-                        <rect key="frame" x="280" y="40" width="40" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-tc-0ak" userLabel="点赞数量">
+                        <rect key="frame" x="275" y="40" width="40" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Mg5-Kv-9Go"/>
+                            <constraint firstAttribute="width" constant="40" id="V9s-kg-sKp"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMY-dc-USZ" userLabel="文字评论">
-                        <rect key="frame" x="53" y="35" width="222" height="39"/>
+                        <rect key="frame" x="53" y="35" width="212" height="39"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Yf7-DX-tUw"/>
                         </constraints>
@@ -79,18 +79,18 @@
                 <constraints>
                     <constraint firstItem="wlT-cv-FEU" firstAttribute="leading" secondItem="BMY-dc-USZ" secondAttribute="leading" id="1pL-hy-ABW"/>
                     <constraint firstItem="Y2I-jp-UwL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="21A-ae-Cho"/>
-                    <constraint firstItem="dhh-tc-0ak" firstAttribute="top" secondItem="53V-Fk-Cbu" secondAttribute="bottom" id="7ef-QU-Tb7"/>
+                    <constraint firstItem="dhh-tc-0ak" firstAttribute="centerX" secondItem="53V-Fk-Cbu" secondAttribute="centerX" id="3Sn-mR-VBC"/>
                     <constraint firstItem="66R-7l-7yr" firstAttribute="top" secondItem="w7D-CX-Pd1" secondAttribute="top" id="Cao-kf-QZW"/>
                     <constraint firstItem="wlT-cv-FEU" firstAttribute="top" secondItem="BMY-dc-USZ" secondAttribute="top" id="KTR-Cl-OGc"/>
                     <constraint firstItem="BMY-dc-USZ" firstAttribute="leading" secondItem="Y2I-jp-UwL" secondAttribute="trailing" constant="8" id="Sme-La-JO6"/>
                     <constraint firstItem="53V-Fk-Cbu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WqZ-Sc-P50"/>
+                    <constraint firstItem="dhh-tc-0ak" firstAttribute="top" secondItem="53V-Fk-Cbu" secondAttribute="bottom" id="Yf2-Eq-g7D"/>
                     <constraint firstItem="BMY-dc-USZ" firstAttribute="top" secondItem="66R-7l-7yr" secondAttribute="bottom" constant="5" id="Ynz-im-wyD"/>
                     <constraint firstItem="w7D-CX-Pd1" firstAttribute="leading" secondItem="Y2I-jp-UwL" secondAttribute="trailing" id="bl2-Oa-Q00"/>
+                    <constraint firstItem="BMY-dc-USZ" firstAttribute="trailing" secondItem="dhh-tc-0ak" secondAttribute="leading" constant="-10" id="eBW-fM-pcu"/>
                     <constraint firstItem="66R-7l-7yr" firstAttribute="bottom" secondItem="w7D-CX-Pd1" secondAttribute="bottom" id="eM8-5Y-Ovj"/>
-                    <constraint firstItem="dhh-tc-0ak" firstAttribute="leading" secondItem="BMY-dc-USZ" secondAttribute="trailing" constant="5" id="fS9-4W-CgX"/>
                     <constraint firstItem="w7D-CX-Pd1" firstAttribute="top" secondItem="Y2I-jp-UwL" secondAttribute="top" id="g8T-Gm-Kte"/>
                     <constraint firstAttribute="bottomMargin" secondItem="BMY-dc-USZ" secondAttribute="bottom" constant="10" id="geC-dZ-KLT"/>
-                    <constraint firstItem="dhh-tc-0ak" firstAttribute="leading" secondItem="53V-Fk-Cbu" secondAttribute="leading" id="lP5-2R-8R9"/>
                     <constraint firstAttribute="trailing" secondItem="53V-Fk-Cbu" secondAttribute="trailing" constant="10" id="lwf-QX-aGN"/>
                     <constraint firstItem="66R-7l-7yr" firstAttribute="leading" secondItem="w7D-CX-Pd1" secondAttribute="trailing" id="mmp-tJ-Ewi"/>
                     <constraint firstItem="Y2I-jp-UwL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rrr-fh-lSi"/>
