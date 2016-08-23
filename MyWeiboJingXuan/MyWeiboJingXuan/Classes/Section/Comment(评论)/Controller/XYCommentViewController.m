@@ -260,6 +260,8 @@ static NSString * const XYCommentCellHeaderId = @"header";
         // 最新评论
         cell.comment = self.latestComments[indexPath.row];
     }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
