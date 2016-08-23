@@ -49,7 +49,12 @@
     // 设置背景图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.middle_image]];
     // 设置播放量
-    self.playcountLabel.text = [NSString stringWithFormat:@"%zd次播放",topic.playcount];
+    if (topic.playcount >= 10000) {
+        self.playcountLabel.text = [NSString stringWithFormat:@"%.2f万次播放",topic.playcount / 10000.0];
+
+    } else {
+        self.playcountLabel.text = [NSString stringWithFormat:@"%zd次播放",topic.playcount];
+    }
     
     NSInteger minute = topic.voicetime / 60;
     NSInteger second = topic.voicetime % 60;

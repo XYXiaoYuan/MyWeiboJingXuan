@@ -26,23 +26,11 @@
                         <action selector="playBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tdr-1g-9Vu"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-sM-Wgu" userLabel="时长">
-                    <rect key="frame" x="0.0" y="211" width="80" height="16"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="16" id="0sg-BN-ROn"/>
-                        <constraint firstAttribute="width" constant="80" id="nz9-yf-ogJ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-LD-aam" userLabel="播放量">
-                    <rect key="frame" x="335" y="211" width="40" height="16"/>
+                    <rect key="frame" x="0.0" y="211" width="33" height="16"/>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="Tnc-KJ-fz8"/>
-                        <constraint firstAttribute="height" constant="16" id="aSg-Yy-vOZ"/>
+                        <constraint firstAttribute="height" constant="16" id="Lgx-3M-jUL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,21 +42,32 @@
                         <constraint firstAttribute="height" constant="25" id="UJz-Ru-QTf"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-sM-Wgu" userLabel="时长">
+                    <rect key="frame" x="335" y="211" width="40" height="16"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="dUc-TC-tkY"/>
+                        <constraint firstAttribute="height" constant="16" id="x3L-HK-JHo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="K52-55-jG8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2aR-ek-4rE"/>
+                <constraint firstItem="IMx-LD-aam" firstAttribute="leading" secondItem="E8f-s2-2sq" secondAttribute="leading" id="3AU-uM-CPN"/>
                 <constraint firstAttribute="trailing" secondItem="E8f-s2-2sq" secondAttribute="trailing" id="7wX-9i-nmP"/>
                 <constraint firstItem="5q3-xg-vUU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KGk-Yi-Qm3"/>
                 <constraint firstItem="K52-55-jG8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="OKY-Bt-Qlm"/>
                 <constraint firstItem="E8f-s2-2sq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OQO-7j-ZP7"/>
+                <constraint firstItem="e9J-sM-Wgu" firstAttribute="bottom" secondItem="E8f-s2-2sq" secondAttribute="bottom" id="QSZ-2g-o4t"/>
+                <constraint firstItem="IMx-LD-aam" firstAttribute="bottom" secondItem="E8f-s2-2sq" secondAttribute="bottom" id="Tl7-Jf-WOV"/>
                 <constraint firstAttribute="bottom" secondItem="5q3-xg-vUU" secondAttribute="bottom" id="XHn-wI-6eh"/>
-                <constraint firstItem="IMx-LD-aam" firstAttribute="trailing" secondItem="E8f-s2-2sq" secondAttribute="trailing" id="eYf-x0-VKI"/>
-                <constraint firstItem="e9J-sM-Wgu" firstAttribute="bottom" secondItem="E8f-s2-2sq" secondAttribute="bottom" id="iyz-lM-nZ6"/>
-                <constraint firstItem="e9J-sM-Wgu" firstAttribute="leading" secondItem="E8f-s2-2sq" secondAttribute="leading" id="mCA-ye-bbx"/>
                 <constraint firstAttribute="bottom" secondItem="E8f-s2-2sq" secondAttribute="bottom" constant="13" id="mKL-mg-Aey"/>
-                <constraint firstItem="IMx-LD-aam" firstAttribute="bottom" secondItem="E8f-s2-2sq" secondAttribute="bottom" id="rxi-TJ-SP9"/>
                 <constraint firstItem="E8f-s2-2sq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vJZ-Wg-SRi"/>
+                <constraint firstItem="e9J-sM-Wgu" firstAttribute="trailing" secondItem="E8f-s2-2sq" secondAttribute="trailing" id="w8V-Xp-Lcu"/>
                 <constraint firstAttribute="trailing" secondItem="K52-55-jG8" secondAttribute="trailing" id="yX7-7k-jx7"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
