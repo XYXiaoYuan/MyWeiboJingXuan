@@ -47,6 +47,10 @@
     seeBig.topic = self.topic;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBig animated:YES completion:nil];
 }
+- (IBAction)seeBigPictureBtnClick
+{
+    [self seeBig];
+}
 
 - (void)setTopic:(XYTopicItem *)topic
 {
