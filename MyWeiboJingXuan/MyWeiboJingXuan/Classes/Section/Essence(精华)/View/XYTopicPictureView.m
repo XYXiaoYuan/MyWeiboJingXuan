@@ -62,6 +62,20 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         // 下载完图片,移除进度条
         self.progressView.hidden = YES;
+        
+        // 处理超长图片的大小
+        if (topic.isBigPicture) {
+            CGFloat imageW = topic.contentF.size.width;
+            CGFloat imageH = imageW * topic.height / topic.width;
+            
+            // 开启上下文
+            UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
+            // 绘制图片到上下文中
+            [self.imageView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
+            self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+            // 关闭上下文
+            UIGraphicsEndImageContext();
+        }
     }];
     
     // 是否显示gif
