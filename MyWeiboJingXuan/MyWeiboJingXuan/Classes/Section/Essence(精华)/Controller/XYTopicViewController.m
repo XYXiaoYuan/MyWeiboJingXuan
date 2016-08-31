@@ -16,7 +16,7 @@
 #import "XYTopicCell.h"
 #import "XYNewViewController.h"
 #import "XYCommentViewController.h"
-// 测试一下
+
 @interface XYTopicViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 /** maxtime : 用来加载下一页数据 */
