@@ -1159,6 +1159,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MyWeiboJingXuan/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeiboJingXuan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1177,6 +1178,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MyWeiboJingXuan/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = MyWeiboJingXuan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
