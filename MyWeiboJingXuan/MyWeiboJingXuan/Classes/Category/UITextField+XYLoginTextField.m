@@ -8,7 +8,7 @@
 
 #import "UITextField+XYLoginTextField.h"
 
-#define XYPlaceholderColorKey @"placeholderColorKey"
+#define XYPlaceholderColorKey @"_placeholderLabel.textColor"
 
 @implementation UITextField (XYLoginTextField)
 

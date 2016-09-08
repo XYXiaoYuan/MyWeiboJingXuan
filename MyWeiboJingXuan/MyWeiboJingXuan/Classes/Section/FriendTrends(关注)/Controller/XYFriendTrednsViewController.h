@@ -1,13 +1,13 @@
 //
 //  XYFriendTrednsViewController.h
-//  MyWeiboJingXuan
+//  bai
 //
-//  Created by 袁小荣 on 16/8/22.
-//  Copyright © 2016年 bruceyuan. All rights reserved.
+//  Created by yuan on 15/11/9.
+//  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface XYFriendTrednsViewController : UITableViewController
+@interface XYFriendTrednsViewController : UIViewController
 
 @end
