@@ -40,6 +40,7 @@
 - (void)recommendClick
 {
     XYRecommendViewController *recommendVc = [[XYRecommendViewController alloc] init];
+    recommendVc.navigationItem.title = @"推荐关注";
     [self.navigationController pushViewController:recommendVc animated:YES];
 }
 

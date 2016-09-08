@@ -7,6 +7,8 @@
 //
 
 #import "XYRecommendViewController.h"
+#import "XYRecommendCategoryTool.h"
+#import "XYRecommendUserTool.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import "XYRecommendCategoryCell.h"
@@ -22,31 +24,18 @@
 @interface XYRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 /** 左边的类别数据 */
 @property (nonatomic, strong) NSArray *categories;
-
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 右边的用户表格 */
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
-
 /** 请求参数 */
-@property (nonatomic, strong) NSMutableDictionary *params;
-
-/** AFN请求管理者 */
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) XYRecommendUserParam *params;
 @end
 
 @implementation XYRecommendViewController
 
 static NSString * const XYCategoryId = @"category";
 static NSString * const XYUserId = @"user";
-
-- (AFHTTPSessionManager *)manager
-{
-    if (!_manager) {
-        _manager = [AFHTTPSessionManager manager];
-    }
-    return _manager;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,15 +59,15 @@ static NSString * const XYUserId = @"user";
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
     // 发送请求
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"category";
-    params[@"c"] = @"subscribe";
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    XYRecommendCategoryParam *params = [[XYRecommendCategoryParam alloc] init];
+    params.a = @"category";
+    params.c = @"subscribe";
+    [XYRecommendCategoryTool recommendCategoryWithParam:params success:^(NSDictionary *result) {
         // 隐藏指示器
         [SVProgressHUD dismiss];
         
         // 服务器返回的JSON数据
-        self.categories = [XYRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        self.categories = [XYRecommendCategory mj_objectArrayWithKeyValuesArray:result[@"list"]];
         
         // 刷新表格
         [self.categoryTableView reloadData];
@@ -88,7 +77,7 @@ static NSString * const XYUserId = @"user";
         
         // 让用户表格进入下拉刷新状态
         [self.userTableView.mj_header beginRefreshing];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } failure:^(NSError *error) {
         // 显示失败信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
@@ -108,9 +97,6 @@ static NSString * const XYUserId = @"user";
     self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.userTableView.contentInset = self.categoryTableView.contentInset;
     self.userTableView.rowHeight = 70;
-    
-    // 设置标题
-    self.title = @"推荐关注";
 }
 
 /**
@@ -127,22 +113,22 @@ static NSString * const XYUserId = @"user";
 - (void)loadNewUsers
 {
     XYRecommendCategory *rc = XYSelectedCategory;
-    
+
     // 设置当前页码为1
     rc.currentPage = 1;
     
     // 请求参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(rc.ID);
-    params[@"page"] = @(rc.currentPage);
+    XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
+    params.a = @"list";
+    params.c = @"subscribe";
+    params.category_id = rc.ID;
+    params.page = rc.currentPage;
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [XYRecommendUserTool recommendUserWithParam:params success:^(NSDictionary *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result[@"list"]];
         
         // 清除所有旧数据
         [rc.users removeAllObjects];
@@ -151,7 +137,7 @@ static NSString * const XYUserId = @"user";
         [rc.users addObjectsFromArray:users];
         
         // 保存总数
-        rc.total = [responseObject[@"total"] integerValue];
+        rc.total = [result[@"total"] integerValue];
         
         // 不是最后一次请求
         if (self.params != params) return;
@@ -164,7 +150,7 @@ static NSString * const XYUserId = @"user";
         
         // 让底部控件结束刷新
         [self checkFooterState];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    } failure:^(NSError *error) {
         if (self.params != params) return;
         
         // 提醒
@@ -179,17 +165,17 @@ static NSString * const XYUserId = @"user";
 {
     XYRecommendCategory *category = XYSelectedCategory;
 
-    // 发送请求给服务器, 加载右侧的数据
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(category.ID);
-    params[@"page"] = @(++category.currentPage);
+    XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
+    params.a = @"list";
+    params.c = @"subscribe";
+    params.category_id = category.ID;
+    params.page = ++category.currentPage;
     self.params = params;
     
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    // 发送请求给服务器, 加载右侧的数据
+    [XYRecommendUserTool recommendUserWithParam:params success:^(NSDictionary *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result[@"list"]];
         
         // 添加到当前类别对应的用户数组中
         [category.users addObjectsFromArray:users];
@@ -202,9 +188,7 @@ static NSString * const XYUserId = @"user";
         
         // 让底部控件结束刷新
         [self checkFooterState];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (self.params != params) return;
-        
+    } failure:^(NSError *error) {
         // 提醒
         [SVProgressHUD showErrorWithStatus:@"加载用户数据失败"];
         
@@ -281,6 +265,6 @@ static NSString * const XYUserId = @"user";
 - (void)dealloc
 {
     // 停止所有操作
-    [self.manager.operationQueue cancelAllOperations];
+    [XYRecommendUserTool invalidateSessionCancelingTasks];
 }
 @end

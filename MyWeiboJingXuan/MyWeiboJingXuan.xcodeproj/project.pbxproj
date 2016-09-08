@@ -88,6 +88,10 @@
 		1CDBD5361D81A1A100E09B7B /* XYEssenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5331D81A1A100E09B7B /* XYEssenceTool.m */; };
 		1CDBD5371D81A1A100E09B7B /* XYTagTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5351D81A1A100E09B7B /* XYTagTool.m */; };
 		1CDBD53B1D81A1B200E09B7B /* XYCommentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */; };
+		1CDBD53F1D81A48500E09B7B /* XYRecommendUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD53E1D81A48500E09B7B /* XYRecommendUserTool.m */; };
+		1CDBD5421D81A4D200E09B7B /* XYRecommendCategoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5411D81A4D200E09B7B /* XYRecommendCategoryTool.m */; };
+		1CDBD5451D81A4F400E09B7B /* XYRecommendCategoryParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5441D81A4F400E09B7B /* XYRecommendCategoryParam.m */; };
+		1CDBD5481D81A6D800E09B7B /* XYRecommendUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5471D81A6D800E09B7B /* XYRecommendUserParam.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -264,6 +268,14 @@
 		1CDBD5351D81A1A100E09B7B /* XYTagTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagTool.m; sourceTree = "<group>"; };
 		1CDBD5391D81A1B200E09B7B /* XYCommentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommentTool.h; sourceTree = "<group>"; };
 		1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentTool.m; sourceTree = "<group>"; };
+		1CDBD53D1D81A48500E09B7B /* XYRecommendUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUserTool.h; sourceTree = "<group>"; };
+		1CDBD53E1D81A48500E09B7B /* XYRecommendUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUserTool.m; sourceTree = "<group>"; };
+		1CDBD5401D81A4D200E09B7B /* XYRecommendCategoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendCategoryTool.h; sourceTree = "<group>"; };
+		1CDBD5411D81A4D200E09B7B /* XYRecommendCategoryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendCategoryTool.m; sourceTree = "<group>"; };
+		1CDBD5431D81A4F400E09B7B /* XYRecommendCategoryParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendCategoryParam.h; sourceTree = "<group>"; };
+		1CDBD5441D81A4F400E09B7B /* XYRecommendCategoryParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendCategoryParam.m; sourceTree = "<group>"; };
+		1CDBD5461D81A6D800E09B7B /* XYRecommendUserParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUserParam.h; sourceTree = "<group>"; };
+		1CDBD5471D81A6D800E09B7B /* XYRecommendUserParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUserParam.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -691,6 +703,7 @@
 		1CD3961D1D6A9AC0001CA85D /* FriendTrends(关注) */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD53C1D81A45100E09B7B /* APITool */,
 				1CD3961E1D6A9AC0001CA85D /* Controller */,
 				1CD3961F1D6A9AC0001CA85D /* Model */,
 				1CD396201D6A9AC0001CA85D /* View */,
@@ -701,15 +714,15 @@
 		1CD3961E1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */,
+				1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */,
+				1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */,
 				1CDBD5021D8184D900E09B7B /* XYFriendTrednsViewController.h */,
 				1CDBD5031D8184D900E09B7B /* XYFriendTrednsViewController.m */,
 				1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */,
 				1CDBD5051D8184D900E09B7B /* XYLoginRegisterViewController.h */,
 				1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */,
 				1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */,
-				1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */,
-				1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */,
-				1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -721,6 +734,10 @@
 				1CDBD52C1D818BD700E09B7B /* XYRecommendCategory.m */,
 				1CDBD52D1D818BD700E09B7B /* XYRecommendUser.h */,
 				1CDBD52E1D818BD700E09B7B /* XYRecommendUser.m */,
+				1CDBD5431D81A4F400E09B7B /* XYRecommendCategoryParam.h */,
+				1CDBD5441D81A4F400E09B7B /* XYRecommendCategoryParam.m */,
+				1CDBD5461D81A6D800E09B7B /* XYRecommendUserParam.h */,
+				1CDBD5471D81A6D800E09B7B /* XYRecommendUserParam.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -824,6 +841,17 @@
 			children = (
 				1CDBD5391D81A1B200E09B7B /* XYCommentTool.h */,
 				1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */,
+			);
+			path = APITool;
+			sourceTree = "<group>";
+		};
+		1CDBD53C1D81A45100E09B7B /* APITool */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD5401D81A4D200E09B7B /* XYRecommendCategoryTool.h */,
+				1CDBD5411D81A4D200E09B7B /* XYRecommendCategoryTool.m */,
+				1CDBD53D1D81A48500E09B7B /* XYRecommendUserTool.h */,
+				1CDBD53E1D81A48500E09B7B /* XYRecommendUserTool.m */,
 			);
 			path = APITool;
 			sourceTree = "<group>";
@@ -1047,6 +1075,7 @@
 				1C763C111D6B64B800CEF1E8 /* KRVideoPlayerController.m in Sources */,
 				1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */,
 				1CA5C2301D6AE92D00236253 /* XYCommentItem.m in Sources */,
+				1CDBD5481D81A6D800E09B7B /* XYRecommendUserParam.m in Sources */,
 				1C763C1D1D6B6B7E00CEF1E8 /* NSString+XFTime.m in Sources */,
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
 				1CA5C2051D6AD05E00236253 /* XYBaseTool.m in Sources */,
@@ -1072,6 +1101,7 @@
 				1CA5C25E1D6B151000236253 /* XYCommentParam.m in Sources */,
 				1CDBD52F1D818BD700E09B7B /* XYRecommendCategory.m in Sources */,
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
+				1CDBD5421D81A4D200E09B7B /* XYRecommendCategoryTool.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
 				1C763C131D6B64B800CEF1E8 /* XFVociePlayerController.m in Sources */,
 				1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */,
@@ -1090,6 +1120,7 @@
 				1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */,
 				1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */,
 				1CDBD5151D8184E300E09B7B /* XYLoginButton.m in Sources */,
+				1CDBD53F1D81A48500E09B7B /* XYRecommendUserTool.m in Sources */,
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
@@ -1109,6 +1140,7 @@
 				1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,
 				1CA5C1FA1D6ACF6200236253 /* XYTagParam.m in Sources */,
+				1CDBD5451D81A4F400E09B7B /* XYRecommendCategoryParam.m in Sources */,
 				1CA5C1FE1D6ACF9400236253 /* XYTagCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
