@@ -227,7 +227,7 @@ static NSString * const XYUserId = @"user";
     
     // 让底部控件结束刷新
     if (rc.users.count == rc.total) { // 全部数据已经加载完毕
-        [self.userTableView.mj_footer resetNoMoreData];
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
     } else { // 还没有加载完毕
         [self.userTableView.mj_footer endRefreshing];
     }
