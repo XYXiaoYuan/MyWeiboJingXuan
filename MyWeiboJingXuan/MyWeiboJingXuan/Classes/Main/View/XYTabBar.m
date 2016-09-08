@@ -7,7 +7,7 @@
 //
 
 #import "XYTabBar.h"
-
+#import "XYPublishViewController.h"
 
 
 @interface XYTabBar ()
@@ -34,6 +34,9 @@
         
         // 设置按钮高亮状态下的图片
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        
+        // 给按钮添加点击事件
+        [publishBtn addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         
         // 设置按钮的图片尺寸大小自适应
         [publishBtn sizeToFit];
@@ -85,6 +88,13 @@
         
     }
     
+}
+
+#pragma mark - 中间tabBar的点击事件处理
+- (void)publishClick
+{
+    XYPublishViewController *publish = [[XYPublishViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
 }
 
 

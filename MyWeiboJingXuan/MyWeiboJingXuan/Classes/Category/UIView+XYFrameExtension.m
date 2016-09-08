@@ -98,5 +98,16 @@
     return self.center.y;
 }
 
+- (void)setXy_size:(CGSize)xy_size
+{
+    CGRect frame = self.frame;
+    frame.size = xy_size;
+    self.frame = frame;
+}
+
+- (CGSize)xy_size
+{
+    return self.frame.size;
+}
 
 @end

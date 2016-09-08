@@ -16,6 +16,8 @@
 @property (nonatomic, assign) CGFloat xy_y;
 @property(nonatomic,assign) CGFloat xy_centerX;
 @property(nonatomic,assign) CGFloat xy_centerY;
+@property (nonatomic, assign) CGSize xy_size;
+
 
 + (instancetype)viewFromXib;
 #pragma mark - 插入view

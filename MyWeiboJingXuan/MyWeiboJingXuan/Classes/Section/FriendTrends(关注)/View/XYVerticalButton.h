@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYLoginButton : UIButton
+@interface XYVerticalButton : UIButton
 
 @end

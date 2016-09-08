@@ -10,5 +10,6 @@ pod "SVProgressHUD"
 pod "DACircularProgress"
 pod "Masonry"
 pod "FMDB"
+pod "pop"
 
 end

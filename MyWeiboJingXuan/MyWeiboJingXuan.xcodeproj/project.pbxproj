@@ -75,7 +75,7 @@
 		1CDBD50C1D8184D900E09B7B /* XYFriendTrednsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */; };
 		1CDBD50D1D8184D900E09B7B /* XYLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */; };
 		1CDBD50E1D8184D900E09B7B /* XYLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */; };
-		1CDBD5151D8184E300E09B7B /* XYLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5121D8184E300E09B7B /* XYLoginButton.m */; };
+		1CDBD5151D8184E300E09B7B /* XYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */; };
 		1CDBD5161D8184E300E09B7B /* XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */; };
 		1CDBD51F1D818B6800E09B7B /* XYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */; };
 		1CDBD5201D818B6800E09B7B /* XYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */; };
@@ -100,6 +100,16 @@
 		1CDBD55B1D81BA4900E09B7B /* XYMineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5561D81BA4900E09B7B /* XYMineViewController.storyboard */; };
 		1CDBD55C1D81BA4900E09B7B /* XYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5581D81BA4900E09B7B /* XYWebViewController.m */; };
 		1CDBD55D1D81BA4900E09B7B /* XYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5591D81BA4900E09B7B /* XYWebViewController.xib */; };
+		1CDBD5681D81C0F900E09B7B /* XYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5621D81C0F900E09B7B /* XYPublishViewController.m */; };
+		1CDBD5691D81C0F900E09B7B /* XYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5631D81C0F900E09B7B /* XYPublishViewController.xib */; };
+		1CDBD56A1D81C0F900E09B7B /* XYPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5651D81C0F900E09B7B /* XYPostWordViewController.m */; };
+		1CDBD56B1D81C0F900E09B7B /* XYAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5671D81C0F900E09B7B /* XYAddTagViewController.m */; };
+		1CDBD5751D81C10300E09B7B /* XYPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD56D1D81C10300E09B7B /* XYPlaceholderTextView.m */; };
+		1CDBD5761D81C10300E09B7B /* XYAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD56F1D81C10300E09B7B /* XYAddTagToolbar.m */; };
+		1CDBD5771D81C10300E09B7B /* XYAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5701D81C10300E09B7B /* XYAddTagToolbar.xib */; };
+		1CDBD5781D81C10300E09B7B /* XYTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5721D81C10300E09B7B /* XYTagButton.m */; };
+		1CDBD5791D81C10300E09B7B /* XYTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5741D81C10300E09B7B /* XYTagTextField.m */; };
+		1CDBD57D1D81C39A00E09B7B /* XYLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD57C1D81C39A00E09B7B /* XYLoginTool.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -252,8 +262,8 @@
 		1CDBD5051D8184D900E09B7B /* XYLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginRegisterViewController.h; sourceTree = "<group>"; };
 		1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginRegisterViewController.m; sourceTree = "<group>"; };
 		1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLoginRegisterViewController.xib; sourceTree = "<group>"; };
-		1CDBD5111D8184E300E09B7B /* XYLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginButton.h; sourceTree = "<group>"; };
-		1CDBD5121D8184E300E09B7B /* XYLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginButton.m; sourceTree = "<group>"; };
+		1CDBD5111D8184E300E09B7B /* XYVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYVerticalButton.h; sourceTree = "<group>"; };
+		1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYVerticalButton.m; sourceTree = "<group>"; };
 		1CDBD5131D8184E300E09B7B /* XYLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginTextField.h; sourceTree = "<group>"; };
 		1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginTextField.m; sourceTree = "<group>"; };
 		1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendViewController.h; sourceTree = "<group>"; };
@@ -296,6 +306,24 @@
 		1CDBD5571D81BA4900E09B7B /* XYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWebViewController.h; sourceTree = "<group>"; };
 		1CDBD5581D81BA4900E09B7B /* XYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWebViewController.m; sourceTree = "<group>"; };
 		1CDBD5591D81BA4900E09B7B /* XYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYWebViewController.xib; sourceTree = "<group>"; };
+		1CDBD5611D81C0F900E09B7B /* XYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPublishViewController.h; sourceTree = "<group>"; };
+		1CDBD5621D81C0F900E09B7B /* XYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPublishViewController.m; sourceTree = "<group>"; };
+		1CDBD5631D81C0F900E09B7B /* XYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPublishViewController.xib; sourceTree = "<group>"; };
+		1CDBD5641D81C0F900E09B7B /* XYPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPostWordViewController.h; sourceTree = "<group>"; };
+		1CDBD5651D81C0F900E09B7B /* XYPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPostWordViewController.m; sourceTree = "<group>"; };
+		1CDBD5661D81C0F900E09B7B /* XYAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAddTagViewController.h; sourceTree = "<group>"; };
+		1CDBD5671D81C0F900E09B7B /* XYAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAddTagViewController.m; sourceTree = "<group>"; };
+		1CDBD56C1D81C10300E09B7B /* XYPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPlaceholderTextView.h; sourceTree = "<group>"; };
+		1CDBD56D1D81C10300E09B7B /* XYPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPlaceholderTextView.m; sourceTree = "<group>"; };
+		1CDBD56E1D81C10300E09B7B /* XYAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAddTagToolbar.h; sourceTree = "<group>"; };
+		1CDBD56F1D81C10300E09B7B /* XYAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAddTagToolbar.m; sourceTree = "<group>"; };
+		1CDBD5701D81C10300E09B7B /* XYAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYAddTagToolbar.xib; sourceTree = "<group>"; };
+		1CDBD5711D81C10300E09B7B /* XYTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagButton.h; sourceTree = "<group>"; };
+		1CDBD5721D81C10300E09B7B /* XYTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagButton.m; sourceTree = "<group>"; };
+		1CDBD5731D81C10300E09B7B /* XYTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagTextField.h; sourceTree = "<group>"; };
+		1CDBD5741D81C10300E09B7B /* XYTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagTextField.m; sourceTree = "<group>"; };
+		1CDBD57B1D81C39A00E09B7B /* XYLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginTool.h; sourceTree = "<group>"; };
+		1CDBD57C1D81C39A00E09B7B /* XYLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginTool.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -566,6 +594,7 @@
 				1CD396251D6A9AC0001CA85D /* New(新帖) */,
 				1CD3961D1D6A9AC0001CA85D /* FriendTrends(关注) */,
 				1CD396211D6A9AC0001CA85D /* Mine(我的) */,
+				1CDBD55E1D81C0E600E09B7B /* Publish(发布) */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -771,8 +800,8 @@
 				1CDBD5241D818BA900E09B7B /* XYRecommendUserCell.h */,
 				1CDBD5251D818BA900E09B7B /* XYRecommendUserCell.m */,
 				1CDBD5261D818BA900E09B7B /* XYRecommendUserCell.xib */,
-				1CDBD5111D8184E300E09B7B /* XYLoginButton.h */,
-				1CDBD5121D8184E300E09B7B /* XYLoginButton.m */,
+				1CDBD5111D8184E300E09B7B /* XYVerticalButton.h */,
+				1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */,
 				1CDBD5131D8184E300E09B7B /* XYLoginTextField.h */,
 				1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */,
 			);
@@ -867,6 +896,55 @@
 				1CDBD53E1D81A48500E09B7B /* XYRecommendUserTool.m */,
 			);
 			path = APITool;
+			sourceTree = "<group>";
+		};
+		1CDBD55E1D81C0E600E09B7B /* Publish(发布) */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD57A1D81C39200E09B7B /* Tool */,
+				1CDBD55F1D81C0E600E09B7B /* Controller */,
+				1CDBD5601D81C0E600E09B7B /* View */,
+			);
+			path = "Publish(发布)";
+			sourceTree = "<group>";
+		};
+		1CDBD55F1D81C0E600E09B7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD5611D81C0F900E09B7B /* XYPublishViewController.h */,
+				1CDBD5621D81C0F900E09B7B /* XYPublishViewController.m */,
+				1CDBD5631D81C0F900E09B7B /* XYPublishViewController.xib */,
+				1CDBD5641D81C0F900E09B7B /* XYPostWordViewController.h */,
+				1CDBD5651D81C0F900E09B7B /* XYPostWordViewController.m */,
+				1CDBD5661D81C0F900E09B7B /* XYAddTagViewController.h */,
+				1CDBD5671D81C0F900E09B7B /* XYAddTagViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1CDBD5601D81C0E600E09B7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD56C1D81C10300E09B7B /* XYPlaceholderTextView.h */,
+				1CDBD56D1D81C10300E09B7B /* XYPlaceholderTextView.m */,
+				1CDBD56E1D81C10300E09B7B /* XYAddTagToolbar.h */,
+				1CDBD56F1D81C10300E09B7B /* XYAddTagToolbar.m */,
+				1CDBD5701D81C10300E09B7B /* XYAddTagToolbar.xib */,
+				1CDBD5711D81C10300E09B7B /* XYTagButton.h */,
+				1CDBD5721D81C10300E09B7B /* XYTagButton.m */,
+				1CDBD5731D81C10300E09B7B /* XYTagTextField.h */,
+				1CDBD5741D81C10300E09B7B /* XYTagTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CDBD57A1D81C39200E09B7B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD57B1D81C39A00E09B7B /* XYLoginTool.h */,
+				1CDBD57C1D81C39A00E09B7B /* XYLoginTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		805832CF4FFC47D25E1A1080 /* Pods */ = {
@@ -1008,6 +1086,7 @@
 				1CDBD5281D818BA900E09B7B /* XYRecommendCategoryCell.xib in Resources */,
 				1C763C141D6B64B800CEF1E8 /* XFVociePlayerController.xib in Resources */,
 				1CDBD55D1D81BA4900E09B7B /* XYWebViewController.xib in Resources */,
+				1CDBD5691D81C0F900E09B7B /* XYPublishViewController.xib in Resources */,
 				1CDBD50C1D8184D900E09B7B /* XYFriendTrednsViewController.xib in Resources */,
 				1CDBD50E1D8184D900E09B7B /* XYLoginRegisterViewController.xib in Resources */,
 				1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */,
@@ -1016,6 +1095,7 @@
 				1CDBD4FE1D8178FF00E09B7B /* XYAdViewController.xib in Resources */,
 				1CDBD52A1D818BA900E09B7B /* XYRecommendUserCell.xib in Resources */,
 				1CA5C2441D6AE99E00236253 /* XYCommentViewController.xib in Resources */,
+				1CDBD5771D81C10300E09B7B /* XYAddTagToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,6 +1171,7 @@
 				1C763C111D6B64B800CEF1E8 /* KRVideoPlayerController.m in Sources */,
 				1CA5C23F1D6AE97C00236253 /* XYRefreshAutoFooter.m in Sources */,
 				1CA5C2301D6AE92D00236253 /* XYCommentItem.m in Sources */,
+				1CDBD5761D81C10300E09B7B /* XYAddTagToolbar.m in Sources */,
 				1CDBD5481D81A6D800E09B7B /* XYRecommendUserParam.m in Sources */,
 				1C763C1D1D6B6B7E00CEF1E8 /* NSString+XFTime.m in Sources */,
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
@@ -1104,6 +1185,7 @@
 				1CA5C23E1D6AE97C00236253 /* XYRefreshGifHeader.m in Sources */,
 				1CA5C2231D6AE92100236253 /* XYTopicPictureView.m in Sources */,
 				1CDBD54F1D81BA3000E09B7B /* XYSquareCell.m in Sources */,
+				1CDBD5751D81C10300E09B7B /* XYPlaceholderTextView.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
 				1CA5C2131D6AD80700236253 /* XYBaseTableViewController.m in Sources */,
 				1CDBD4FD1D8178FF00E09B7B /* XYAdViewController.m in Sources */,
@@ -1111,6 +1193,7 @@
 				1CA5C2391D6AE94B00236253 /* XYTopicViewController.m in Sources */,
 				1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */,
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
+				1CDBD56A1D81C0F900E09B7B /* XYPostWordViewController.m in Sources */,
 				1CDBD5291D818BA900E09B7B /* XYRecommendUserCell.m in Sources */,
 				1CA5C24A1D6AE9A600236253 /* XYCommentCell.m in Sources */,
 				1CA5C2021D6AD00600236253 /* XYHttpTool.m in Sources */,
@@ -1127,6 +1210,7 @@
 				1CDBD5271D818BA900E09B7B /* XYRecommendCategoryCell.m in Sources */,
 				1CDBD51F1D818B6800E09B7B /* XYRecommendViewController.m in Sources */,
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
+				1CDBD5681D81C0F900E09B7B /* XYPublishViewController.m in Sources */,
 				1CA5C2251D6AE92100236253 /* XYTopicVideoView.m in Sources */,
 				1CA5C1F71D6ACF5A00236253 /* XYTagItem.m in Sources */,
 				1CDBD5161D8184E300E09B7B /* XYLoginTextField.m in Sources */,
@@ -1137,14 +1221,16 @@
 				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
 				1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */,
 				1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */,
-				1CDBD5151D8184E300E09B7B /* XYLoginButton.m in Sources */,
+				1CDBD5151D8184E300E09B7B /* XYVerticalButton.m in Sources */,
 				1CDBD55C1D81BA4900E09B7B /* XYWebViewController.m in Sources */,
 				1CDBD53F1D81A48500E09B7B /* XYRecommendUserTool.m in Sources */,
+				1CDBD5791D81C10300E09B7B /* XYTagTextField.m in Sources */,
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
 				1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */,
+				1CDBD5781D81C10300E09B7B /* XYTagButton.m in Sources */,
 				1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */,
 				1CA5C2311D6AE92D00236253 /* XYTopicItem.m in Sources */,
 				1CA5C22F1D6AE92D00236253 /* XYUserItem.m in Sources */,
@@ -1155,6 +1241,8 @@
 				1CDBD53B1D81A1B200E09B7B /* XYCommentTool.m in Sources */,
 				1CDBD50D1D8184D900E09B7B /* XYLoginRegisterViewController.m in Sources */,
 				1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */,
+				1CDBD56B1D81C0F900E09B7B /* XYAddTagViewController.m in Sources */,
+				1CDBD57D1D81C39A00E09B7B /* XYLoginTool.m in Sources */,
 				1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */,
 				1CDBD5361D81A1A100E09B7B /* XYEssenceTool.m in Sources */,
 				1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */,

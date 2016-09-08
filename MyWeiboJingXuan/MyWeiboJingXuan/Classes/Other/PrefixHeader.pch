@@ -30,6 +30,8 @@
 // 导入Masonry
 #import <Masonry.h>
 
+#define XYTagBg XYRGBColor(74, 139, 209)
+#define XYTagFont [UIFont systemFontOfSize:14]
 
 #endif
 /**********************   这是OC文件 ******************************/

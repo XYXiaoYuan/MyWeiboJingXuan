@@ -6,9 +6,9 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import "XYLoginButton.h"
+#import "XYVerticalButton.h"
 
-@implementation XYLoginButton
+@implementation XYVerticalButton
 
 // 通过xib/storyboard创建的控件初始化的时候就会调用这个方法
 - (void)awakeFromNib
