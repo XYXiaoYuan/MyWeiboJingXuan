@@ -10,4 +10,14 @@
 
 @implementation XYRecommendCategoryParam
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.a = @"category";
+        self.c = @"subscribe";
+    }
+    return self;
+}
+
 @end

@@ -1,5 +1,5 @@
 //
-//  XYCategoryParam.h
+//  XYBaseParam.m
 //  MyWeiboJingXuan
 //
 //  Created by 袁小荣 on 16/9/8.
@@ -8,6 +8,6 @@
 
 #import "XYBaseParam.h"
 
-@interface XYRecommendCategoryParam : XYBaseParam
+@implementation XYBaseParam
 
 @end

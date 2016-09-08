@@ -10,4 +10,12 @@
 
 @implementation XYEssenceParam
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.c = @"data";
+    }
+    return self;
+}
+
 @end

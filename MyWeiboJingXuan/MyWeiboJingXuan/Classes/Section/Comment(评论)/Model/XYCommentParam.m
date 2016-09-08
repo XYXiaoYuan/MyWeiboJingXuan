@@ -10,4 +10,13 @@
 
 @implementation XYCommentParam
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.a = @"dataList";
+        self.c = @"comment";
+    }
+    return self;
+}
+
 @end

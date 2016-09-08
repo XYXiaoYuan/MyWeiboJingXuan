@@ -6,15 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "XYBaseParam.h"
 
-@interface XYEssenceParam : NSObject
-/** a */
-@property(nonatomic,strong) NSString *a;
-/** c */
-@property(nonatomic,strong) NSString *c;
+@interface XYEssenceParam : XYBaseParam
 /** type */
-@property(nonatomic,assign) NSUInteger type;
+@property(nonatomic,assign) NSInteger type;
 /** maxtime */
 @property(nonatomic,copy) NSString *maxtime;
 @end

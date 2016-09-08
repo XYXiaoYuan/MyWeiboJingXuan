@@ -7,9 +7,9 @@
 //
 
 #import "XYTagViewController.h"
-#import "XYTagTool.h"
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
+#import "XYTagTool.h"
 #import "XYTagItem.h"
 #import "XYTagCell.h"
 
@@ -53,9 +53,7 @@ static NSString * const XYTagCellId = @"tag";
     
     // 加载标签数据
     XYTagParam *param = [[XYTagParam alloc] init];
-    param.a = @"tag_recommend";
     param.action = @"sub";
-    param.c = @"topic";
     
     XYWeakSelf;
     [XYTagTool tagWithParam:param success:^(XYTagItem *result) {

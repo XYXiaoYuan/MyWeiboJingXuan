@@ -10,4 +10,13 @@
 
 @implementation XYTagParam
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.a = @"tag_recommend";
+        self.c = @"topic";
+    }
+    return self;
+}
+
 @end

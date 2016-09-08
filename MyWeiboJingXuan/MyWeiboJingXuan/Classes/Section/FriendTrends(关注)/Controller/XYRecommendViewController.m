@@ -59,8 +59,6 @@ static NSString * const XYUserId = @"user";
     
     // 发送请求
     XYRecommendCategoryParam *params = [[XYRecommendCategoryParam alloc] init];
-    params.a = @"category";
-    params.c = @"subscribe";
     [XYRecommendCategoryTool recommendCategoryWithParam:params success:^(NSDictionary *result) {
         // 隐藏指示器
         [SVProgressHUD dismiss];
@@ -118,8 +116,6 @@ static NSString * const XYUserId = @"user";
     
     // 请求参数
     XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
-    params.a = @"list";
-    params.c = @"subscribe";
     params.category_id = rc.ID;
     params.page = rc.currentPage;
     self.params = params;
@@ -165,8 +161,6 @@ static NSString * const XYUserId = @"user";
     XYRecommendCategory *category = XYSelectedCategory;
 
     XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
-    params.a = @"list";
-    params.c = @"subscribe";
     params.category_id = category.ID;
     params.page = ++category.currentPage;
     self.params = params;

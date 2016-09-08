@@ -92,6 +92,7 @@
 		1CDBD5421D81A4D200E09B7B /* XYRecommendCategoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5411D81A4D200E09B7B /* XYRecommendCategoryTool.m */; };
 		1CDBD5451D81A4F400E09B7B /* XYRecommendCategoryParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5441D81A4F400E09B7B /* XYRecommendCategoryParam.m */; };
 		1CDBD5481D81A6D800E09B7B /* XYRecommendUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5471D81A6D800E09B7B /* XYRecommendUserParam.m */; };
+		1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD54A1D81AE7A00E09B7B /* XYBaseParam.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -276,6 +277,8 @@
 		1CDBD5441D81A4F400E09B7B /* XYRecommendCategoryParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendCategoryParam.m; sourceTree = "<group>"; };
 		1CDBD5461D81A6D800E09B7B /* XYRecommendUserParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUserParam.h; sourceTree = "<group>"; };
 		1CDBD5471D81A6D800E09B7B /* XYRecommendUserParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUserParam.m; sourceTree = "<group>"; };
+		1CDBD5491D81AE7A00E09B7B /* XYBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseParam.h; sourceTree = "<group>"; };
+		1CDBD54A1D81AE7A00E09B7B /* XYBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseParam.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				1CA5C2011D6AD00600236253 /* XYHttpTool.m */,
 				1CA5C2031D6AD05E00236253 /* XYBaseTool.h */,
 				1CA5C2041D6AD05E00236253 /* XYBaseTool.m */,
+				1CDBD5491D81AE7A00E09B7B /* XYBaseParam.h */,
+				1CDBD54A1D81AE7A00E09B7B /* XYBaseParam.m */,
 			);
 			path = HttpTool;
 			sourceTree = "<group>";
@@ -796,8 +801,6 @@
 			isa = PBXGroup;
 			children = (
 				1CD396261D6A9AC0001CA85D /* Controller */,
-				1CD396271D6A9AC0001CA85D /* Model */,
-				1CD396281D6A9AC0001CA85D /* View */,
 			);
 			path = "New(新帖)";
 			sourceTree = "<group>";
@@ -809,20 +812,6 @@
 				1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1CD396271D6A9AC0001CA85D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1CD396281D6A9AC0001CA85D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1CDBD5311D81A1A100E09B7B /* APITool */ = {
@@ -1125,6 +1114,7 @@
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
+				1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */,
 				1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */,
 				1CA5C2311D6AE92D00236253 /* XYTopicItem.m in Sources */,
 				1CA5C22F1D6AE92D00236253 /* XYUserItem.m in Sources */,

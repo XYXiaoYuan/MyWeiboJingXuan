@@ -10,4 +10,14 @@
 
 @implementation XYRecommendUserParam
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.a = @"list";
+        self.c = @"subscribe";
+    }
+    return self;
+}
+
 @end

@@ -6,13 +6,9 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "XYBaseParam.h"
 
-@interface XYTagParam : NSObject
-/** a */
-@property(nonatomic,copy) NSString *a;
+@interface XYTagParam : XYBaseParam
 /** action */
 @property(nonatomic,copy) NSString *action;
-/** c */
-@property(nonatomic,copy) NSString *c;
 @end

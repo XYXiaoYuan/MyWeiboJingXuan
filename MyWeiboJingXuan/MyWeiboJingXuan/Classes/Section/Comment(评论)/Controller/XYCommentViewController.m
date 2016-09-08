@@ -116,8 +116,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
     // 参数
     XYCommentParam *param = [[XYCommentParam alloc] init];
-    param.a = @"dataList";
-    param.c = @"comment";
     param.data_id = self.topic.ID;
     param.hot = 1; // @"1"
     
@@ -158,8 +156,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
     // 参数
     XYCommentParam *param = [[XYCommentParam alloc] init];
-    param.a = @"dataList";
-    param.c = @"comment";
     param.data_id = self.topic.ID;
     param.lastcid = self.latestComments.lastObject.ID;
     

@@ -6,13 +6,9 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "XYBaseParam.h"
 
-@interface XYCommentParam : NSObject
-/** a */
-@property(nonatomic,strong) NSString *a;
-/** c */
-@property(nonatomic,strong) NSString *c;
+@interface XYCommentParam : XYBaseParam
 /** data_id */
 @property(nonatomic,strong) NSString *data_id;
 /** lastcid */
