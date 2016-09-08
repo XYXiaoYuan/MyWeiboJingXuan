@@ -75,7 +75,6 @@
 		1CDBD50C1D8184D900E09B7B /* XYFriendTrednsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */; };
 		1CDBD50D1D8184D900E09B7B /* XYLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */; };
 		1CDBD50E1D8184D900E09B7B /* XYLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */; };
-		1CDBD5151D8184E300E09B7B /* XYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */; };
 		1CDBD5161D8184E300E09B7B /* XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */; };
 		1CDBD51F1D818B6800E09B7B /* XYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */; };
 		1CDBD5201D818B6800E09B7B /* XYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */; };
@@ -110,6 +109,8 @@
 		1CDBD5781D81C10300E09B7B /* XYTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5721D81C10300E09B7B /* XYTagButton.m */; };
 		1CDBD5791D81C10300E09B7B /* XYTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5741D81C10300E09B7B /* XYTagTextField.m */; };
 		1CDBD57D1D81C39A00E09B7B /* XYLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD57C1D81C39A00E09B7B /* XYLoginTool.m */; };
+		1CDBD5801D81CF7800E09B7B /* XYLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD57F1D81CF7800E09B7B /* XYLoginButton.m */; };
+		1CDBD5831D81CFAD00E09B7B /* XYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5821D81CFAD00E09B7B /* XYVerticalButton.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -262,8 +263,6 @@
 		1CDBD5051D8184D900E09B7B /* XYLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginRegisterViewController.h; sourceTree = "<group>"; };
 		1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginRegisterViewController.m; sourceTree = "<group>"; };
 		1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLoginRegisterViewController.xib; sourceTree = "<group>"; };
-		1CDBD5111D8184E300E09B7B /* XYVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYVerticalButton.h; sourceTree = "<group>"; };
-		1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYVerticalButton.m; sourceTree = "<group>"; };
 		1CDBD5131D8184E300E09B7B /* XYLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginTextField.h; sourceTree = "<group>"; };
 		1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginTextField.m; sourceTree = "<group>"; };
 		1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendViewController.h; sourceTree = "<group>"; };
@@ -324,6 +323,10 @@
 		1CDBD5741D81C10300E09B7B /* XYTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagTextField.m; sourceTree = "<group>"; };
 		1CDBD57B1D81C39A00E09B7B /* XYLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginTool.h; sourceTree = "<group>"; };
 		1CDBD57C1D81C39A00E09B7B /* XYLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginTool.m; sourceTree = "<group>"; };
+		1CDBD57E1D81CF7800E09B7B /* XYLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLoginButton.h; sourceTree = "<group>"; };
+		1CDBD57F1D81CF7800E09B7B /* XYLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLoginButton.m; sourceTree = "<group>"; };
+		1CDBD5811D81CFAD00E09B7B /* XYVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYVerticalButton.h; sourceTree = "<group>"; };
+		1CDBD5821D81CFAD00E09B7B /* XYVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYVerticalButton.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -800,8 +803,8 @@
 				1CDBD5241D818BA900E09B7B /* XYRecommendUserCell.h */,
 				1CDBD5251D818BA900E09B7B /* XYRecommendUserCell.m */,
 				1CDBD5261D818BA900E09B7B /* XYRecommendUserCell.xib */,
-				1CDBD5111D8184E300E09B7B /* XYVerticalButton.h */,
-				1CDBD5121D8184E300E09B7B /* XYVerticalButton.m */,
+				1CDBD57E1D81CF7800E09B7B /* XYLoginButton.h */,
+				1CDBD57F1D81CF7800E09B7B /* XYLoginButton.m */,
 				1CDBD5131D8184E300E09B7B /* XYLoginTextField.h */,
 				1CDBD5141D8184E300E09B7B /* XYLoginTextField.m */,
 			);
@@ -934,6 +937,8 @@
 				1CDBD5721D81C10300E09B7B /* XYTagButton.m */,
 				1CDBD5731D81C10300E09B7B /* XYTagTextField.h */,
 				1CDBD5741D81C10300E09B7B /* XYTagTextField.m */,
+				1CDBD5811D81CFAD00E09B7B /* XYVerticalButton.h */,
+				1CDBD5821D81CFAD00E09B7B /* XYVerticalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1221,12 +1226,13 @@
 				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
 				1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */,
 				1CA5C2521D6AEA8000236253 /* XYEssenceParam.m in Sources */,
-				1CDBD5151D8184E300E09B7B /* XYVerticalButton.m in Sources */,
 				1CDBD55C1D81BA4900E09B7B /* XYWebViewController.m in Sources */,
 				1CDBD53F1D81A48500E09B7B /* XYRecommendUserTool.m in Sources */,
+				1CDBD5801D81CF7800E09B7B /* XYLoginButton.m in Sources */,
 				1CDBD5791D81C10300E09B7B /* XYTagTextField.m in Sources */,
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
+				1CDBD5831D81CFAD00E09B7B /* XYVerticalButton.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
 				1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */,
