@@ -113,9 +113,6 @@ static NSString * const XYTopicCellId = @"topic";
     self.tableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
-    
-    // 上拉加载更多
-    self.tableView.mj_footer = [XYRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
 #pragma mark - 加载数据
@@ -146,6 +143,8 @@ static NSString * const XYTopicCellId = @"topic";
         
         // 结束刷新
         [weakSelf.tableView.mj_header endRefreshing];
+        // 上拉加载更多
+        self.tableView.mj_footer = [XYRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
     } failure:^(NSError *error) {
         // 发送失败
         // 结束刷新
