@@ -7,9 +7,9 @@
 //
 
 #import "XYMineViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import "XYSquareItem.h"
 #import <MJExtension/MJExtension.h>
+#import "XYMineTool.h"
+#import "XYSquareItem.h"
 #import "XYSquareCell.h"
 #import "XYWebViewController.h"
 /*
@@ -65,21 +65,15 @@ static CGFloat const margin = 1;
 #pragma mark - 请求数据
 - (void)loadData
 {
-    // 1.创建请求会话管理者
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    // 1.参数
+    XYMineParam *params = [[XYMineParam alloc] init];
     
-    // 2.拼接请求参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"square";
-    parameters[@"c"] = @"topic";
-    
-    // 3.发送请求
-    [mgr GET:XYRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
-   
-        NSArray *dictArr = responseObject[@"square_list"];
+    // 2.发送请求
+    [XYMineTool mineDataWithParam:params success:^(NSDictionary *result) {
+        NSArray *dictArr = result[@"square_list"];
         
         // 字典数组转换成模型数组
-       _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
+        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
         
         // 处理数据
         [self resloveData];
@@ -95,11 +89,9 @@ static CGFloat const margin = 1;
         self.tableView.tableFooterView = self.collectionView;
         // 刷新表格
         [self.collectionView reloadData];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSError *error) {
         
     }];
-    
 }
 
 #pragma mark - 处理请求完成数据
@@ -191,8 +183,8 @@ static CGFloat const margin = 1;
 
 - (void)setupNavBar
 {
-    // 左边按钮
-    // 把UIButton包装成UIBarButtonItem.就导致按钮点击区域扩大
+    // titleView
+    self.navigationItem.title = @"我的";
     
     // 设置
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] highlightImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
@@ -202,8 +194,6 @@ static CGFloat const margin = 1;
 
     self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
     
-    // titleView
-    self.navigationItem.title = @"我的";
     
 }
 
