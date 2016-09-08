@@ -71,6 +71,9 @@
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
 		1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD396081D6A9AC0001CA85D /* AppDelegate.m */; };
 		1CD3962A1D6A9AC0001CA85D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3960F1D6A9AC0001CA85D /* main.m */; };
+		1CDBD4FD1D8178FF00E09B7B /* XYAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD4FB1D8178FF00E09B7B /* XYAdViewController.m */; };
+		1CDBD4FE1D8178FF00E09B7B /* XYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD4FC1D8178FF00E09B7B /* XYAdViewController.xib */; };
+		1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5001D81790600E09B7B /* XYADItem.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -220,6 +223,11 @@
 		1CD396071D6A9AC0001CA85D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CD396081D6A9AC0001CA85D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1CD3960F1D6A9AC0001CA85D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CDBD4FA1D8178FF00E09B7B /* XYAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAdViewController.h; sourceTree = "<group>"; };
+		1CDBD4FB1D8178FF00E09B7B /* XYAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAdViewController.m; sourceTree = "<group>"; };
+		1CDBD4FC1D8178FF00E09B7B /* XYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYAdViewController.xib; sourceTree = "<group>"; };
+		1CDBD4FF1D81790600E09B7B /* XYADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYADItem.h; sourceTree = "<group>"; };
+		1CDBD5001D81790600E09B7B /* XYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYADItem.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -521,7 +529,6 @@
 			children = (
 				1CD396121D6A9AC0001CA85D /* Controller */,
 				1CD396131D6A9AC0001CA85D /* Model */,
-				1CD396141D6A9AC0001CA85D /* View */,
 			);
 			path = "Advertisement(广告)";
 			sourceTree = "<group>";
@@ -529,6 +536,9 @@
 		1CD396121D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD4FA1D8178FF00E09B7B /* XYAdViewController.h */,
+				1CDBD4FB1D8178FF00E09B7B /* XYAdViewController.m */,
+				1CDBD4FC1D8178FF00E09B7B /* XYAdViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,15 +546,10 @@
 		1CD396131D6A9AC0001CA85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD4FF1D81790600E09B7B /* XYADItem.h */,
+				1CDBD5001D81790600E09B7B /* XYADItem.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		1CD396141D6A9AC0001CA85D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1CD396151D6A9AC0001CA85D /* Comment(评论) */ = {
@@ -905,6 +910,7 @@
 				1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */,
 				1CA5C2241D6AE92100236253 /* XYTopicPictureView.xib in Resources */,
 				1CA5C2221D6AE92100236253 /* XYTopicCell.xib in Resources */,
+				1CDBD4FE1D8178FF00E09B7B /* XYAdViewController.xib in Resources */,
 				1CA5C2441D6AE99E00236253 /* XYCommentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,6 +1001,7 @@
 				1CA5C2231D6AE92100236253 /* XYTopicPictureView.m in Sources */,
 				1CD3962A1D6A9AC0001CA85D /* main.m in Sources */,
 				1CA5C2131D6AD80700236253 /* XYBaseTableViewController.m in Sources */,
+				1CDBD4FD1D8178FF00E09B7B /* XYAdViewController.m in Sources */,
 				1CA5C1F01D6AC45F00236253 /* XYWordViewController.m in Sources */,
 				1CA5C2391D6AE94B00236253 /* XYTopicViewController.m in Sources */,
 				1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */,
@@ -1023,6 +1030,7 @@
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,
 				1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */,
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
+				1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */,
 				1CA5C2311D6AE92D00236253 /* XYTopicItem.m in Sources */,
 				1CA5C22F1D6AE92D00236253 /* XYUserItem.m in Sources */,
 				1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */,

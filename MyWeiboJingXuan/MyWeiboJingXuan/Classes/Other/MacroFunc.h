@@ -26,6 +26,7 @@
 #define XYiOS_8_OR_LATER       (XYCurrentSystemVersion >= 8.0)
 #define XYiOS_9_OR_LATER       (XYCurrentSystemVersion >= 9.0)
 /** 屏幕适配 */
+#define XYiPhone4_OR_4s           (XYSCREEN_H == 320)
 #define XYiPhone5_OR_5c_OR_5s     (XYSCREEN_H == 568)
 #define XYiPhone6_OR_6s           (XYSCREEN_H == 667)
 #define XYiPhone6Plus_OR_6sPlus   (XYSCREEN_H == 736)
