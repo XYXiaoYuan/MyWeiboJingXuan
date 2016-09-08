@@ -8,6 +8,7 @@
 
 #import "XYFriendTrednsViewController.h"
 #import "XYLoginRegisterViewController.h"
+#import "XYRecommendViewController.h"
 
 @interface XYFriendTrednsViewController ()
 
@@ -38,7 +39,8 @@
 
 - (void)recommendClick
 {
-    XYFuncLog;
+    XYRecommendViewController *recommendVc = [[XYRecommendViewController alloc] init];
+    [self.navigationController pushViewController:recommendVc animated:YES];
 }
 
 @end
