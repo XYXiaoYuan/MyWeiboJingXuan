@@ -89,7 +89,7 @@ static CGFloat const margin = 1;
         NSInteger count = _squareItems.count;
         NSInteger rows = (count - 1) / cols + 1;
         // 设置collectioView高度
-        self.collectionView.xy_height = rows * itemWH;
+        self.collectionView.xy_height = rows * itemWH + 10;
         
         // 设置tableView滚动范围:自己计算
         self.tableView.tableFooterView = self.collectionView;
