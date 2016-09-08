@@ -179,6 +179,9 @@ static NSString * const XYUserId = @"user";
         // 刷新右边的表格
         [self.userTableView reloadData];
         
+        // 结束刷新
+        [self.userTableView.mj_footer endRefreshing];
+        
         // 让底部控件结束刷新
         [self checkFooterState];
     } failure:^(NSError *error) {
@@ -243,7 +246,7 @@ static NSString * const XYUserId = @"user";
     
     XYRecommendCategory *c = self.categories[indexPath.row];
     if (c.users.count) {
-        // 显示曾经的数据
+        // 显示推荐分类列表的数据
         [self.userTableView reloadData];
     } else {
         // 赶紧刷新表格,目的是: 马上显示当前category的用户数据, 不让用户看见上一个category的残留数据

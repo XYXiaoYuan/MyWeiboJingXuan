@@ -111,7 +111,6 @@ static NSString * const XYTopicCellId = @"topic";
 {
     // 下拉刷新
     self.tableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
-    self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
 }
 
