@@ -13,8 +13,8 @@
 #import "XYRefreshAutoFooter.h"
 #import "XYRecommendCategoryTool.h"
 #import "XYRecommendUserTool.h"
-#import "XYRecommendUserCell.h"
 #import "XYRecommendCategoryCell.h"
+#import "XYRecommendUserCell.h"
 #import "XYRecommendCategory.h"
 #import "XYRecommendUser.h"
 
