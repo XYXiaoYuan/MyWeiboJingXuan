@@ -1,9 +1,9 @@
 //
-//  xyMeViewController.m
-//  BuDeJie
+//  XYMeViewController.m
+//  bai
 //
-//  Created by xiaomage on 16/3/11.
-//  Copyright © 2016年 小码哥. All rights reserved.
+//  Created by yuan on 15/11/10.
+//  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
 #import "XYMineViewController.h"
