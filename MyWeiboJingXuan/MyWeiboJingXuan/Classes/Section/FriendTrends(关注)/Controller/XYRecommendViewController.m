@@ -110,9 +110,6 @@ static NSString * const XYUserId = @"user";
     
     // 设置标题
     self.title = @"推荐关注";
-    
-    // 设置背景色
-    self.view.backgroundColor = XYCommonBgColor;
 }
 
 /**
