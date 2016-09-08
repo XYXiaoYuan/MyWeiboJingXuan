@@ -111,6 +111,7 @@ static NSString * const XYTopicCellId = @"topic";
 {
     // 下拉刷新
     self.tableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
     
     // 上拉加载更多
@@ -179,11 +180,11 @@ static NSString * const XYTopicCellId = @"topic";
         [weakSelf.tableView reloadData];
         
         // 结束刷新
-        [weakSelf.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
         // 发送失败
         // 结束刷新
-        [weakSelf.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_footer endRefreshing];
     }];
 }
 
