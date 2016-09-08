@@ -7,17 +7,16 @@
 //
 
 #import "XYRecommendViewController.h"
-#import "XYRecommendCategoryTool.h"
-#import "XYRecommendUserTool.h"
-#import <AFNetworking.h>
 #import <SVProgressHUD.h>
-#import "XYRecommendCategoryCell.h"
 #import <MJExtension.h>
-#import "XYRecommendCategory.h"
-#import "XYRecommendUserCell.h"
-#import "XYRecommendUser.h"
 #import "XYRefreshGifHeader.h"
 #import "XYRefreshAutoFooter.h"
+#import "XYRecommendCategoryTool.h"
+#import "XYRecommendUserTool.h"
+#import "XYRecommendUserCell.h"
+#import "XYRecommendCategoryCell.h"
+#import "XYRecommendCategory.h"
+#import "XYRecommendUser.h"
 
 #define XYSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
