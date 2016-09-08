@@ -191,7 +191,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
 
 - (void)setupBase
 {
-    self.navigationItem.title = @"评论";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 

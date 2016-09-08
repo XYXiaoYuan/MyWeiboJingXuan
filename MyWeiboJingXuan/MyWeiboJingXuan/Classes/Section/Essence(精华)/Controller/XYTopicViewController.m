@@ -213,6 +213,7 @@ static NSString * const XYTopicCellId = @"topic";
     XYCommentViewController *comment = [[XYCommentViewController alloc] init];
     
     // 这里必须传一个模型过来,不然获取不了数据
+    comment.navigationItem.title = @"评论";
     comment.topic = self.topics[indexPath.row];
     
     [self.navigationController pushViewController:comment animated:YES];
