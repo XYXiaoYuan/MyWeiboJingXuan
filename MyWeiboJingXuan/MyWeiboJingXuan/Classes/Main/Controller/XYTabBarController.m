@@ -79,7 +79,10 @@
     [self setupOneViewController:[[XYFriendTrednsViewController alloc] init] image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"关注"];
     
     // 我的
-    [self setupOneViewController:[[XYMineViewController alloc] init] image:[UIImage imageNamed:@"tabBar_me_icon"] selectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我的"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NSStringFromClass([XYMineViewController class]) bundle:nil];
+    // 加载箭头指向控制器
+    XYMineViewController *mineVc = [storyboard instantiateInitialViewController];
+    [self setupOneViewController:mineVc image:[UIImage imageNamed:@"tabBar_me_icon"] selectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我的"];
 }
     
     
