@@ -15,7 +15,7 @@
     [super prepare];
     
     // 设置下拉刷新的提示文字颜色
-    self.stateLabel.textColor = [UIColor redColor];
+    self.stateLabel.textColor = [UIColor grayColor];
     
     [self setTitle:@"没有数据啦,不要再上拉了" forState:MJRefreshStateNoMoreData];
 

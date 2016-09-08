@@ -14,7 +14,8 @@
 #import "XYRecommendCategory.h"
 #import "XYRecommendUserCell.h"
 #import "XYRecommendUser.h"
-#import <MJRefresh.h>
+#import "XYRefreshGifHeader.h"
+#import "XYRefreshAutoFooter.h"
 
 #define XYSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
@@ -117,9 +118,9 @@ static NSString * const XYUserId = @"user";
  */
 - (void)setupRefresh
 {
-    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
+    self.userTableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     
-    self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.userTableView.mj_footer = [XYRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
 }
 
 #pragma mark - 加载用户数据
