@@ -56,7 +56,7 @@
     // 向前一步
     [webView addObserver:self forKeyPath:@"canGoForward" options:options context:nil];
     // 进度条
-    [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [webView addObserver:self forKeyPath:@"estimatedProgress" options:options context:nil];
     // 导航栏标题
     [webView addObserver:self forKeyPath:@"title" options:options context:nil];
 }

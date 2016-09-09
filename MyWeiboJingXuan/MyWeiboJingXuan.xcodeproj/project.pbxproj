@@ -121,6 +121,7 @@
 		1CDBD5B91D828E8300E09B7B /* XYSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5B01D828E8300E09B7B /* XYSettingSwitchItem.m */; };
 		1CDBD5BA1D828E8300E09B7B /* XYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5B31D828E8300E09B7B /* XYSettingCell.m */; };
 		1CDBD5BD1D828F6400E09B7B /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5BC1D828F6400E09B7B /* XYSettingViewController.m */; };
+		1CDBD5C31D82CA2900E09B7B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDBD5C21D82CA2900E09B7B /* WebKit.framework */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -357,6 +358,7 @@
 		1CDBD5B31D828E8300E09B7B /* XYSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSettingCell.m; sourceTree = "<group>"; };
 		1CDBD5BB1D828F6400E09B7B /* XYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSettingViewController.h; sourceTree = "<group>"; };
 		1CDBD5BC1D828F6400E09B7B /* XYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSettingViewController.m; sourceTree = "<group>"; };
+		1CDBD5C21D82CA2900E09B7B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CDBD5C31D82CA2900E09B7B /* WebKit.framework in Frameworks */,
 				1C763C1A1D6B64F400CEF1E8 /* AudioToolbox.framework in Frameworks */,
 				1C763C181D6B64EB00CEF1E8 /* MediaPlayer.framework in Frameworks */,
 				1C763C161D6B64E000CEF1E8 /* AVFoundation.framework in Frameworks */,
@@ -1070,6 +1073,7 @@
 		F074C43E100CA8EAD5DBCFEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD5C21D82CA2900E09B7B /* WebKit.framework */,
 				1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */,
 				1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */,
 				1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */,
