@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class XYSquareItem;
+
 @interface XYSquareCell : UICollectionViewCell
-@property (nonatomic, strong) XYSquareItem *item;
+/** XYSquareItem模型 */
+@property (nonatomic, strong) XYSquareItem *squareItem;
 @end

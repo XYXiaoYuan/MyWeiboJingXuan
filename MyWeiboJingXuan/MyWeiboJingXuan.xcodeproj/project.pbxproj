@@ -113,6 +113,7 @@
 		1CDBD5831D81CFAD00E09B7B /* XYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5821D81CFAD00E09B7B /* XYVerticalButton.m */; };
 		1CDBD5871D81D08400E09B7B /* XYMineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5861D81D08400E09B7B /* XYMineTool.m */; };
 		1CDBD58A1D81D0CA00E09B7B /* XYMineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5891D81D0CA00E09B7B /* XYMineParam.m */; };
+		1CDBD58E1D825B2400E09B7B /* XYAdTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD58D1D825B2400E09B7B /* XYAdTool.m */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
 		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
@@ -333,6 +334,8 @@
 		1CDBD5861D81D08400E09B7B /* XYMineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMineTool.m; sourceTree = "<group>"; };
 		1CDBD5881D81D0CA00E09B7B /* XYMineParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMineParam.h; sourceTree = "<group>"; };
 		1CDBD5891D81D0CA00E09B7B /* XYMineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMineParam.m; sourceTree = "<group>"; };
+		1CDBD58C1D825B2400E09B7B /* XYAdTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAdTool.h; sourceTree = "<group>"; };
+		1CDBD58D1D825B2400E09B7B /* XYAdTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAdTool.m; sourceTree = "<group>"; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
 		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
@@ -611,6 +614,7 @@
 		1CD396111D6A9AC0001CA85D /* Advertisement(广告) */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD58B1D825B0E00E09B7B /* APITool */,
 				1CD396121D6A9AC0001CA85D /* Controller */,
 				1CD396131D6A9AC0001CA85D /* Model */,
 			);
@@ -970,6 +974,15 @@
 			path = APITool;
 			sourceTree = "<group>";
 		};
+		1CDBD58B1D825B0E00E09B7B /* APITool */ = {
+			isa = PBXGroup;
+			children = (
+				1CDBD58C1D825B2400E09B7B /* XYAdTool.h */,
+				1CDBD58D1D825B2400E09B7B /* XYAdTool.m */,
+			);
+			path = APITool;
+			sourceTree = "<group>";
+		};
 		805832CF4FFC47D25E1A1080 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1283,7 @@
 				1CDBD57D1D81C39A00E09B7B /* XYLoginTool.m in Sources */,
 				1CDBD58A1D81D0CA00E09B7B /* XYMineParam.m in Sources */,
 				1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */,
+				1CDBD58E1D825B2400E09B7B /* XYAdTool.m in Sources */,
 				1CDBD5361D81A1A100E09B7B /* XYEssenceTool.m in Sources */,
 				1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */,
 				1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */,

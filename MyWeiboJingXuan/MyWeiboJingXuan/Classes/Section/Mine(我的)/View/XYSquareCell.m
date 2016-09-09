@@ -9,26 +9,22 @@
 #import "XYSquareCell.h"
 #import <UIImageView+WebCache.h>
 #import "XYSquareItem.h"
-@interface XYSquareCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *iconView;
-@property (weak, nonatomic) IBOutlet UILabel *nameView;
 
+@interface XYSquareCell ()
+/** 图标的imageView */
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+/** 名字的label */
+@property (weak, nonatomic) IBOutlet UILabel *nameView;
 @end
 
 @implementation XYSquareCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)setSquareItem:(XYSquareItem *)squareItem
+{
+    _squareItem = squareItem;
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:squareItem.icon]];
+    _nameView.text = squareItem.name;
 }
 
-- (void)setItem:(XYSquareItem *)item
-{
-    _item = item;
-    
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
-    _nameView.text = item.name;
-    
-    
-}
 
 @end

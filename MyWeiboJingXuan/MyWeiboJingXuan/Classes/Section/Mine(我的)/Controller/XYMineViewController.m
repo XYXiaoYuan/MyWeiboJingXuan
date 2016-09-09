@@ -41,25 +41,7 @@ static CGFloat const margin = 1;
     // 处理cell间距,默认tableView分组样式,有额外头部和尾部间距
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
-    
     self.tableView.contentInset = UIEdgeInsetsMake(10 - 35, 0, 0, 0);
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark - 监听
-/**
- *  监听tabBarButton重复点击
- */
-- (void)tabBarButtonDidRepeatClick
-{
-    if (self.view.window == nil) return;
-    
 }
 
 #pragma mark - 请求数据
@@ -116,29 +98,34 @@ static CGFloat const margin = 1;
 - (void)setupFootView{
     /*
         1.初始化要设置流水布局
-        2.cell必须要注册
-        3.cell必须自定义
+        2.cell必须自定义
+        3.cell必须要注册
      */
-    // 创建布局
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    // 1.初始化要设置流水布局
+    UICollectionViewFlowLayout *layout = ({
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        // 设置cell尺寸
+        layout.itemSize = CGSizeMake(itemWH, itemWH);
+        layout.minimumInteritemSpacing = margin;
+        layout.minimumLineSpacing = margin;
+        layout;
+    });
     
-    // 设置cell尺寸
-    layout.itemSize = CGSizeMake(itemWH, itemWH);
-    layout.minimumInteritemSpacing = margin;
-    layout.minimumLineSpacing = margin;
+    // 2.创建UICollectionView
+    UICollectionView *collectionView = ({
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
+        collectionView.backgroundColor = self.tableView.backgroundColor;
+        collectionView.dataSource = self;
+        collectionView.delegate = self;
+        collectionView.scrollEnabled = NO;
+        self.tableView.tableFooterView = collectionView;
+        _collectionView = collectionView;
+        collectionView;
+    });
     
-    // 创建UICollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:layout];
-    _collectionView = collectionView;
-    collectionView.backgroundColor = self.tableView.backgroundColor;
-    self.tableView.tableFooterView = collectionView;
-    
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
-    collectionView.scrollEnabled = NO;
-    
-    // 注册cell
+    // 3.注册cell
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XYSquareCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+    
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -176,7 +163,7 @@ static CGFloat const margin = 1;
        // 从缓存池取
     XYSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
-    cell.item = self.squareItems[indexPath.row];
+    cell.squareItem = self.squareItems[indexPath.row];
     
     return cell;
 }
@@ -190,7 +177,7 @@ static CGFloat const margin = 1;
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] highlightImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
     
     // 夜间模型
-    UIBarButtonItem *nightItem =  [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] highlightImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
+    UIBarButtonItem *nightItem =  [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] selectedImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
 
     self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
     

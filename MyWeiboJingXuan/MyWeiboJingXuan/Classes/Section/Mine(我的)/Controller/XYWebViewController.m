@@ -10,10 +10,10 @@
 #import <WebKit/WebKit.h>
 @interface XYWebViewController ()
 @property (weak, nonatomic) IBOutlet UIView *contentView;
-@property (weak, nonatomic) IBOutlet WKWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardItem;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+@property(nonatomic,weak) WKWebView *webView;
 @end
 
 @implementation XYWebViewController
@@ -38,23 +38,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    // 添加webView
-    WKWebView *webView = [[WKWebView alloc] init];
-    _webView = webView;
-    [self.contentView addSubview:webView];
-    
-    // 展示网页
+
     NSURLRequest *request = [NSURLRequest requestWithURL:_url];
-    [webView loadRequest:request];
+    
+    // 添加webView
+    WKWebView *webView = ({
+        WKWebView *webView = [[WKWebView alloc] init];
+        [self.contentView addSubview:webView];
+        
+        // 展示网页
+        [webView loadRequest:request];
+        
+        _webView = webView;
+        webView;
+    });
     
     // KVO监听属性改变
     /*
-        Observer:观察者
-        KeyPath:观察webView哪个属性
-        options:NSKeyValueObservingOptionNew:观察新值改变
+     Observer:观察者
+     KeyPath:观察webView哪个属性
+     options:NSKeyValueObservingOptionNew:观察新值改变
      
-        KVO注意点.一定要记得移除
+     KVO注意点.一定要记得移除
      */
     [webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:nil];
     [webView addObserver:self forKeyPath:@"canGoForward" options:NSKeyValueObservingOptionNew context:nil];
@@ -62,7 +67,6 @@
     
     // 进度条
     [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-    
 }
 
 // 只要观察对象属性有新值就会调用

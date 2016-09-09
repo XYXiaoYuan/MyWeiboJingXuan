@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-// name url icon
+
 @interface XYSquareItem : NSObject
+/** 名字 */
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *url;
+/** 图标 */
 @property (nonatomic, strong) NSString *icon;
+/** url */
+@property (nonatomic, strong) NSString *url;
 @end

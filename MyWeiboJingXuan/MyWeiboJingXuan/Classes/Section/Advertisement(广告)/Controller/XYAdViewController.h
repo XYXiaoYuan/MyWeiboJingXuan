@@ -1,5 +1,5 @@
 //
-//  XMGAdViewController.h
+//  XYAdViewController.h
 //  BuDeJie
 //
 //  Created by 袁小荣 on 16/8/22.
