@@ -97,7 +97,7 @@ static CGFloat const XYSpringFactor = 10;
     [self cancelWithCompletionBlock:^{
         if (button.tag == 2) {
             // 判断是否登录
-            if ([XYLoginTool getUid:YES] == nil) return;
+//            if ([XYLoginTool getUid:YES] == nil) return;
             
             XYPostWordViewController *postWord = [[XYPostWordViewController alloc] init];
             XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:postWord];
