@@ -12,9 +12,7 @@
 #import "XYSquareItem.h"
 #import "XYSquareCell.h"
 #import "XYWebViewController.h"
-/*
-    搭建基本结构 -> 设置底部条 -> 设置顶部条 -> 设置顶部条标题字体 -> 处理导航控制器业务逻辑(跳转)
- */
+
 static NSString * const XYSquareCellID = @"XYSquareCellID";
 static NSInteger const cols = 4;
 static CGFloat const margin = 1;
