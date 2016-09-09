@@ -158,6 +158,10 @@ static NSString * XYAssetCollectionTitle = @"百思不得姐";
     
     // imageView
     UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [imageView addGestureRecognizer:tap];
+    
     [imageView sd_setImageWithURL:[NSURL URLWithString:_topic.big_image] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         // 如果图片下载失败,保存按钮不可点
         if (image == nil) {
