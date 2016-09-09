@@ -17,7 +17,7 @@ CGFloat const XYNavBarMaxY = 64;
 /** UITabBar的高度 */
 CGFloat const XYTabBarH = 49;
 
-/** XMGTitlesView的高度 */
+/** XYTitlesView的高度 */
 CGFloat const XYTitlesViewH = 35;
 
 /** 标签的高度 */

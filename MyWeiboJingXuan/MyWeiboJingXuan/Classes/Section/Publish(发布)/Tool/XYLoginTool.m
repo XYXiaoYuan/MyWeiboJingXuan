@@ -1,6 +1,6 @@
 //
 //  XYLoginTool.m
-//  bai
+//  MyWeiboJingXuan
 //
 //  Created by yuan on 15/8/6.
 //  Copyright (c) 2015年 袁小荣. All rights reserved.

@@ -17,7 +17,7 @@
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"code2"] = code2;
-    [self getWithUrl:@"http://mobads.baidu.com/cpro/ui/mads.php" param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:@"http://mobads.MyWeiboJingXuandu.com/cpro/ui/mads.php" param:param resultClass:[NSDictionary class] success:success failure:failure];
 }
 
 @end

@@ -1,6 +1,6 @@
 //
 //  NSString+XFTime.h
-//  XFBaiSiBuDeJie
+//  MyWeiboJingXuan
 //
 //  Created by Fay on 16/3/15.
 //  Copyright © 2016年 谢飞. All rights reserved.

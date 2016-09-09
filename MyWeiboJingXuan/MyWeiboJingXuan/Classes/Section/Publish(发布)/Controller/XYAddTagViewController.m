@@ -1,6 +1,6 @@
 //
 //  XYAddTagViewController.m
-//  bai
+//  MyWeiboJingXuan
 //
 //  Created by yuan on 16/7/29.
 //  Copyright (c) 2016年 袁小荣. All rights reserved.
@@ -108,11 +108,6 @@
 
 - (void)done
 {
-    // 传递数据给上一个控制器
-//    NSMutableArray *tags = [NSMutableArray array];
-//    for (XMGTagButton *tagButton in self.tagButtons) {
-//        [tags addObject:tagButton.currentTitle];
-//    }
     // 传递tags给这个block
     NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
     !self.tagsBlock ? : self.tagsBlock(tags);
