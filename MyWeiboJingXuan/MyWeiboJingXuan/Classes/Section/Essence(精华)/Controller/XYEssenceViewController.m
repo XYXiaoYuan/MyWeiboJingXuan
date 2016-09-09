@@ -9,13 +9,11 @@
 #import "XYEssenceViewController.h"
 #import "XYTagViewController.h"
 #import "XYTitleButton.h"
-
 #import "XYAllViewController.h"
 #import "XYVideoViewController.h"
 #import "XYVoiceViewController.h"
 #import "XYPictureViewController.h"
 #import "XYWordViewController.h"
-
 
 @interface XYEssenceViewController () <UIScrollViewDelegate>
 /** 底部的横线view */
@@ -34,24 +32,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置导航条
+    // 1.设置导航条
     [self setupNav];
     
-    // 创建所有的控制器
+    // 2.设置所有的子控制器
     [self seupAllChildViewControllers];
     
-    // 设置scrollView
+    // 3.设置scrollView
     [self setupScrollView];
     
-    // 设置按钮文字
+    // 4.设置按钮文字
     [self setuptitlesView];
     
-    // 设置默认加载XYAllViewController
+    // 5.设置默认加载XYAllViewController
     [self addChildVc];
-    
 }
 
-#pragma mark - 设置所有的子控制器
+#pragma mark - 1.设置导航条
+- (void)setupNav
+{
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
+}
+
+#pragma mark - 1.1.标签按钮的点击
+- (void)tagClick
+{
+    XYTagViewController *tag = [[XYTagViewController alloc] init];
+    tag.title = @"标签订阅";
+    [self.navigationController pushViewController:tag animated:YES];
+}
+
+#pragma mark - 2.设置所有的子控制器
 - (void)seupAllChildViewControllers
 {
     XYAllViewController *all = [[XYAllViewController alloc] init];
@@ -75,7 +86,7 @@
     [self addChildViewController:word];
 }
 
-#pragma mark - 设置scrollView
+#pragma mark - 3.设置scrollView
 - (void)setupScrollView
 {
     // 取消自动调整额外滚动区域
@@ -99,7 +110,7 @@
     scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xy_width, 0);
 }
 
-#pragma mark - 设置标题按钮
+#pragma mark - 4.设置标题按钮
 - (void)setuptitlesView
 {
     // 标签栏的整体view
@@ -166,14 +177,14 @@
     
 }
 
-#pragma mark - 标题按钮的点击
+#pragma mark - 4.1.标题按钮的点击
 - (void)titleButtonClick:(XYTitleButton *)titleButton
 {
     // 某个标题按钮被重复点击
     if (titleButton == self.selectedTitleButton) {
         [[NSNotificationCenter defaultCenter] postNotificationName:XYTitleButtonDidRepeatClickNotification object:nil];
     }
-
+    
     // 按钮交替选中三步曲
     self.selectedTitleButton.selected = NO;
     titleButton.selected = YES;
@@ -188,6 +199,23 @@
     CGPoint offset = self.scrollView.contentOffset;
     offset.x = titleButton.tag * self.scrollView.xy_width;
     [self.scrollView setContentOffset:offset animated:YES];
+}
+
+#pragma mark - 5.添加子控制器的view
+- (void)addChildVc
+{
+    // 计算当前子控制器的索引
+    NSInteger index = self.scrollView.contentOffset.x / self.scrollView.xy_width;
+    UIViewController *childVc = self.childViewControllers[index];
+    
+    
+    // 如果当前view加载过,那么就不再加载,直接返回
+    if ([childVc isViewLoaded]) return;
+    
+    // scrollView的bounds 就是子控制器的frame
+    childVc.view.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:childVc.view];
+    
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -210,37 +238,6 @@
     [self titleButtonClick:titleButton];
     
     [self addChildVc];
-}
-
-#pragma mark - 添加子控制器的view
-- (void)addChildVc
-{
-    // 计算当前子控制器的索引
-    NSInteger index = self.scrollView.contentOffset.x / self.scrollView.xy_width;
-    UIViewController *childVc = self.childViewControllers[index];
-    
-    
-    // 如果当前view加载过,那么就不再加载,直接返回
-    if ([childVc isViewLoaded]) return;
-    
-    // scrollView的bounds 就是子控制器的frame
-    childVc.view.frame = self.scrollView.bounds;
-    [self.scrollView addSubview:childVc.view];
-    
-}
-
-#pragma mark -   设置导航条
-- (void)setupNav
-{
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highlightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
-}
-
-#pragma mark - 标签按钮的点击
-- (void)tagClick
-{
-    XYTagViewController *tag = [[XYTagViewController alloc] init];
-    tag.title = @"标签订阅";
-    [self.navigationController pushViewController:tag animated:YES];
 }
 
 @end
