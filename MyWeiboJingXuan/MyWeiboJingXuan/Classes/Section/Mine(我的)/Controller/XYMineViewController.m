@@ -15,7 +15,7 @@
 /*
     搭建基本结构 -> 设置底部条 -> 设置顶部条 -> 设置顶部条标题字体 -> 处理导航控制器业务逻辑(跳转)
  */
-static NSString * const ID = @"XYSquareCellID";
+static NSString * const XYSquareCellID = @"XYSquareCellID";
 static NSInteger const cols = 4;
 static CGFloat const margin = 1;
 #define itemWH (XYSCREEN_W - (cols - 1) * margin) / cols
@@ -35,7 +35,7 @@ static CGFloat const margin = 1;
     // 设置tableView底部视图
     [self setupFootView];
     
-    // 展示方块内容 -> 请求数据(查看接口文档)
+    // 展示方块内容 -> 请求数据
     [self loadData];
     
     // 处理cell间距,默认tableView分组样式,有额外头部和尾部间距
@@ -52,10 +52,9 @@ static CGFloat const margin = 1;
     
     // 2.发送请求
     [XYMineTool mineDataWithParam:params success:^(NSDictionary *result) {
-        NSArray *dictArr = result[@"square_list"];
         
         // 字典数组转换成模型数组
-        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
+        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:result[@"square_list"]];
         
         // 处理数据
         [self resloveData];
@@ -69,6 +68,7 @@ static CGFloat const margin = 1;
         
         // 设置tableView滚动范围:自己计算
         self.tableView.tableFooterView = self.collectionView;
+        
         // 刷新表格
         [self.collectionView reloadData];
     } failure:^(NSError *error) {
@@ -124,7 +124,7 @@ static CGFloat const margin = 1;
     });
     
     // 3.注册cell
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XYSquareCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XYSquareCell class]) bundle:nil] forCellWithReuseIdentifier:XYSquareCellID];
     
 }
 
@@ -160,11 +160,12 @@ static CGFloat const margin = 1;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-       // 从缓存池取
-    XYSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
+    // 1.创建cell
+    XYSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XYSquareCellID forIndexPath:indexPath];
+    // 2.设置模型数据
     cell.squareItem = self.squareItems[indexPath.row];
     
+    // 3.返回cell
     return cell;
 }
 
