@@ -81,31 +81,36 @@
     // 取消自动调整额外滚动区域
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
-    
-    scrollView.pagingEnabled = YES;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    scrollView.showsVerticalScrollIndicator = NO;
-    scrollView.frame = self.view.bounds;
-    // 设置代理
-    scrollView.delegate = self;
-    [self.view addSubview:scrollView];
-    self.scrollView = scrollView;
+    // 设置scrollView的相关属性
+    UIScrollView *scrollView = ({
+        UIScrollView *scrollView = [[UIScrollView alloc] init];
+        
+        scrollView.pagingEnabled = YES;
+        scrollView.frame = self.view.bounds;
+        scrollView.showsHorizontalScrollIndicator = NO;
+        scrollView.showsVerticalScrollIndicator = NO;
+        scrollView.delegate = self;
+        [self.view addSubview:scrollView];
+        self.scrollView = scrollView;
+        scrollView;
+    });
     
     // 加载所有的子控制器
     scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xy_width, 0);
-    [self.view addSubview:scrollView];
-    self.scrollView = scrollView;
 }
 
 #pragma mark - 设置标题按钮
 - (void)setuptitlesView
 {
     // 标签栏的整体view
-    UIView *titlesView = [[UIView alloc] init];
-    titlesView.frame = CGRectMake(44 * XYWidthRatio, 20, XYSCREEN_W - 44 * XYWidthRatio, 44);
+    UIView *titlesView = ({
+        UIView *titlesView = [[UIView alloc] init];
+        titlesView.frame = CGRectMake(44 * XYWidthRatio, 20, XYSCREEN_W - 44 * XYWidthRatio, 44);
+        self.titlesView = titlesView;
+        titlesView;
+    });
+    
     self.navigationItem.titleView = titlesView;
-    self.titlesView = titlesView;
 
     // 标签栏按钮
     NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
@@ -135,21 +140,28 @@
     }
     
     // 添加底部的指示器红色横线
-    XYTitleButton *firstTitleButotn = titlesView.subviews.firstObject;
-    UIView *indicatorView = [[UIView alloc] init];
-    indicatorView.backgroundColor = [firstTitleButotn titleColorForState:UIControlStateSelected];
-    indicatorView.xy_height = 2;
-    indicatorView.xy_y = titlesView.xy_height - indicatorView.xy_height;
+    XYTitleButton *firstTitleButotn = ({
+        XYTitleButton *firstTitleButotn = titlesView.subviews.firstObject;
+        // 根据lable的宽度计算出指示条的宽度
+        [firstTitleButotn.titleLabel sizeToFit];
+        // 默认情况下: 选中最前面的标题按钮
+        firstTitleButotn.selected = YES;
+        firstTitleButotn;
+    });
+    
+    UIView *indicatorView = ({
+        UIView *indicatorView = [[UIView alloc] init];
+        indicatorView.backgroundColor = [firstTitleButotn titleColorForState:UIControlStateSelected];
+        indicatorView.xy_width = firstTitleButotn.titleLabel.xy_width;
+        indicatorView.xy_height = 2;
+        indicatorView.xy_centerX = firstTitleButotn.xy_centerX;
+        indicatorView.xy_y = titlesView.xy_height - indicatorView.xy_height;
+        self.indicatorView = indicatorView;
+        indicatorView;
+    });
+    
     [titlesView addSubview:indicatorView];
-    self.indicatorView = indicatorView;
     
-    // 根据lable的宽度计算出指示条的宽度
-    [firstTitleButotn.titleLabel sizeToFit];
-    indicatorView.xy_width = firstTitleButotn.titleLabel.xy_width;
-    indicatorView.xy_centerX = firstTitleButotn.xy_centerX;
-    
-    // 默认情况下: 选中最前面的标题按钮
-    firstTitleButotn.selected = YES;
     self.selectedTitleButton = firstTitleButotn;
     
 }
