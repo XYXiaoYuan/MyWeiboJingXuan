@@ -8,7 +8,7 @@
 
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface XFVociePlayerController : UIViewController
+@interface kVociePlayerController : UIViewController
 @property (nonatomic,copy) NSString *url;
 @property (nonatomic,assign) NSInteger totalTime;
 -(void)dismiss;

@@ -12,14 +12,14 @@
 #import "XYSeeBigPictureViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "XFVociePlayerController.h"
+#import "kVociePlayerController.h"
 
 @interface XYTopicVoiceView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
-@property (nonatomic,strong) XFVociePlayerController *voicePlayer;
+@property (nonatomic,strong) kVociePlayerController *voicePlayer;
 @end
 
 @implementation XYTopicVoiceView
@@ -70,7 +70,7 @@
 - (IBAction)playBtnClick:(UIButton *)sender
 {
     self.playBtn.hidden = YES;
-    self.voicePlayer = [[XFVociePlayerController alloc]initWithNibName:NSStringFromClass([XFVociePlayerController class]) bundle:nil];
+    self.voicePlayer = [[kVociePlayerController alloc]initWithNibName:NSStringFromClass([kVociePlayerController class]) bundle:nil];
     self.voicePlayer.url = self.topic.voiceuri;
     self.voicePlayer.totalTime = self.topic.voicetime;
     self.voicePlayer.view.xy_width = self.imageView.xy_width;

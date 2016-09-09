@@ -6,10 +6,10 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XFVociePlayerController.h"
+#import "kVociePlayerController.h"
 #import "NSString+XFTime.h"
 
-@interface XFVociePlayerController ()
+@interface kVociePlayerController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 @property (weak, nonatomic) IBOutlet UILabel *restTime;
@@ -29,7 +29,7 @@
 @end
 
 
-@implementation XFVociePlayerController
+@implementation kVociePlayerController
 
 
 -(void)viewDidLoad {

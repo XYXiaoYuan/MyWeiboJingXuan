@@ -10,8 +10,8 @@
 		1C16BE941D6B527500F528A8 /* XYScrollToTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C16BE931D6B527500F528A8 /* XYScrollToTopWindow.m */; };
 		1C763C111D6B64B800CEF1E8 /* KRVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */; };
 		1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */; };
-		1C763C131D6B64B800CEF1E8 /* XFVociePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */; };
-		1C763C141D6B64B800CEF1E8 /* XFVociePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */; };
+		1C763C131D6B64B800CEF1E8 /* kVociePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C763C0F1D6B64B800CEF1E8 /* kVociePlayerController.m */; };
+		1C763C141D6B64B800CEF1E8 /* kVociePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C763C101D6B64B800CEF1E8 /* kVociePlayerController.xib */; };
 		1C763C161D6B64E000CEF1E8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */; };
 		1C763C181D6B64EB00CEF1E8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */; };
 		1C763C1A1D6B64F400CEF1E8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */; };
@@ -155,9 +155,9 @@
 		1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerController.m; sourceTree = "<group>"; };
 		1C763C0C1D6B64B800CEF1E8 /* KRVideoPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRVideoPlayerControlView.h; sourceTree = "<group>"; };
 		1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerControlView.m; sourceTree = "<group>"; };
-		1C763C0E1D6B64B800CEF1E8 /* XFVociePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVociePlayerController.h; sourceTree = "<group>"; };
-		1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVociePlayerController.m; sourceTree = "<group>"; };
-		1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFVociePlayerController.xib; sourceTree = "<group>"; };
+		1C763C0E1D6B64B800CEF1E8 /* kVociePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kVociePlayerController.h; sourceTree = "<group>"; };
+		1C763C0F1D6B64B800CEF1E8 /* kVociePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kVociePlayerController.m; sourceTree = "<group>"; };
+		1C763C101D6B64B800CEF1E8 /* kVociePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = kVociePlayerController.xib; sourceTree = "<group>"; };
 		1C763C151D6B64E000CEF1E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1C763C171D6B64EB00CEF1E8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		1C763C191D6B64F400CEF1E8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -411,9 +411,9 @@
 				1C763C0B1D6B64B800CEF1E8 /* KRVideoPlayerController.m */,
 				1C763C0C1D6B64B800CEF1E8 /* KRVideoPlayerControlView.h */,
 				1C763C0D1D6B64B800CEF1E8 /* KRVideoPlayerControlView.m */,
-				1C763C0E1D6B64B800CEF1E8 /* XFVociePlayerController.h */,
-				1C763C0F1D6B64B800CEF1E8 /* XFVociePlayerController.m */,
-				1C763C101D6B64B800CEF1E8 /* XFVociePlayerController.xib */,
+				1C763C0E1D6B64B800CEF1E8 /* kVociePlayerController.h */,
+				1C763C0F1D6B64B800CEF1E8 /* kVociePlayerController.m */,
+				1C763C101D6B64B800CEF1E8 /* kVociePlayerController.xib */,
 			);
 			path = KRVideoPlayerController;
 			sourceTree = "<group>";
@@ -1204,7 +1204,7 @@
 				1CDBD5201D818B6800E09B7B /* XYRecommendViewController.xib in Resources */,
 				1CA5C2261D6AE92100236253 /* XYTopicVideoView.xib in Resources */,
 				1CDBD5281D818BA900E09B7B /* XYRecommendCategoryCell.xib in Resources */,
-				1C763C141D6B64B800CEF1E8 /* XFVociePlayerController.xib in Resources */,
+				1C763C141D6B64B800CEF1E8 /* kVociePlayerController.xib in Resources */,
 				1CDBD55D1D81BA4900E09B7B /* XYWebViewController.xib in Resources */,
 				1CDBD5691D81C0F900E09B7B /* XYPublishViewController.xib in Resources */,
 				1CDBD50C1D8184D900E09B7B /* XYFriendTrednsViewController.xib in Resources */,
@@ -1326,7 +1326,7 @@
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CDBD5421D81A4D200E09B7B /* XYRecommendCategoryTool.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
-				1C763C131D6B64B800CEF1E8 /* XFVociePlayerController.m in Sources */,
+				1C763C131D6B64B800CEF1E8 /* kVociePlayerController.m in Sources */,
 				1CA5C2431D6AE99E00236253 /* XYCommentViewController.m in Sources */,
 				1CDBD50B1D8184D900E09B7B /* XYFriendTrednsViewController.m in Sources */,
 				1CDBD5271D818BA900E09B7B /* XYRecommendCategoryCell.m in Sources */,
