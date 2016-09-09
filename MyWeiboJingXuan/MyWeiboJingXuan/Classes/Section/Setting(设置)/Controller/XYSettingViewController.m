@@ -73,7 +73,12 @@
         [self.navigationController pushViewController:webVc animated:YES];
     };
     
-    XYSettingArrowItem *item7 = [XYSettingArrowItem initWithTitle:@"打分支持不得姐"];
+    XYSettingArrowItem *item7 = [XYSettingArrowItem initWithTitle:@"打分支持不得姐!"];
+    item7.operation = ^(){
+        NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/bai-si-bu-jie-zui-da-gao-xiao/id1093382986?mt=8"];
+        [[UIApplication sharedApplication] openURL:url];
+
+    };
     
     
     group.items = @[item1,item2,item3,item4,item5,item6,item7];
