@@ -16,12 +16,10 @@
 
 @implementation XYRecommendCategoryCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     self.backgroundColor = XYRGBColor(244, 244, 244);
     self.selectedIndicator.backgroundColor = XYRGBColor(219, 21, 26);
-    
-    // 当cell的selection为None时, 即使cell被选中了, 内部的子控件也不会进入高亮状态
-//    self.textLabel.highlightedTextColor = XMGRGBColor(219, 21, 26);
 }
 
 - (void)setCategory:(XYRecommendCategory *)category

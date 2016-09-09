@@ -36,22 +36,35 @@
 static NSString * const XYCategoryId = @"category";
 static NSString * const XYUserId = @"user";
 
+#pragma mark - 0.view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 控件的初始化
+    // 1.控件的初始化
     [self setupTableView];
     
-    // 添加刷新控件
-    [self setupRefresh];
-    
-    // 加载左侧的类别数据
+    // 2.加载左侧的类别数据
     [self loadCategories];
+    
+    // 3.添加刷新控件
+    [self setupRefresh];
 }
 
-/**
- * 加载左侧的类别数据
- */
+#pragma mark - 1.控件的初始化
+- (void)setupTableView
+{
+    // 设置inset
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(XYNavBarMaxY, 0, 0, 0);
+    self.userTableView.contentInset = self.categoryTableView.contentInset;
+    self.userTableView.rowHeight = 70;
+   
+    // 注册
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:XYCategoryId];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:XYUserId];
+}
+
+#pragma mark - 2.加载左侧的类别数据
 - (void)loadCategories
 {
     // 显示指示器
@@ -80,25 +93,7 @@ static NSString * const XYUserId = @"user";
     }];
 }
 
-/**
- * 控件的初始化
- */
-- (void)setupTableView
-{
-    // 注册
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:XYCategoryId];
-    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:XYUserId];
-    
-    // 设置inset
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-    self.userTableView.contentInset = self.categoryTableView.contentInset;
-    self.userTableView.rowHeight = 70;
-}
-
-/**
- * 添加刷新控件
- */
+#pragma mark - 3.添加刷新控件
 - (void)setupRefresh
 {
     self.userTableView.mj_header = [XYRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
@@ -106,7 +101,7 @@ static NSString * const XYUserId = @"user";
     self.userTableView.mj_footer = [XYRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
 }
 
-#pragma mark - 加载用户数据
+#pragma mark - 3.1.加载最新用户数据
 - (void)loadNewUsers
 {
     XYRecommendCategory *rc = XYSelectedCategory;
@@ -156,6 +151,7 @@ static NSString * const XYUserId = @"user";
     }];
 }
 
+#pragma mark - 3.2.加载更多用户数据
 - (void)loadMoreUsers
 {
     XYRecommendCategory *category = XYSelectedCategory;
@@ -193,9 +189,7 @@ static NSString * const XYUserId = @"user";
     }];
 }
 
-/**
- * 时刻监测footer的状态
- */
+#pragma mark - 3.3.时刻监测footer的状态
 - (void)checkFooterState
 {
     XYRecommendCategory *rc = XYSelectedCategory;

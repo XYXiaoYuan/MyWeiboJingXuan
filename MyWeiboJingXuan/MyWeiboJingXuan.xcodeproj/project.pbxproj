@@ -765,12 +765,12 @@
 		1CD3961E1D6A9AC0001CA85D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */,
-				1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */,
-				1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */,
 				1CDBD5021D8184D900E09B7B /* XYFriendTrednsViewController.h */,
 				1CDBD5031D8184D900E09B7B /* XYFriendTrednsViewController.m */,
 				1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */,
+				1CDBD51C1D818B6800E09B7B /* XYRecommendViewController.h */,
+				1CDBD51D1D818B6800E09B7B /* XYRecommendViewController.m */,
+				1CDBD51E1D818B6800E09B7B /* XYRecommendViewController.xib */,
 				1CDBD5051D8184D900E09B7B /* XYLoginRegisterViewController.h */,
 				1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */,
 				1CDBD5071D8184D900E09B7B /* XYLoginRegisterViewController.xib */,

@@ -27,11 +27,15 @@
 {
     XYLoginRegisterViewController *loginRegisterViewController = [[XYLoginRegisterViewController alloc] init];
     
-    CATransition *transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromBottom;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    CATransition *transition = ({
+        CATransition *transition = [CATransition animation];
+        transition.duration = 0.5;
+        transition.type = kCATransitionPush;
+        transition.subtype = kCATransitionFromBottom;
+        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        transition;
+    });
+    
     [self.view.window.layer addAnimation:transition forKey:kCATransition];
     [self presentViewController:loginRegisterViewController animated:NO completion:nil];
 }
