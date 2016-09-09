@@ -15,27 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QVO-WB-To8" userLabel="上部图片">
-                    <rect key="frame" x="276" y="143" width="48" height="48"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="48" id="NB1-oI-VDW"/>
-                        <constraint firstAttribute="height" constant="48" id="OYG-H4-bcN"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-Ya-Kp8" userLabel="中间文本">
-                    <rect key="frame" x="179" y="271" width="243" height="58"/>
+                    <rect key="frame" x="195" y="94" width="210" height="39"/>
                     <string key="text">快快登录吧,关注百思最in牛人
-      好友动态让你过把瘾儿~
-          欧耶~~~~!</string>
+好友动态让你过把瘾儿~欧耶!</string>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-lP-tbn">
-                    <rect key="frame" x="179" y="409" width="243" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="hQg-9D-hXe"/>
-                    </constraints>
+                    <rect key="frame" x="179" y="458" width="243" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
                         <color key="titleColor" red="1" green="0.1340586949" blue="0.093797341519999994" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,16 +36,18 @@
                         <action selector="loginOrRegister" destination="-1" eventType="touchUpInside" id="92O-0d-37t"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon_190x190_" translatesAutoresizingMaskIntoConstraints="NO" id="QVO-WB-To8" userLabel="上部图片">
+                    <rect key="frame" x="205" y="205" width="190" height="190"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="1a5-Ya-Kp8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4V5-XD-Htg"/>
-                <constraint firstItem="jUM-lP-tbn" firstAttribute="leading" secondItem="1a5-Ya-Kp8" secondAttribute="leading" id="9bV-oJ-aWy"/>
-                <constraint firstItem="jUM-lP-tbn" firstAttribute="trailing" secondItem="1a5-Ya-Kp8" secondAttribute="trailing" id="H8z-tq-J5g"/>
-                <constraint firstItem="1a5-Ya-Kp8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Olw-bg-Gcy"/>
-                <constraint firstItem="jUM-lP-tbn" firstAttribute="top" secondItem="1a5-Ya-Kp8" secondAttribute="bottom" constant="80" id="Zfq-C8-UJ7"/>
-                <constraint firstItem="1a5-Ya-Kp8" firstAttribute="top" secondItem="QVO-WB-To8" secondAttribute="bottom" constant="80" id="lgn-RR-6TG"/>
-                <constraint firstItem="QVO-WB-To8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mJF-XA-44d"/>
+                <constraint firstItem="1a5-Ya-Kp8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="57g-po-hcx"/>
+                <constraint firstItem="QVO-WB-To8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EWh-ui-Cht"/>
+                <constraint firstItem="1a5-Ya-Kp8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="94" id="fSf-Ra-ba6"/>
+                <constraint firstAttribute="bottom" secondItem="jUM-lP-tbn" secondAttribute="bottom" constant="94" id="g3X-kC-kdN"/>
+                <constraint firstItem="QVO-WB-To8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gHP-yN-6Ac"/>
+                <constraint firstItem="jUM-lP-tbn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="z4W-82-W6n"/>
             </constraints>
             <point key="canvasLocation" x="314" y="267"/>
         </view>
@@ -64,6 +55,6 @@
     <resources>
         <image name="friendsTrend_login" width="243" height="48"/>
         <image name="friendsTrend_login_click" width="243" height="48"/>
-        <image name="header_cry_icon" width="48" height="48"/>
+        <image name="header_cry_icon_190x190_" width="190" height="190"/>
     </resources>
 </document>

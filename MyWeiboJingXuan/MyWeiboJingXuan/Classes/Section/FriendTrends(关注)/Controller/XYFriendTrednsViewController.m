@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"关注";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highlightImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(recommendClick)];
 }
 
