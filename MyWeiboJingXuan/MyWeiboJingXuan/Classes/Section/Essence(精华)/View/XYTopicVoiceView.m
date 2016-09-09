@@ -74,16 +74,30 @@
     self.voicePlayer.view.xy_width = self.imageView.xy_width;
     self.voicePlayer.view.xy_y = self.imageView.xy_height - self.voicePlayer.view.xy_height;
     [self addSubview:self.voicePlayer.view];
-
+    
+    [self setBackPlay];
 }
 
-//重置
+#pragma mark - 重置
 -(void)reset {
     
     [self.voicePlayer dismiss];
     [self.voicePlayer.view removeFromSuperview];
     self.voicePlayer = nil;
     self.playBtn.hidden = NO;
+}
+
+#pragma mark - 后台播放
+- (void)setBackPlay
+{
+    // 1. 获取音频回话
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    // 2. 设置音频回话类别
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    // 3. 激活音频回话
+    [session setActive:YES error:nil];
 }
 
 

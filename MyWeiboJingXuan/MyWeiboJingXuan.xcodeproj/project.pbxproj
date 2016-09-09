@@ -1150,6 +1150,11 @@
 					1CD395CE1D6A97DB001CA85D = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = T868H8UY96;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					1CD395E71D6A97DC001CA85D = {
 						CreatedOnToolsVersion = 7.3;
