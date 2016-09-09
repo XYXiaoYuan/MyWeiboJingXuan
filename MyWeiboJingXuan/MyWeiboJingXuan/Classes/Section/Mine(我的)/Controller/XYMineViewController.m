@@ -12,6 +12,7 @@
 #import "XYSquareItem.h"
 #import "XYSquareCell.h"
 #import "XYWebViewController.h"
+#import "XYSettingViewController.h"
 
 static NSString * const XYSquareCellID = @"XYSquareCellID";
 static NSInteger const cols = 4;
@@ -192,11 +193,11 @@ static CGFloat const margin = 1;
 - (void)setting
 {
     // 跳转到设置界面
-//    XYSettingViewController *settingVc = [[XYSettingViewController alloc] init];
-//    // 必须要在跳转之前设置
-//    settingVc.hidesBottomBarWhenPushed = YES;
-//    
-//    [self.navigationController pushViewController:settingVc animated:YES];
+    XYSettingViewController *settingVc = [[XYSettingViewController alloc] init];
+    
+    settingVc.title = @"设置";
+    
+    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 @end
