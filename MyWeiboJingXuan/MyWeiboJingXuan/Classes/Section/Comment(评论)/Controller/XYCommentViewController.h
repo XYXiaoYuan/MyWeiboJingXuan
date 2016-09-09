@@ -10,9 +10,6 @@
 
 @class XYTopicItem;
 @interface XYCommentViewController : XYBaseViewController
-
 /** 帖子数据模型 */
 @property(nonatomic,strong) XYTopicItem *topic;
-
-
 @end

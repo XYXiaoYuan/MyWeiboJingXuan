@@ -12,12 +12,9 @@
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
-        
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]){
         self.textLabel.textColor = [UIColor darkGrayColor];
-        
         self.contentView.backgroundColor = XYCommonBgColor;
-        
     }
     
     return self;
@@ -30,7 +27,6 @@
     self.textLabel.font = XYFont(14);
     
     self.textLabel.xy_x = XYCommonSmallMargin;
-    
 }
 
 @end

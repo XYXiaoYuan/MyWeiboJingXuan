@@ -40,7 +40,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="OGk-Kw-W1M"/>
-                        <barButtonItem title="Item" systemItem="refresh" id="LnF-5p-Jsn">
+                        <barButtonItem systemItem="refresh" id="LnF-5p-Jsn">
                             <connections>
                                 <action selector="reload:" destination="-1" id="G8G-a3-TjY"/>
                             </connections>

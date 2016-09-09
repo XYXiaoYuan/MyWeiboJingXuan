@@ -7,16 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-// w_picurl,ori_curl:跳转到广告界面,w,h
-@interface XYADItem : NSObject
 
+@interface XYADItem : NSObject
 /** 广告地址 */
 @property (nonatomic, strong) NSString *w_picurl;
 /** 点击广告跳转的界面 */
 @property (nonatomic, strong) NSString *ori_curl;
-
+/** 图片的宽度 */
 @property (nonatomic, assign) CGFloat w;
-
+/** 图片的高度 */
 @property (nonatomic, assign) CGFloat h;
-
 @end

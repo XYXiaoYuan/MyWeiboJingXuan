@@ -7,15 +7,15 @@
 //
 
 #import "XYCommentViewController.h"
+#import <MJExtension.h>
 #import "XYCommentTool.h"
 #import "XYRefreshGifHeader.h"
 #import "XYRefreshAutoFooter.h"
-#import <MJExtension.h>
 #import "XYCommentSectionHeader.h"
 #import "XYCommentCell.h"
+#import "XYTopicCell.h"
 #import "XYCommentItem.h"
 #import "XYTopicItem.h"
-#import "XYTopicCell.h"
 
 @interface XYCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
@@ -40,19 +40,47 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    // 设置基本的数据
+    // 1.设置基本的数据
     [self setupBase];
     
-    // 设置tableView
+    // 2.设置tableView
     [self setupTable];
     
-    // 刷新数据
-    [self setupRefresh];
-    
-    // 设置头部的view
+    // 3.设置头部的view
     [self setupHeaderView];
+    
+    // 4.刷新数据
+    [self setupRefresh];
 }
 
+#pragma mark - 1.设置基本的数据
+- (void)setupBase
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+#pragma mark - 2.设置tableView
+- (void)setupTable
+{
+    self.tableView.backgroundColor = XYCommonBgColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 设置cell的高度
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44;
+    
+    // 设置headerView的高度
+    self.tableView.sectionHeaderHeight = XYFont(14).lineHeight + 2;
+    
+    // 注册
+    // XYCommentCellId,通过xib来注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYCommentCell class]) bundle:nil] forCellReuseIdentifier:XYCommentCellId];
+    
+    // XYCommentCellHeaderId,通过类来注册
+    [self.tableView registerClass:[XYCommentSectionHeader class]forHeaderFooterViewReuseIdentifier:XYCommentCellHeaderId];
+}
+
+#pragma mark - 3.设置头部的view
 - (void)setupHeaderView
 {
     // 处理模型数据
@@ -77,27 +105,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
 }
 
-- (void)setupTable
-{
-    self.tableView.backgroundColor = XYCommonBgColor;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
-    // 设置cell的高度
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 44;
-    
-    // 设置headerView的高度
-    self.tableView.sectionHeaderHeight = XYFont(14).lineHeight + 2;
-    
-    // 注册
-    // XYCommentCellId,通过xib来注册
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYCommentCell class]) bundle:nil] forCellReuseIdentifier:XYCommentCellId];
-    
-    // XYCommentCellHeaderId,通过类来注册
-    [self.tableView registerClass:[XYCommentSectionHeader class]forHeaderFooterViewReuseIdentifier:XYCommentCellHeaderId];
-}
-
-
+#pragma mark - 4.刷新数据
 - (void)setupRefresh
 {
     // 下拉刷新
@@ -108,7 +116,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
     self.tableView.mj_footer = [XYRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
 }
 
-#pragma mark - 加载数据
+#pragma mark - 4.1.加载最新评论
 - (void)loadNewComments
 {
     //取消任务,防止下拉加载和上拉刷新同时进行
@@ -146,19 +154,18 @@ static NSString * const XYCommentCellHeaderId = @"header";
         // 结束刷新
         [weakSelf.tableView.mj_header endRefreshing];
     }];
-    }
+}
 
+#pragma mark - 4.2.加载更多评论
 - (void)loadMoreComments
 {
     //取消任务
     [XYCommentTool cancel];
 
-    
     // 参数
     XYCommentParam *param = [[XYCommentParam alloc] init];
     param.data_id = self.topic.ID;
     param.lastcid = self.latestComments.lastObject.ID;
-    
     
     XYWeakSelf
     // 发送请求
@@ -188,13 +195,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
     }];
 }
 
-
-- (void)setupBase
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-}
-
-
 /** 当键盘将要改变frame时调用 */
 - (void)keyboardWillChangeFrame:(NSNotification *)note
 {
@@ -208,15 +208,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
     [UIView animateWithDuration:duration animations:^{
         [self.view layoutIfNeeded];
     }];
-
-}
-
-/** 移除通知 */
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    self.topic.top_cmt = self.savedTopCmt;
-    self.topic.cellHeight = 0;
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -247,22 +238,25 @@ static NSString * const XYCommentCellHeaderId = @"header";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 1.创建cell
     XYCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:XYCommentCellId];
+    
+    // 2.根据不同的组设置模型数据
     if (indexPath.section == 0 && self.hotestComments.count) {
         // 热门评论
-        cell.comment = self.hotestComments[indexPath.row];
+        cell.commentItem = self.hotestComments[indexPath.row];
     } else {
         // 最新评论
-        cell.comment = self.latestComments[indexPath.row];
+        cell.commentItem = self.latestComments[indexPath.row];
     }
-    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    // 3.返回cell
     return cell;
 }
 
 
 #pragma mark - <UIScrollViewDelegate>
-
 /** 设置头部标题 */
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -282,6 +276,12 @@ static NSString * const XYCommentCellHeaderId = @"header";
     [self.view endEditing:YES];
 }
 
-
+#pragma mark - 移除通知
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    self.topic.top_cmt = self.savedTopCmt;
+    self.topic.cellHeight = 0;
+}
 
 @end
