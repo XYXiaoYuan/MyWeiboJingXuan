@@ -24,6 +24,7 @@
 
 @implementation XYTopicVoiceView
 
+#pragma mark - 从xib中加载出现就会调用的方法
 - (void)awakeFromNib
 {
     self.autoresizingMask = UIViewAutoresizingNone;
@@ -33,6 +34,7 @@
     
 }
 
+#pragma mark - 查看大图
 - (void)seeBig
 {
     XYSeeBigPictureViewController *seeBig = [[XYSeeBigPictureViewController alloc] init];
@@ -41,7 +43,7 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBig animated:YES completion:nil];
 }
 
-
+#pragma mark - 模型的setter方法
 - (void)setTopic:(XYTopicItem *)topic
 {
     _topic = topic;
