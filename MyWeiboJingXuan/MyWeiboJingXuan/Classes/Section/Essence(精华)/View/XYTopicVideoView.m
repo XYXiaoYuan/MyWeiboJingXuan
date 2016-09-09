@@ -9,7 +9,6 @@
 #import "XYTopicVideoView.h"
 #import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
-#import "XYSeeBigPictureViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "KRVideoPlayerController.h"
 
@@ -28,16 +27,8 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     // 查看大图
     self.imageView.userInteractionEnabled = YES;
-    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBig)]];
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playBtnClick:)]];
     
-}
-
-- (void)seeBig
-{
-    XYSeeBigPictureViewController *seeBig = [[XYSeeBigPictureViewController alloc] init];
-    // 设置数据
-    seeBig.topic = self.topic;
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBig animated:YES completion:nil];
 }
 
 
