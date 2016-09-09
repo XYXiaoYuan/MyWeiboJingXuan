@@ -10,6 +10,8 @@
 
 @interface XYLoginRegisterViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftSpace;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
 @end
 
@@ -18,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+    // 设置登录,注册按钮的圆角
+    self.loginButton.layer.cornerRadius = 5;
+    self.loginButton.clipsToBounds = YES;
+    self.registerButton.layer.cornerRadius = 5;
+    self.registerButton.clipsToBounds = YES;
 }
 
 - (IBAction)close {
@@ -27,6 +35,8 @@
 
 - (IBAction)loginOrRegister:(UIButton *)button
 {
+    [self.view endEditing:YES];
+    
     // 修改约束
     if (self.leftSpace.constant == 0) {
         self.leftSpace.constant = - self.view.xy_width;
@@ -40,7 +50,6 @@
     [UIView animateWithDuration:0.25 animations:^{
         [self.view layoutIfNeeded];
     }];
-    
 }
 
 
@@ -54,7 +63,6 @@
 {
     [self.view endEditing:YES];
 }
-
 
 
 @end
