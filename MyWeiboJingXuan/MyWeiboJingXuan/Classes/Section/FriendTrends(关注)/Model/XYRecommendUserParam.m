@@ -12,8 +12,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         self.a = @"list";
         self.c = @"subscribe";
     }
