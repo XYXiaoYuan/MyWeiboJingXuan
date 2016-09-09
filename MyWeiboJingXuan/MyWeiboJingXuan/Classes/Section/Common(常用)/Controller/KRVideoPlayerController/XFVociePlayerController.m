@@ -33,6 +33,8 @@
 
 
 -(void)viewDidLoad {
+    [super viewDidLoad];
+    
     [self.progress setThumbImage:[UIImage imageNamed:@"kr-video-player-point"] forState:UIControlStateNormal];
     [self startPlayingMusic];
     self.playTime.text = [NSString stringWithTime:self.totalTime];

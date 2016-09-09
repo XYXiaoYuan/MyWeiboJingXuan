@@ -82,7 +82,7 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 
 /*************    增加额外的属性,方便开发    ***************/
 /** cell的高度 */
-@property(nonatomic,assign) NSInteger cellHeight;
+@property(nonatomic,assign) CGFloat cellHeight;
 /** 中间内容的frame */
 @property(nonatomic,assign) CGRect contentF;
 /** 是否为大图 */

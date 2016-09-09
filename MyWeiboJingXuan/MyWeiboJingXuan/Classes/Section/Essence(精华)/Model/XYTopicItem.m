@@ -16,9 +16,11 @@ static NSDateFormatter *fmt_;
 
 
 // 在这里手动计算cell的高度
-- (NSInteger)cellHeight
+- (CGFloat)cellHeight
 {
-    if (_cellHeight == 0) {
+    // 如果cell的高度已经计算过,就直接返回
+    if (_cellHeight) return _cellHeight;
+    
     // cell的高度
     // 1.头像
     _cellHeight = 55;
@@ -57,9 +59,8 @@ static NSDateFormatter *fmt_;
         // 最热评论内容
         
         // 语音消息处理
-        NSString *content = self.top_cmt.content;
         if (self.top_cmt.voiceuri.length) {
-            content = @"[语音评论]";
+            self.top_cmt.content = @"[语音评论]";
         }
         NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",self.top_cmt.user.username,self.top_cmt.content];
         
@@ -73,7 +74,7 @@ static NSDateFormatter *fmt_;
     
     // 5.底部工具条
     _cellHeight += 35 + XYCommonMargin;
-    }
+    
     return _cellHeight;
 }
 

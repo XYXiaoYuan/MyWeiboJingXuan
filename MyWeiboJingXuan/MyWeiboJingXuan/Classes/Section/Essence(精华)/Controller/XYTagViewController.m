@@ -99,7 +99,7 @@ static NSString * const XYTagCellID = @"tag";
 /** 控制的view即将消失的时候调用 */
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewWillDisappear:animated];
     
     // 停止请求
     [XYTagTool invalidateSessionCancelingTasks];
