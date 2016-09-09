@@ -188,11 +188,19 @@ static NSString * const XYTopicCellId = @"topic";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // 1.创建cell
     XYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:XYTopicCellId];
     
+    // 2.给cell设置模型数据
     cell.topic = self.topics[indexPath.row];
     
+    cell.commentBlock = ^(){
+        XYCommentViewController *comment = [[XYCommentViewController alloc] init];
+        comment.topic = self.topics[indexPath.row];
+        [self.navigationController pushViewController:comment animated:YES];
+    };
+    
+    // 3.返回cell
     return cell;
 }
 
@@ -207,7 +215,6 @@ static NSString * const XYTopicCellId = @"topic";
     XYCommentViewController *comment = [[XYCommentViewController alloc] init];
     
     // 这里必须传一个模型过来,不然获取不了数据
-    comment.navigationItem.title = @"评论";
     comment.topic = self.topics[indexPath.row];
     
     [self.navigationController pushViewController:comment animated:YES];

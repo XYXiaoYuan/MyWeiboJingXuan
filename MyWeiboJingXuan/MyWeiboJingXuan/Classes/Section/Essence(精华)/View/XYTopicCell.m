@@ -169,9 +169,17 @@
 - (void)awakeFromNib
 {
     // 设置背景图片,cell会模糊
-//    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    [self.commentButton addTarget:self action:@selector(jumpToCommentVc) forControlEvents:UIControlEventTouchUpInside];
 }
 
+
+- (void)jumpToCommentVc
+{
+    if (self.commentBlock) {
+        self.commentBlock();
+    }
+}
 
 /** 重写setFrame,先覆盖然后让cell自己调用计算 */
 - (void)setFrame:(CGRect)frame

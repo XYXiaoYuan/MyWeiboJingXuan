@@ -35,11 +35,10 @@
 static NSString * const XYCommentCellId = @"comment";
 static NSString * const XYCommentCellHeaderId = @"header";
 
-
 #pragma mark - 初始化操作
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     // 1.设置基本的数据
     [self setupBase];
     
@@ -62,6 +61,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
 #pragma mark - 2.设置tableView
 - (void)setupTable
 {
+    self.navigationItem.title = @"评论";
     self.tableView.backgroundColor = XYCommonBgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -266,6 +266,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
     } else {
         header.textLabel.text = @"最新评论";
     }
+    
     return header;
 }
 
