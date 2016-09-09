@@ -21,14 +21,6 @@
     return self;
 }
 
-// 也能在这个方法中监听键盘的输入，比如输入“换行”
-//- (void)insertText:(NSString *)text
-//{
-//    [super insertText:text];
-//    
-//    XYLog(@"%d", [text isEqualToString:@"\n"]);
-//}
-
 - (void)deleteBackward
 {
     !self.deleteBlock ? : self.deleteBlock();

@@ -7,11 +7,11 @@
 //
 
 #import "XYPublishViewController.h"
+#import "XYLoginTool.h"
+#import <POP.h>
 #import "XYVerticalButton.h"
 #import "XYPostWordViewController.h"
 #import "XYNavigationController.h"
-#import <POP.h>
-#import "XYLoginTool.h"
 
 static CGFloat const XYAnimationDelay = 0.1;
 static CGFloat const XYSpringFactor = 10;
@@ -57,12 +57,15 @@ static CGFloat const XYSpringFactor = 10;
         CGFloat buttonBeginY = buttonEndY - XYSCREEN_H;
         
         // 按钮动画
-        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
-        anim.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
-        anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
-        anim.springBounciness = XYSpringFactor;
-        anim.springSpeed = XYSpringFactor;
-        anim.beginTime = CACurrentMediaTime() + XYAnimationDelay * i;
+        POPSpringAnimation *anim = ({
+            POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+            anim.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
+            anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
+            anim.springBounciness = XYSpringFactor;
+            anim.springSpeed = XYSpringFactor;
+            anim.beginTime = CACurrentMediaTime() + XYAnimationDelay * i;
+            anim;
+        });
         [button pop_addAnimation:anim forKey:nil];
     }
     
@@ -126,10 +129,10 @@ static CGFloat const XYSpringFactor = 10;
         // 基本动画
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
         CGFloat centerY = subview.xy_centerY + XYSCREEN_H;
-        // 动画的执行节奏(一开始很慢, 后面很快)
-        //        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
         anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.xy_centerX, centerY)];
         anim.beginTime = CACurrentMediaTime() + (i - beginIndex) * XYAnimationDelay;
+        // 动画的执行节奏(一开始很慢, 后面很快)
+        //        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
         [subview pop_addAnimation:anim forKey:nil];
         
         // 监听最后一个动画

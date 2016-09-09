@@ -1,9 +1,9 @@
 //
-//  XMGLoginTool.h
-//  01-百思不得姐
+//  XYLoginTool.h
+//  bai
 //
-//  Created by xiaomage on 15/8/6.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by yuan on 15/8/6.
+//  Copyright (c) 2015年 袁小荣. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
