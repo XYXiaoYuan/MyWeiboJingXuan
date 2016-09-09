@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class XYTopicItem;
-@interface XYTopicVideoView : UIView
 
+@interface XYTopicVideoView : UIView
 // 模型数据
 @property(nonatomic,strong) XYTopicItem *topic;
+/** 重置播放器 */
 - (void)reset;
-
 @end
