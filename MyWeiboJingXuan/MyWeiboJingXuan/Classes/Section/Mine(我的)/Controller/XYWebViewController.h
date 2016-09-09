@@ -6,8 +6,9 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYBaseViewController.h"
 
-@interface XYWebViewController : UIViewController
+@interface XYWebViewController : XYBaseViewController
+/** 加载网页的url */
 @property (nonatomic, strong) NSURL *url;
 @end

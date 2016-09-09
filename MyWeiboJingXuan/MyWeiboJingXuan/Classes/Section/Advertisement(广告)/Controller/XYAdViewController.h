@@ -6,8 +6,8 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYBaseViewController.h"
 
-@interface XYAdViewController : UIViewController
+@interface XYAdViewController : XYBaseViewController
 
 @end

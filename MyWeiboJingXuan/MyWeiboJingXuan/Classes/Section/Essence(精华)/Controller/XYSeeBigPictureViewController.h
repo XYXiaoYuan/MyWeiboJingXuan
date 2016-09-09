@@ -6,10 +6,10 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XYBaseViewController.h"
 
 @class XYTopicItem;
-@interface XYSeeBigPictureViewController : UIViewController
+@interface XYSeeBigPictureViewController : XYBaseViewController
 
 // 模型数据
 @property(nonatomic,strong) XYTopicItem *topic;
