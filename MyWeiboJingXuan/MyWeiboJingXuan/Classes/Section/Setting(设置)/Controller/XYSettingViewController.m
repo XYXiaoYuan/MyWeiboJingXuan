@@ -7,6 +7,7 @@
 //
 
 #import "XYSettingViewController.h"
+#import "XYWebViewController.h"
 
 @interface XYSettingViewController ()
 
@@ -45,11 +46,33 @@
     group.headTitle = @"其他";
     
     XYSettingArrowItem *item1 = [XYSettingArrowItem initWithTitle:@"清除缓存"];
+    
     XYSettingArrowItem *item2 = [XYSettingArrowItem initWithTitle:@"推荐给朋友"];
+    
     XYSettingArrowItem *item3 = [XYSettingArrowItem initWithTitle:@"帮助"];
+    item3.operation = ^(){
+        XYWebViewController *webVc = [[XYWebViewController alloc] init];
+        webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/help.html"];
+        [self.navigationController pushViewController:webVc animated:YES];
+    };
+    
     XYSettingItem *item4 = [XYSettingItem initWithTitle:@"当前版本: 4.3"];
+    
     XYSettingArrowItem *item5 = [XYSettingArrowItem initWithTitle:@"关于我们"];
+    item5.operation = ^(){
+        XYWebViewController *webVc = [[XYWebViewController alloc] init];
+        webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/aboutus.html?client=iphone&market=&ver=4.3&device=ios%20device&uid=&sex=m&udid=&mac=&openudid=0855398ed0cd64dd8ad14832ca16ccd1585ab719&asid=8E6ACD13-D8CC-42BC-B565-1640CAB44A06&jbk=1&appname=bs0315&1473404594"];
+        [self.navigationController pushViewController:webVc animated:YES];
+    };
+
+    
     XYSettingArrowItem *item6 = [XYSettingArrowItem initWithTitle:@"隐私政策"];
+    item6.operation = ^(){
+        XYWebViewController *webVc = [[XYWebViewController alloc] init];
+        webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/privacy.html?client=iphone&market=&ver=4.3&device=ios%20device&uid=&sex=m&udid=&mac=&openudid=0855398ed0cd64dd8ad14832ca16ccd1585ab719&asid=8E6ACD13-D8CC-42BC-B565-1640CAB44A06&jbk=1&appname=bs0315"];
+        [self.navigationController pushViewController:webVc animated:YES];
+    };
+    
     XYSettingArrowItem *item7 = [XYSettingArrowItem initWithTitle:@"打分支持不得姐"];
     
     
