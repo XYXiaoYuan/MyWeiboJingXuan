@@ -7,11 +7,10 @@
 //
 
 #import "XYSeeBigPictureViewController.h"
-
-#import "XYTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import <Photos/Photos.h>
 #import <SVProgressHUD.h>
+#import "XYTopicItem.h"
 
 @interface XYSeeBigPictureViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
@@ -29,7 +28,6 @@ static NSString * XYAssetCollectionTitle = @"百思不得姐";
     
     // 点击图片,看大图
     [self seeBigImage];
-   
 }
 
 - (IBAction)save

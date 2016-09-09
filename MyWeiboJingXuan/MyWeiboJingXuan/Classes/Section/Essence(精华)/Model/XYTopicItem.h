@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class XYCommentItem;
+
 // 定义一个枚举,存储不同的帖子枚举类型
 typedef NS_ENUM(NSUInteger, XYTopicType)  {
     /** 全部 */
@@ -23,8 +25,6 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
     // 	1为全部，10为图片，29为段子，31为音频，41为视频，默认为10
 } ;
 
-
-@class XYCommentItem;
 @interface XYTopicItem : NSObject
 
 // 用户 -- 发帖者
@@ -46,18 +46,15 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 @property (nonatomic, assign) NSInteger repost;
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
+/** 文字宽度 */
+@property(nonatomic,assign) NSInteger width;
+/** 文字高度 */
+@property(nonatomic,assign) NSInteger height;
 
 /** 最热评论 */
 @property(nonatomic,strong) XYCommentItem *top_cmt;
-
 /** 类型 */
 @property(nonatomic,assign) XYTopicType type;
-
-/** 文字宽度 */
-@property(nonatomic,assign) NSInteger width;
-
-/** 文字高度 */
-@property(nonatomic,assign) NSInteger height;
 
 /********  关于图片的大小   **********/
 /** 小图 */
@@ -67,11 +64,13 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 /** 大图 */
 @property(nonatomic,copy) NSString *big_image;
 
+/********  关于音频   **********/
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 音频的播放地址 */
 @property (copy, nonatomic) NSString *voiceuri;
 
+/********  关于视频   **********/
 /** 视频时长 */
 @property (nonatomic, assign) NSInteger videotime;
 /** 视频的播放地址 */
@@ -90,5 +89,4 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 @property(nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
 /** 是否为gif图 */
 @property(nonatomic,assign) BOOL is_gif;
-
 @end

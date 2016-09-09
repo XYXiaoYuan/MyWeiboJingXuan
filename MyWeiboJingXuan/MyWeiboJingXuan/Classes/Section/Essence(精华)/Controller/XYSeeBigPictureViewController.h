@@ -9,9 +9,8 @@
 #import "XYBaseViewController.h"
 
 @class XYTopicItem;
+
 @interface XYSeeBigPictureViewController : XYBaseViewController
-
-// 模型数据
+/** 帖子模型数据 */
 @property(nonatomic,strong) XYTopicItem *topic;
-
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "XYTopicItem.h"
-
 #import "XYUserItem.h"
 #import "XYCommentItem.h"
 

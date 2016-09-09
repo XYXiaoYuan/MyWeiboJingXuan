@@ -9,25 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @class XYUserItem;
-@interface XYCommentItem : NSObject
 
+@interface XYCommentItem : NSObject
 /** 评论内容 */
 @property(nonatomic,copy) NSString *content;
-
 /** 用户 */
 @property(nonatomic,strong) XYUserItem *user;
-
 /** id */
 @property(nonatomic,copy) NSString *ID;
-
 /** 被点赞数 */
 @property(nonatomic,assign) NSInteger like_count;
-
 /** 音频文件的时长 */
 @property(nonatomic,assign) NSInteger voicetime;
-
 /** 音频文件的url */
 @property(nonatomic,copy) NSString *voiceuri;
-
-
 @end

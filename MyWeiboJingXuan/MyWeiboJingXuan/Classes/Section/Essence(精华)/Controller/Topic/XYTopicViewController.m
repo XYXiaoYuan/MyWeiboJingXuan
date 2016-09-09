@@ -18,14 +18,10 @@
 #import "XYCommentViewController.h"
 
 @interface XYTopicViewController ()<UITableViewDataSource,UITableViewDelegate>
-
 /** maxtime : 用来加载下一页数据 */
 @property (nonatomic, copy) NSString *maxtime;
-
 /** topics模型数据 */
 @property(nonatomic,strong) NSMutableArray<XYTopicItem *> *topics;
-
-
 /** 声明这个方法的目的 : 为了能够使用点语法的智能提示 */
 - (NSString *)aParam;
 @end
@@ -48,54 +44,22 @@ static NSString * const XYTopicCellId = @"topic";
     return 0;
 }
 
-#pragma mark - 初始化操作
+#pragma mark - 0.初始化操作
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置tableView
+    // 1.设置tableView
     [self setupTable];
     
-    // 数据刷新
+    // 2.数据刷新
     [self setupRefresh];
     
-    // 注册通知
+    // 3.注册通知
     [self setupNote];
     
 }
 
-- (void)setupNote
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XYTitleButtonDidRepeatClickNotification object:nil];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark - 监听
-#pragma mark - 监听TabBar按钮的重复点击
-- (void)tabBarButtonDidRepeatClick
-{
-    // 如果当前控制器的view不在window上，就直接返回
-    if (self.view.window == nil) return;
-    
-    // 如果当前控制器的view跟window没有重叠，就直接返回
-    if (![self.view intersectWithView:self.view.window]) return;
-    
-    // 进行下拉刷新
-    [self.tableView.mj_header beginRefreshing];
-}
-
-#pragma mark - 监听标题按钮的重复点击
-- (void)titleButtonDidRepeatClick
-{
-    [self tabBarButtonDidRepeatClick];
-}
-
-
-#pragma mark -  初始化tableView
+#pragma mark -  1.设置tableView
 - (void)setupTable
 {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -105,8 +69,7 @@ static NSString * const XYTopicCellId = @"topic";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTopicCell class]) bundle:nil] forCellReuseIdentifier:XYTopicCellId];
 }
 
-
-#pragma mark - 数据刷新
+#pragma mark - 2.数据刷新
 - (void)setupRefresh
 {
     // 下拉刷新
@@ -114,7 +77,7 @@ static NSString * const XYTopicCellId = @"topic";
     [self.tableView.mj_header beginRefreshing];
 }
 
-#pragma mark - 加载数据
+#pragma mark - 2.1.下拉刷新
 // 下拉刷新,加载最新数据
 - (void)loadNewTopics
 {
@@ -149,7 +112,8 @@ static NSString * const XYTopicCellId = @"topic";
     }];
 }
 
-// 上拉刷新,加载更多数据
+#pragma mark - 2.2.上拉加载
+// 上拉加载,加载更多数据
 - (void)loadMoreTopics
 {
     //取消任务
@@ -183,6 +147,37 @@ static NSString * const XYTopicCellId = @"topic";
     }];
 }
 
+#pragma mark - 3.注册通知
+- (void)setupNote
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XYTabBarButtonDidRepeatClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XYTitleButtonDidRepeatClickNotification object:nil];
+}
+
+#pragma mark - 3.1.监听标题按钮的重复点击
+- (void)titleButtonDidRepeatClick
+{
+    [self tabBarButtonDidRepeatClick];
+}
+
+#pragma mark - 3.2.监听TabBar按钮的重复点击
+- (void)tabBarButtonDidRepeatClick
+{
+    // 如果当前控制器的view不在window上，就直接返回
+    if (self.view.window == nil) return;
+    
+    // 如果当前控制器的view跟window没有重叠，就直接返回
+    if (![self.view intersectWithView:self.view.window]) return;
+    
+    // 进行下拉刷新
+    [self.tableView.mj_header beginRefreshing];
+}
+
+#pragma mark - 3.3.delloc中移除通知
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

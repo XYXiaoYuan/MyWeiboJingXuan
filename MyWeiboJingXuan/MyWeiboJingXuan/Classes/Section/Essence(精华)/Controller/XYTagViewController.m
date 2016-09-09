@@ -7,8 +7,8 @@
 //
 
 #import "XYTagViewController.h"
-#import <MJExtension.h>
 #import <SVProgressHUD.h>
+#import <MJExtension.h>
 #import "XYTagTool.h"
 #import "XYTagItem.h"
 #import "XYTagCell.h"
@@ -20,7 +20,7 @@
 
 @implementation XYTagViewController
 // 重用标识
-static NSString * const XYTagCellId = @"tag";
+static NSString * const XYTagCellID = @"tag";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,7 +42,7 @@ static NSString * const XYTagCellId = @"tag";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 注册xib
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTagCell class]) bundle:nil] forCellReuseIdentifier:XYTagCellId];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XYTagCell class]) bundle:nil] forCellReuseIdentifier:XYTagCellID];
 }
 
 #pragma mark - 加载标签数据
@@ -86,10 +86,13 @@ static NSString * const XYTagCellId = @"tag";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XYTagCell *cell = [tableView dequeueReusableCellWithIdentifier:XYTagCellId];
+    // 1.创建cell
+    XYTagCell *cell = [tableView dequeueReusableCellWithIdentifier:XYTagCellID];
     
+    // 2.设置模型数据
     cell.tagModel = self.tags[indexPath.row];
     
+    // 3.返回cell
     return cell;
 }
 

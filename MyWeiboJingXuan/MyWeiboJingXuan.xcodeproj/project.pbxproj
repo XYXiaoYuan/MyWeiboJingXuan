@@ -975,16 +975,16 @@
 		1CDBD58F1D826FA900E09B7B /* Topic */ = {
 			isa = PBXGroup;
 			children = (
-				1CDBD5901D826FA900E09B7B /* XYAllViewController.h */,
-				1CDBD5911D826FA900E09B7B /* XYAllViewController.m */,
-				1CDBD5921D826FA900E09B7B /* XYPictureViewController.h */,
-				1CDBD5931D826FA900E09B7B /* XYPictureViewController.m */,
 				1CDBD5941D826FA900E09B7B /* XYTopicViewController.h */,
 				1CDBD5951D826FA900E09B7B /* XYTopicViewController.m */,
+				1CDBD5901D826FA900E09B7B /* XYAllViewController.h */,
+				1CDBD5911D826FA900E09B7B /* XYAllViewController.m */,
 				1CDBD5961D826FA900E09B7B /* XYVideoViewController.h */,
 				1CDBD5971D826FA900E09B7B /* XYVideoViewController.m */,
 				1CDBD5981D826FA900E09B7B /* XYVoiceViewController.h */,
 				1CDBD5991D826FA900E09B7B /* XYVoiceViewController.m */,
+				1CDBD5921D826FA900E09B7B /* XYPictureViewController.h */,
+				1CDBD5931D826FA900E09B7B /* XYPictureViewController.m */,
 				1CDBD59A1D826FA900E09B7B /* XYWordViewController.h */,
 				1CDBD59B1D826FA900E09B7B /* XYWordViewController.m */,
 			);
