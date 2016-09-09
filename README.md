@@ -2,4 +2,4 @@
 重构百思不得姐
 
 #能够播放视频
-![](/MyWeiboJingXuan/MyWeiboJingXuan.gif)
+![image](MyWeiboJingXuan.gif)
