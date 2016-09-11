@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XYTabBarController.h"
 #import "XYScrollToTopWindow.h"
+#import "XYPushGuide.h"
 
 @interface AppDelegate () <UITabBarControllerDelegate>
 /** 记录上一次选中的子控制器的索引 */
@@ -45,6 +46,9 @@
     
     // 4.添加点击状态栏回到顶部功能
     [XYScrollToTopWindow show];
+    
+    // 5.显示推送引导
+    [XYPushGuide show];
     
     return YES;
 
