@@ -9,7 +9,6 @@
 #import "XYBaseTool.h"
 #import "MJExtension.h"
 
-
 @implementation XYBaseTool
 
 + (void)getWithUrl:(NSString *)url param:(id)param resultClass:(Class)resultClass success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
@@ -18,7 +17,13 @@
     
     [XYHttpTool get:url params:params success:^(id responseObj) {
         if (success) {
-            success(responseObj);
+            if ([responseObj isKindOfClass:[NSDictionary class]]) {
+                id result = [resultClass mj_objectWithKeyValues:responseObj];
+                success(result);
+            }if ([responseObj isKindOfClass:[NSArray class]]) {
+                id result = [resultClass mj_objectArrayWithKeyValuesArray:responseObj];
+                success(result);
+            }
         }
     } failure:^(NSError *error) {
         if (failure) {
@@ -32,8 +37,12 @@
     NSDictionary *params = [param mj_keyValues];
     
     [XYHttpTool post:url params:params success:^(id responseObj) {
-        if (success) {
-            success(responseObj);
+        if ([responseObj isKindOfClass:[NSDictionary class]]) {
+            id result = [resultClass mj_objectWithKeyValues:responseObj];
+            success(result);
+        }if ([responseObj isKindOfClass:[NSArray class]]) {
+            id result = [resultClass mj_objectArrayWithKeyValuesArray:responseObj];
+            success(result);
         }
     } failure:^(NSError *error) {
         if (failure) {

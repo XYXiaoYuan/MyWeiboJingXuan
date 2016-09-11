@@ -53,13 +53,14 @@ static NSString * const XYTagCellID = @"tag";
     
     // 加载标签数据
     XYTagParam *param = [[XYTagParam alloc] init];
-    param.action = @"sub";
+//    param.action = @"sub";
     
     XYWeakSelf;
     [XYTagTool tagWithParam:param success:^(XYTagItem *result) {
         // 成功
         // 字典数据 -> 模型数据
-        weakSelf.tags = [XYTagItem mj_objectArrayWithKeyValuesArray:result];
+        NSDictionary *resultDict = [result mj_keyValues];
+        weakSelf.tags = [XYTagItem mj_objectArrayWithKeyValuesArray:resultDict];
 
         // 刷新数据
         [weakSelf.tableView reloadData];

@@ -72,12 +72,12 @@ static NSString * const XYUserId = @"user";
     
     // 发送请求
     XYRecommendCategoryParam *params = [[XYRecommendCategoryParam alloc] init];
-    [XYRecommendCategoryTool recommendCategoryWithParam:params success:^(NSDictionary *result) {
+    [XYRecommendCategoryTool recommendCategoryWithParam:params success:^(XYRecommendCategoryResult *result) {
         // 隐藏指示器
         [SVProgressHUD dismiss];
         
         // 服务器返回的JSON数据
-        self.categories = [XYRecommendCategory mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        self.categories = [XYRecommendCategory mj_objectArrayWithKeyValuesArray:result.list];
         
         // 刷新表格
         [self.categoryTableView reloadData];
@@ -116,9 +116,9 @@ static NSString * const XYUserId = @"user";
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据
-    [XYRecommendUserTool recommendUserWithParam:params success:^(NSDictionary *result) {
+    [XYRecommendUserTool recommendUserWithParam:params success:^(XYRecommendUserResult *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result.list];
         
         // 清除所有旧数据
         [rc.users removeAllObjects];
@@ -127,7 +127,7 @@ static NSString * const XYUserId = @"user";
         [rc.users addObjectsFromArray:users];
         
         // 保存总数
-        rc.total = [result[@"total"] integerValue];
+        rc.total = result.total;
         
         // 不是最后一次请求
         if (self.params != params) return;
@@ -162,9 +162,9 @@ static NSString * const XYUserId = @"user";
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据
-    [XYRecommendUserTool recommendUserWithParam:params success:^(NSDictionary *result) {
+    [XYRecommendUserTool recommendUserWithParam:params success:^(XYRecommendUserResult *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result.list];
         
         // 添加到当前类别对应的用户数组中
         [category.users addObjectsFromArray:users];

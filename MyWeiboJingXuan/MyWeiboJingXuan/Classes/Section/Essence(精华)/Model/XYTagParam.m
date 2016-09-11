@@ -15,6 +15,7 @@
     if (self = [super init]) {
         self.a = @"tag_recommend";
         self.c = @"topic";
+        self.action = @"sub";
     }
     return self;
 }

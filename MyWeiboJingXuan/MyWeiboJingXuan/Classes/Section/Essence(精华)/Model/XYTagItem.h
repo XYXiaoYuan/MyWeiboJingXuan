@@ -11,8 +11,14 @@
 @interface XYTagItem : NSObject
 /** 图片 */
 @property(nonatomic,copy) NSString *image_list;
-/** 订阅数 */
-@property(nonatomic,assign) NSInteger sub_number;
+/** theme_id */
+@property(nonatomic,strong) NSString *theme_id;
 /** 名字 */
 @property(nonatomic,copy) NSString *theme_name;
+/** is_sub */
+@property(nonatomic,assign) BOOL is_sub;
+/** is_default */
+@property(nonatomic,assign) BOOL is_default;
+/** 订阅数 */
+@property(nonatomic,assign) NSInteger sub_number;
 @end

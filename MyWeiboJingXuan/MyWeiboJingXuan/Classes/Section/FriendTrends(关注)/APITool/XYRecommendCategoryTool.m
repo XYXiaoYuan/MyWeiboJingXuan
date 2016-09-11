@@ -10,9 +10,9 @@
 
 @implementation XYRecommendCategoryTool
 
-+ (void)recommendCategoryWithParam:(XYRecommendCategoryParam *)param success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure
++ (void)recommendCategoryWithParam:(XYRecommendCategoryParam *)param success:(void (^)(XYRecommendCategoryResult *result))success failure:(void (^)(NSError *error))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYRecommendCategoryResult class] success:success failure:failure];
 }
 
 @end

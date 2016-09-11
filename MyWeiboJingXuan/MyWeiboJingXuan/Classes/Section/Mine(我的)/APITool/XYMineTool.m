@@ -10,9 +10,9 @@
 
 @implementation XYMineTool
 
-+ (void)mineDataWithParam:(XYMineParam *)param success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure
++ (void)mineDataWithParam:(XYMineParam *)param success:(void (^)(XYMineResult *))success failure:(void (^)(NSError *))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYMineResult class] success:success failure:failure];
 }
 
 @end

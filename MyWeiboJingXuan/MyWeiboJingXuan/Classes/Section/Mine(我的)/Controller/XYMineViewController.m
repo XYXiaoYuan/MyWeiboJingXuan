@@ -50,10 +50,10 @@ static CGFloat const margin = 1;
     XYMineParam *params = [[XYMineParam alloc] init];
     
     // 2.发送请求
-    [XYMineTool mineDataWithParam:params success:^(NSDictionary *result) {
+    [XYMineTool mineDataWithParam:params success:^(XYMineResult *result) {
         
         // 字典数组转换成模型数组
-        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:result[@"square_list"]];
+        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:result.square_list];
         
         // 处理数据
         [self resloveData];

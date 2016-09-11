@@ -10,9 +10,9 @@
 
 @implementation XYEssenceTool
 
-+ (void)essenceWithParam:(XYEssenceParam *)param success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure
++ (void)essenceWithParam:(XYEssenceParam *)param success:(void (^)(XYEssenceResult *result))success failure:(void (^)(NSError *error))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYEssenceResult class] success:success failure:failure];
 }
 
 @end

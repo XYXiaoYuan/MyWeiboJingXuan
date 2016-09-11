@@ -10,9 +10,9 @@
 
 @implementation XYCommentTool
 
-+ (void)commentWithParam:(XYCommentParam *)param success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure
++ (void)commentWithParam:(XYCommentParam *)param success:(void (^)(XYCommentResult *result))success failure:(void (^)(NSError *error))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYCommentResult class] success:success failure:failure];
 }
 
 @end

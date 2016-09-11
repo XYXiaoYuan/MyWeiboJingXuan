@@ -13,6 +13,7 @@
 #import "XYEssenceTool.h"
 #import <MJExtension.h>
 #import "XYTopicItem.h"
+#import "XYEssenceInfoItem.h"
 #import "XYTopicCell.h"
 #import "XYNewViewController.h"
 #import "XYCommentViewController.h"
@@ -90,13 +91,13 @@ static NSString * const XYTopicCellId = @"topic";
     param.type = self.type;
     
     XYWeakSelf
-    [XYEssenceTool essenceWithParam:param success:^(NSDictionary *result) {
+    [XYEssenceTool essenceWithParam:param success:^(XYEssenceResult *result) {
         // 发送成功
         // 存储maxtime(方便用来加载下一页数据)
-        self.maxtime = result[@"info"][@"maxtime"];
+        self.maxtime = result.info.maxtime;
         
         // 字典数据 -> 模型数组
-        weakSelf.topics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        weakSelf.topics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result.list];
         
         // 刷新数据
         [weakSelf.tableView reloadData];
@@ -126,13 +127,13 @@ static NSString * const XYTopicCellId = @"topic";
     param.maxtime = self.maxtime;
     
     XYWeakSelf
-    [XYEssenceTool essenceWithParam:param success:^(NSDictionary *result) {
-        // 发送成功
+    [XYEssenceTool essenceWithParam:param success:^(XYEssenceResult *result) {
+    // 发送成功
         // 存储maxtime(方便用来加载下一页数据)
-        self.maxtime = result[@"info"][@"maxtime"];
+        self.maxtime = result.info.maxtime;
         
         // 字典数据 -> 模型数组
-        NSArray<XYTopicItem *> *moreTopics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result[@"list"]];
+        NSArray<XYTopicItem *> *moreTopics = [XYTopicItem mj_objectArrayWithKeyValuesArray:result.list];
         [self.topics addObjectsFromArray:moreTopics];
         
         // 刷新数据

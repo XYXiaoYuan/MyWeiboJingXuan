@@ -10,9 +10,9 @@
 
 @implementation XYRecommendUserTool
 
-+ (void)recommendUserWithParam:(XYRecommendUserParam *)param success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure
++ (void)recommendUserWithParam:(XYRecommendUserParam *)param success:(void (^)(XYRecommendUserResult *result))success failure:(void (^)(NSError *error))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[NSDictionary class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYRecommendUserResult class] success:success failure:failure];
 }
 
 @end

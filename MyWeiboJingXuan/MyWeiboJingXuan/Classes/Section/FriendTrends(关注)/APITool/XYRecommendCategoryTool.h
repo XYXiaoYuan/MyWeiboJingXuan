@@ -8,6 +8,7 @@
 
 #import "XYBaseTool.h"
 #import "XYRecommendCategoryParam.h"
+#import "XYRecommendCategoryResult.h"
 
 @interface XYRecommendCategoryTool : XYBaseTool
 
@@ -18,6 +19,6 @@
  *  @param success 请求成功后的回调（请将请求成功后想做的事情写到这个block中）
  *  @param failure 请求失败后的回调（请将请求失败后想做的事情写到这个block中）
  */
-+ (void)recommendCategoryWithParam:(XYRecommendCategoryParam *)param success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure;
++ (void)recommendCategoryWithParam:(XYRecommendCategoryParam *)param success:(void (^)(XYRecommendCategoryResult *result))success failure:(void (^)(NSError *error))failure;
 
 @end

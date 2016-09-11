@@ -129,21 +129,21 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
     XYWeakSelf
     // 发送请求
-    [XYCommentTool commentWithParam:param success:^(NSDictionary *result) {
+    [XYCommentTool commentWithParam:param success:^(XYCommentResult *result) {
         // 发送成功
         // 没有任何评论数据
-        if (![result isKindOfClass:[NSDictionary class]]) {
+        if (![result isKindOfClass:[XYCommentResult class]]) {
             // 让刷新控件结束刷新
             [weakSelf.tableView.mj_header endRefreshing];
             return;
         }
         
         // 字典数据 -> 模型数组
-        weakSelf.latestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
-        weakSelf.hotestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"hot"]];
+        weakSelf.latestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result.data];
+        weakSelf.hotestComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result.hot];
         
         // 记录下就算没有下拉,也有多少条总评论数
-        self.total = [result[@"total"] intValue];
+        self.total = [result.total integerValue];
         
         // 刷新数据
         [weakSelf.tableView reloadData];
@@ -169,19 +169,19 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
     XYWeakSelf
     // 发送请求
-    [XYCommentTool commentWithParam:param success:^(NSDictionary *result) {
+    [XYCommentTool commentWithParam:param success:^(XYCommentResult *result) {
         // 不再有评论数据了
-        if (![result isKindOfClass:[NSDictionary class]]) {
+        if (![result isKindOfClass:[XYCommentResult class]]) {
             [weakSelf.tableView.mj_footer endRefreshing];
             return;
         }
         
         // 字典数据 -> 模型数组
-        NSArray<XYCommentItem *> *moreComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result[@"data"]];
+        NSArray<XYCommentItem *> *moreComments = [XYCommentItem mj_objectArrayWithKeyValuesArray:result.data];
         [self.latestComments addObjectsFromArray:moreComments];
         
         // 记录下拉到最后加载到的总最新评论条数
-        self.total = [result[@"total"] intValue];
+        self.total = [result.total intValue];
         
         // 刷新数据
         [weakSelf.tableView reloadData];
