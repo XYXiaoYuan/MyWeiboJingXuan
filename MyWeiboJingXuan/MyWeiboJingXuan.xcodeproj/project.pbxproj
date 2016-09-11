@@ -29,6 +29,8 @@
 		1C7A84511D853C4200B6EC8E /* XYRecommendUserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A844C1D853C4200B6EC8E /* XYRecommendUserResult.m */; };
 		1C7A84561D853C5900B6EC8E /* XYMineParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A84531D853C5900B6EC8E /* XYMineParam.m */; };
 		1C7A84571D853C5900B6EC8E /* XYMineResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A84551D853C5900B6EC8E /* XYMineResult.m */; };
+		1C7A845A1D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A84591D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.m */; };
+		1C7A845D1D8544DF00B6EC8E /* LFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A845C1D8544DF00B6EC8E /* LFNavigationController.m */; };
 		1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C21D6AA7C800236253 /* XYConst.m */; };
 		1CA5C1D31D6AA86F00236253 /* UIBarButtonItem+XYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1C81D6AA86F00236253 /* UIBarButtonItem+XYExtension.m */; };
 		1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1CA1D6AA86F00236253 /* UITextField+XYLoginTextField.m */; };
@@ -130,7 +132,6 @@
 		1CDBD5BD1D828F6400E09B7B /* XYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5BC1D828F6400E09B7B /* XYSettingViewController.m */; };
 		1CDBD5C31D82CA2900E09B7B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDBD5C21D82CA2900E09B7B /* WebKit.framework */; };
 		1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5961D6AA542006212D3 /* XYTabBarController.m */; };
-		1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5981D6AA542006212D3 /* XYNavigationController.m */; };
 		1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */; };
 		1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */; };
 		1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */; };
@@ -196,6 +197,10 @@
 		1C7A84531D853C5900B6EC8E /* XYMineParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMineParam.m; sourceTree = "<group>"; };
 		1C7A84541D853C5900B6EC8E /* XYMineResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYMineResult.h; sourceTree = "<group>"; };
 		1C7A84551D853C5900B6EC8E /* XYMineResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYMineResult.m; sourceTree = "<group>"; };
+		1C7A84581D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LFNavigationExtension.h"; sourceTree = "<group>"; };
+		1C7A84591D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LFNavigationExtension.m"; sourceTree = "<group>"; };
+		1C7A845B1D8544DF00B6EC8E /* LFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFNavigationController.h; sourceTree = "<group>"; };
+		1C7A845C1D8544DF00B6EC8E /* LFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFNavigationController.m; sourceTree = "<group>"; };
 		1CA5C1C01D6AA79A00236253 /* MacroFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFunc.h; sourceTree = "<group>"; };
 		1CA5C1C11D6AA7C800236253 /* XYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYConst.h; sourceTree = "<group>"; };
 		1CA5C1C21D6AA7C800236253 /* XYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYConst.m; sourceTree = "<group>"; };
@@ -382,8 +387,6 @@
 		1CDBD5C21D82CA2900E09B7B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1CF7D5951D6AA542006212D3 /* XYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBarController.h; sourceTree = "<group>"; };
 		1CF7D5961D6AA542006212D3 /* XYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarController.m; sourceTree = "<group>"; };
-		1CF7D5971D6AA542006212D3 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
-		1CF7D5981D6AA542006212D3 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
 		1CF7D59E1D6AA57A006212D3 /* XYNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNewViewController.h; sourceTree = "<group>"; };
 		1CF7D59F1D6AA57A006212D3 /* XYNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNewViewController.m; sourceTree = "<group>"; };
 		1CF7D5A71D6AA5B6006212D3 /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 		1CD396091D6A9AC0001CA85D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1C7A84581D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.h */,
+				1C7A84591D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.m */,
 				1CF7D5AA1D6AA611006212D3 /* UIView+XYFrameExtension.h */,
 				1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */,
 				1CA5C1C71D6AA86F00236253 /* UIBarButtonItem+XYExtension.h */,
@@ -609,8 +614,8 @@
 			children = (
 				1CF7D5951D6AA542006212D3 /* XYTabBarController.h */,
 				1CF7D5961D6AA542006212D3 /* XYTabBarController.m */,
-				1CF7D5971D6AA542006212D3 /* XYNavigationController.h */,
-				1CF7D5981D6AA542006212D3 /* XYNavigationController.m */,
+				1C7A845B1D8544DF00B6EC8E /* LFNavigationController.h */,
+				1C7A845C1D8544DF00B6EC8E /* LFNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1334,7 +1339,6 @@
 				1CA5C2051D6AD05E00236253 /* XYBaseNetTool.m in Sources */,
 				1CDBD5BA1D828E8300E09B7B /* XYSettingCell.m in Sources */,
 				1CDBD5531D81BA3700E09B7B /* XYSquareItem.m in Sources */,
-				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,
 				1C7A84511D853C4200B6EC8E /* XYRecommendUserResult.m in Sources */,
 				1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */,
 				1CF7D5991D6AA542006212D3 /* XYTabBarController.m in Sources */,
@@ -1356,6 +1360,7 @@
 				1CDBD56A1D81C0F900E09B7B /* XYPostWordViewController.m in Sources */,
 				1CDBD5291D818BA900E09B7B /* XYRecommendUserCell.m in Sources */,
 				1CA5C24A1D6AE9A600236253 /* XYCommentCell.m in Sources */,
+				1C7A845A1D8544BB00B6EC8E /* UIViewController+LFNavigationExtension.m in Sources */,
 				1CA5C2021D6AD00600236253 /* XYHttpTool.m in Sources */,
 				1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */,
 				1C7A84501D853C4200B6EC8E /* XYRecommendUserParam.m in Sources */,
@@ -1384,6 +1389,7 @@
 				1C7A844E1D853C4200B6EC8E /* XYRecommendCategoryResult.m in Sources */,
 				1CDBD53F1D81A48500E09B7B /* XYRecommendUserTool.m in Sources */,
 				1CDBD5801D81CF7800E09B7B /* XYLoginButton.m in Sources */,
+				1C7A845D1D8544DF00B6EC8E /* LFNavigationController.m in Sources */,
 				1CDBD5791D81C10300E09B7B /* XYTagTextField.m in Sources */,
 				1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */,
 				1CA5C1C41D6AA7C800236253 /* XYConst.m in Sources */,

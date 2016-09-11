@@ -11,7 +11,7 @@
 #import <POP.h>
 #import "XYVerticalButton.h"
 #import "XYPostWordViewController.h"
-#import "XYNavigationController.h"
+#import "LFNavigationController.h"
 
 static CGFloat const XYAnimationDelay = 0.1;
 static CGFloat const XYSpringFactor = 10;
@@ -100,7 +100,7 @@ static CGFloat const XYSpringFactor = 10;
 //            if ([XYLoginTool getUid:YES] == nil) return;
             
             XYPostWordViewController *postWord = [[XYPostWordViewController alloc] init];
-            XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:postWord];
+            LFNavigationController *nav = [[LFNavigationController alloc] initWithRootViewController:postWord];
             
             // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
             UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;

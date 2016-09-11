@@ -15,7 +15,7 @@
 
 #import "XYTabBar.h"
 
-#import "XYNavigationController.h"
+#import "LFNavigationController.h"
 
 
 
@@ -90,7 +90,7 @@
 - (void)setupOneViewController:(UIViewController *)vc image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title
 {
     // 创建导航控制器并且设置对应的vc为其根控制器
-    XYNavigationController *nav = [[XYNavigationController alloc] initWithRootViewController:vc];
+    LFNavigationController *nav = [[LFNavigationController alloc] initWithRootViewController:vc];
     
     // 设置tabBar的文字和图片
     nav.tabBarItem.title = title;
@@ -100,7 +100,7 @@
     // 将创建好的导航控制器添加为 XYTabBarController 的子控制器
     [self addChildViewController:nav];
     
-    
+    nav.fullScreenPopGestureEnabled = YES;
     // 到此主流框架搭建完毕
     
 }
