@@ -53,7 +53,6 @@ static NSString * const XYTagCellID = @"tag";
     
     // 加载标签数据
     XYTagParam *param = [[XYTagParam alloc] init];
-//    param.action = @"sub";
     
     XYWeakSelf;
     [XYTagTool tagWithParam:param success:^(XYTagResultItem *result) {
@@ -69,13 +68,6 @@ static NSString * const XYTagCellID = @"tag";
         [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
         // 失败
-        if (error.code == NSURLErrorCancelled) {
-            return ;
-        } else if (error.code == NSURLErrorTimedOut){
-            [SVProgressHUD showErrorWithStatus:@"超时"];
-        } else{
-            [SVProgressHUD showErrorWithStatus:@"正在加载中,请稍候"];
-        }
     }];
 }
 
