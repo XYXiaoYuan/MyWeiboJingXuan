@@ -10,9 +10,9 @@
 
 @implementation XYTagTool
 
-+ (void)tagWithParam:(XYTagParam *)param success:(void (^)(XYTagItem *result))success failure:(void (^)(NSError *error))failure
++ (void)tagWithParam:(XYTagParam *)param success:(void (^)(XYTagResultItem *result))success failure:(void (^)(NSError *error))failure
 {
-    [self getWithUrl:XYRequestURL param:param resultClass:[XYTagItem class] success:success failure:failure];
+    [self getWithUrl:XYRequestURL param:param resultClass:[XYTagResultItem class] success:success failure:failure];
 }
 
 @end

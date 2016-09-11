@@ -7,7 +7,7 @@
 //
 
 #import "XYRecommendUserCell.h"
-#import "XYRecommendUser.h"
+#import "XYRecommendUserItem.h"
 #import <UIImageView+WebCache.h>
 
 @interface XYRecommendUserCell()
@@ -18,7 +18,7 @@
 
 @implementation XYRecommendUserCell
 
-- (void)setUser:(XYRecommendUser *)user
+- (void)setUser:(XYRecommendUserItem *)user
 {
     _user = user;
     

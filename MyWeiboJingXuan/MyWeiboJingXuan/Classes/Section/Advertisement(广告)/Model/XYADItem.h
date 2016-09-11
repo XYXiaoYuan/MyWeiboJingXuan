@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYADItem : NSObject
+@interface XYAdItem : NSObject
 /** 广告地址 */
 @property (nonatomic, strong) NSString *w_picurl;
 /** 点击广告跳转的界面 */

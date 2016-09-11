@@ -7,14 +7,14 @@
 //
 
 #import "XYRecommendCategoryResult.h"
-#import "XYRecommendCategory.h"
+#import "XYRecommendCategoryItem.h"
 #import <MJExtension.h>
 
 @implementation XYRecommendCategoryResult
 
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"list" : [XYRecommendCategory class]};
+    return @{@"list" : [XYRecommendCategoryItem class]};
 }
 
 @end

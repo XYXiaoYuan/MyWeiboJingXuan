@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYRecommendCategory;
+@class XYRecommendCategoryItem;
 
 @interface XYRecommendCategoryCell : UITableViewCell
 
 /** 类别模型 */
-@property (nonatomic, strong) XYRecommendCategory *category;
+@property (nonatomic, strong) XYRecommendCategoryItem *category;
 
 @end

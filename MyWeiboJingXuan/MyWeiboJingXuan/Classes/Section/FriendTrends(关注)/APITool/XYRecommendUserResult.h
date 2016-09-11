@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class XYRecommendUser;
+@class XYRecommendUserItem;
 
 @interface XYRecommendUserResult : NSObject
 /** count */
@@ -18,7 +18,7 @@
 /** total */
 @property(nonatomic,assign) NSInteger total;
 /** list */
-@property(nonatomic,assign) NSArray<XYRecommendUser *> *list;
+@property(nonatomic,assign) NSArray<XYRecommendUserItem *> *list;
 /** total_page */
 @property(nonatomic,assign) NSInteger total_page;
 @end

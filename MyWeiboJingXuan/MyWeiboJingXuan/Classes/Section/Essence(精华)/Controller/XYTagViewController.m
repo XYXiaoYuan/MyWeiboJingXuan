@@ -10,12 +10,12 @@
 #import <SVProgressHUD.h>
 #import <MJExtension.h>
 #import "XYTagTool.h"
-#import "XYTagItem.h"
+#import "XYTagResultItem.h"
 #import "XYTagCell.h"
 
 @interface XYTagViewController ()
 /** tag模型数组 */
-@property(nonatomic,strong) NSMutableArray<XYTagItem *> *tags;
+@property(nonatomic,strong) NSMutableArray<XYTagResultItem *> *tags;
 @end
 
 @implementation XYTagViewController
@@ -56,11 +56,11 @@ static NSString * const XYTagCellID = @"tag";
 //    param.action = @"sub";
     
     XYWeakSelf;
-    [XYTagTool tagWithParam:param success:^(XYTagItem *result) {
+    [XYTagTool tagWithParam:param success:^(XYTagResultItem *result) {
         // 成功
         // 字典数据 -> 模型数据
         NSDictionary *resultDict = [result mj_keyValues];
-        weakSelf.tags = [XYTagItem mj_objectArrayWithKeyValuesArray:resultDict];
+        weakSelf.tags = [XYTagResultItem mj_objectArrayWithKeyValuesArray:resultDict];
 
         // 刷新数据
         [weakSelf.tableView reloadData];

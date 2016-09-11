@@ -10,7 +10,7 @@
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
 #import "XYAdTool.h"
-#import "XYADItem.h"
+#import "XYAdItem.h"
 #import "XYTabBarController.h"
 /*
     1.广告业务逻辑
@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *adContainView;
 @property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 @property (nonatomic, weak) UIImageView *adView;
-@property (nonatomic, strong) XYADItem *item;
+@property (nonatomic, strong) XYAdItem *item;
 @property (nonatomic, weak) NSTimer *timer;
 @end
 
@@ -102,7 +102,7 @@
         NSDictionary *adDict = [result[@"ad"] lastObject];
         
         // 字典转模型
-        _item = [XYADItem mj_objectWithKeyValues:adDict];
+        _item = [XYAdItem mj_objectWithKeyValues:adDict];
         
         // 创建UIImageView展示图片 =>
         CGFloat h = XYSCREEN_W / _item.w * _item.h;

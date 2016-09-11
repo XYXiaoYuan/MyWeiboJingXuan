@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYRecommendUser : NSObject
+@interface XYRecommendUserItem : NSObject
 /** 头像 */
 @property (nonatomic, copy) NSString *header;
 /** 粉丝数(有多少人关注这个用户) */

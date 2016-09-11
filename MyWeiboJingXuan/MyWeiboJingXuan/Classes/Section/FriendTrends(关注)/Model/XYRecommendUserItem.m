@@ -6,8 +6,8 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import "XYRecommendUser.h"
+#import "XYRecommendUserItem.h"
 
-@implementation XYRecommendUser
+@implementation XYRecommendUserItem
 
 @end

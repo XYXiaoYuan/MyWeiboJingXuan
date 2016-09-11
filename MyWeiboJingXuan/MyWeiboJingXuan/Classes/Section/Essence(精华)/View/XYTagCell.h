@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYTagItem;
+@class XYTagResultItem;
 
 @interface XYTagCell : UITableViewCell
 
 /** tag模型 */
-@property(nonatomic,strong) XYTagItem *tagModel;
+@property(nonatomic,strong) XYTagResultItem *tagModel;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "XYRecommendCategoryCell.h"
-#import "XYRecommendCategory.h"
+#import "XYRecommendCategoryItem.h"
 
 @interface XYRecommendCategoryCell()
 /** 选中时显示的指示器控件 */
@@ -22,7 +22,7 @@
     self.selectedIndicator.backgroundColor = XYRGBColor(219, 21, 26);
 }
 
-- (void)setCategory:(XYRecommendCategory *)category
+- (void)setCategory:(XYRecommendCategoryItem *)category
 {
     _category = category;
     

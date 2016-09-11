@@ -39,7 +39,7 @@
 		1CA5C1DE1D6AB26C00236253 /* XYTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1DD1D6AB26C00236253 /* XYTagViewController.m */; };
 		1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1E01D6AB9B800236253 /* XYTitleButton.m */; };
 		1CA5C1F31D6ACB6300236253 /* XYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1F21D6ACB6300236253 /* XYEssenceViewController.m */; };
-		1CA5C1F71D6ACF5A00236253 /* XYTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1F61D6ACF5A00236253 /* XYTagItem.m */; };
+		1CA5C1F71D6ACF5A00236253 /* XYTagResultItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1F61D6ACF5A00236253 /* XYTagResultItem.m */; };
 		1CA5C1FA1D6ACF6200236253 /* XYTagParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1F91D6ACF6200236253 /* XYTagParam.m */; };
 		1CA5C1FE1D6ACF9400236253 /* XYTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1FC1D6ACF9400236253 /* XYTagCell.m */; };
 		1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C1FD1D6ACF9400236253 /* XYTagCell.xib */; };
@@ -74,7 +74,7 @@
 		1CD3962A1D6A9AC0001CA85D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3960F1D6A9AC0001CA85D /* main.m */; };
 		1CDBD4FD1D8178FF00E09B7B /* XYAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD4FB1D8178FF00E09B7B /* XYAdViewController.m */; };
 		1CDBD4FE1D8178FF00E09B7B /* XYAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD4FC1D8178FF00E09B7B /* XYAdViewController.xib */; };
-		1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5001D81790600E09B7B /* XYADItem.m */; };
+		1CDBD5011D81790600E09B7B /* XYAdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5001D81790600E09B7B /* XYAdItem.m */; };
 		1CDBD50B1D8184D900E09B7B /* XYFriendTrednsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5031D8184D900E09B7B /* XYFriendTrednsViewController.m */; };
 		1CDBD50C1D8184D900E09B7B /* XYFriendTrednsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */; };
 		1CDBD50D1D8184D900E09B7B /* XYLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5061D8184D900E09B7B /* XYLoginRegisterViewController.m */; };
@@ -86,8 +86,8 @@
 		1CDBD5281D818BA900E09B7B /* XYRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5231D818BA900E09B7B /* XYRecommendCategoryCell.xib */; };
 		1CDBD5291D818BA900E09B7B /* XYRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5251D818BA900E09B7B /* XYRecommendUserCell.m */; };
 		1CDBD52A1D818BA900E09B7B /* XYRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDBD5261D818BA900E09B7B /* XYRecommendUserCell.xib */; };
-		1CDBD52F1D818BD700E09B7B /* XYRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD52C1D818BD700E09B7B /* XYRecommendCategory.m */; };
-		1CDBD5301D818BD700E09B7B /* XYRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD52E1D818BD700E09B7B /* XYRecommendUser.m */; };
+		1CDBD52F1D818BD700E09B7B /* XYRecommendCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD52C1D818BD700E09B7B /* XYRecommendCategoryItem.m */; };
+		1CDBD5301D818BD700E09B7B /* XYRecommendUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD52E1D818BD700E09B7B /* XYRecommendUserItem.m */; };
 		1CDBD5361D81A1A100E09B7B /* XYEssenceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5331D81A1A100E09B7B /* XYEssenceTool.m */; };
 		1CDBD5371D81A1A100E09B7B /* XYTagTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD5351D81A1A100E09B7B /* XYTagTool.m */; };
 		1CDBD53B1D81A1B200E09B7B /* XYCommentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */; };
@@ -217,8 +217,8 @@
 		1CA5C1E01D6AB9B800236253 /* XYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTitleButton.m; sourceTree = "<group>"; };
 		1CA5C1F11D6ACB6300236253 /* XYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceViewController.h; sourceTree = "<group>"; };
 		1CA5C1F21D6ACB6300236253 /* XYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceViewController.m; sourceTree = "<group>"; };
-		1CA5C1F51D6ACF5A00236253 /* XYTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagItem.h; sourceTree = "<group>"; };
-		1CA5C1F61D6ACF5A00236253 /* XYTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagItem.m; sourceTree = "<group>"; };
+		1CA5C1F51D6ACF5A00236253 /* XYTagResultItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagResultItem.h; sourceTree = "<group>"; };
+		1CA5C1F61D6ACF5A00236253 /* XYTagResultItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagResultItem.m; sourceTree = "<group>"; };
 		1CA5C1F81D6ACF6200236253 /* XYTagParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagParam.h; sourceTree = "<group>"; };
 		1CA5C1F91D6ACF6200236253 /* XYTagParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTagParam.m; sourceTree = "<group>"; };
 		1CA5C1FB1D6ACF9400236253 /* XYTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagCell.h; sourceTree = "<group>"; };
@@ -281,8 +281,8 @@
 		1CDBD4FA1D8178FF00E09B7B /* XYAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAdViewController.h; sourceTree = "<group>"; };
 		1CDBD4FB1D8178FF00E09B7B /* XYAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAdViewController.m; sourceTree = "<group>"; };
 		1CDBD4FC1D8178FF00E09B7B /* XYAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYAdViewController.xib; sourceTree = "<group>"; };
-		1CDBD4FF1D81790600E09B7B /* XYADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYADItem.h; sourceTree = "<group>"; };
-		1CDBD5001D81790600E09B7B /* XYADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYADItem.m; sourceTree = "<group>"; };
+		1CDBD4FF1D81790600E09B7B /* XYAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAdItem.h; sourceTree = "<group>"; };
+		1CDBD5001D81790600E09B7B /* XYAdItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAdItem.m; sourceTree = "<group>"; };
 		1CDBD5021D8184D900E09B7B /* XYFriendTrednsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFriendTrednsViewController.h; sourceTree = "<group>"; };
 		1CDBD5031D8184D900E09B7B /* XYFriendTrednsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFriendTrednsViewController.m; sourceTree = "<group>"; };
 		1CDBD5041D8184D900E09B7B /* XYFriendTrednsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYFriendTrednsViewController.xib; sourceTree = "<group>"; };
@@ -300,10 +300,10 @@
 		1CDBD5241D818BA900E09B7B /* XYRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUserCell.h; sourceTree = "<group>"; };
 		1CDBD5251D818BA900E09B7B /* XYRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUserCell.m; sourceTree = "<group>"; };
 		1CDBD5261D818BA900E09B7B /* XYRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYRecommendUserCell.xib; sourceTree = "<group>"; };
-		1CDBD52B1D818BD700E09B7B /* XYRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendCategory.h; sourceTree = "<group>"; };
-		1CDBD52C1D818BD700E09B7B /* XYRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendCategory.m; sourceTree = "<group>"; };
-		1CDBD52D1D818BD700E09B7B /* XYRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUser.h; sourceTree = "<group>"; };
-		1CDBD52E1D818BD700E09B7B /* XYRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUser.m; sourceTree = "<group>"; };
+		1CDBD52B1D818BD700E09B7B /* XYRecommendCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendCategoryItem.h; sourceTree = "<group>"; };
+		1CDBD52C1D818BD700E09B7B /* XYRecommendCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendCategoryItem.m; sourceTree = "<group>"; };
+		1CDBD52D1D818BD700E09B7B /* XYRecommendUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRecommendUserItem.h; sourceTree = "<group>"; };
+		1CDBD52E1D818BD700E09B7B /* XYRecommendUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecommendUserItem.m; sourceTree = "<group>"; };
 		1CDBD5321D81A1A100E09B7B /* XYEssenceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEssenceTool.h; sourceTree = "<group>"; };
 		1CDBD5331D81A1A100E09B7B /* XYEssenceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEssenceTool.m; sourceTree = "<group>"; };
 		1CDBD5341D81A1A100E09B7B /* XYTagTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTagTool.h; sourceTree = "<group>"; };
@@ -680,8 +680,8 @@
 		1CD396131D6A9AC0001CA85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1CDBD4FF1D81790600E09B7B /* XYADItem.h */,
-				1CDBD5001D81790600E09B7B /* XYADItem.m */,
+				1CDBD4FF1D81790600E09B7B /* XYAdItem.h */,
+				1CDBD5001D81790600E09B7B /* XYAdItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -757,8 +757,8 @@
 		1CD3961B1D6A9AC0001CA85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1CA5C1F51D6ACF5A00236253 /* XYTagItem.h */,
-				1CA5C1F61D6ACF5A00236253 /* XYTagItem.m */,
+				1CA5C1F51D6ACF5A00236253 /* XYTagResultItem.h */,
+				1CA5C1F61D6ACF5A00236253 /* XYTagResultItem.m */,
 				1CA5C1F81D6ACF6200236253 /* XYTagParam.h */,
 				1CA5C1F91D6ACF6200236253 /* XYTagParam.m */,
 				1CA5C2291D6AE92D00236253 /* XYUserItem.h */,
@@ -823,10 +823,10 @@
 		1CD3961F1D6A9AC0001CA85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1CDBD52B1D818BD700E09B7B /* XYRecommendCategory.h */,
-				1CDBD52C1D818BD700E09B7B /* XYRecommendCategory.m */,
-				1CDBD52D1D818BD700E09B7B /* XYRecommendUser.h */,
-				1CDBD52E1D818BD700E09B7B /* XYRecommendUser.m */,
+				1CDBD52B1D818BD700E09B7B /* XYRecommendCategoryItem.h */,
+				1CDBD52C1D818BD700E09B7B /* XYRecommendCategoryItem.m */,
+				1CDBD52D1D818BD700E09B7B /* XYRecommendUserItem.h */,
+				1CDBD52E1D818BD700E09B7B /* XYRecommendUserItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1360,7 +1360,7 @@
 				1CA5C1D81D6AA86F00236253 /* NSDate+XYGetLatelyDate.m in Sources */,
 				1C7A84501D853C4200B6EC8E /* XYRecommendUserParam.m in Sources */,
 				1CDBD55A1D81BA4900E09B7B /* XYMineViewController.m in Sources */,
-				1CDBD52F1D818BD700E09B7B /* XYRecommendCategory.m in Sources */,
+				1CDBD52F1D818BD700E09B7B /* XYRecommendCategoryItem.m in Sources */,
 				1CA5C1D61D6AA86F00236253 /* UIImage+XYImageExtension.m in Sources */,
 				1CDBD5421D81A4D200E09B7B /* XYRecommendCategoryTool.m in Sources */,
 				1CF7D5A01D6AA57A006212D3 /* XYNewViewController.m in Sources */,
@@ -1373,10 +1373,10 @@
 				1CD396291D6A9AC0001CA85D /* AppDelegate.m in Sources */,
 				1CDBD5681D81C0F900E09B7B /* XYPublishViewController.m in Sources */,
 				1CA5C2251D6AE92100236253 /* XYTopicVideoView.m in Sources */,
-				1CA5C1F71D6ACF5A00236253 /* XYTagItem.m in Sources */,
+				1CA5C1F71D6ACF5A00236253 /* XYTagResultItem.m in Sources */,
 				1CDBD5161D8184E300E09B7B /* XYLoginTextField.m in Sources */,
 				1CA5C2101D6AD7CB00236253 /* XYBaseViewController.m in Sources */,
-				1CDBD5301D818BD700E09B7B /* XYRecommendUser.m in Sources */,
+				1CDBD5301D818BD700E09B7B /* XYRecommendUserItem.m in Sources */,
 				1CA5C1D51D6AA86F00236253 /* UIImageView+XYIconImageExtension.m in Sources */,
 				1CDBD5B91D828E8300E09B7B /* XYSettingSwitchItem.m in Sources */,
 				1CA5C2271D6AE92100236253 /* XYTopicVoiceView.m in Sources */,
@@ -1395,7 +1395,7 @@
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
 				1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */,
 				1CDBD5781D81C10300E09B7B /* XYTagButton.m in Sources */,
-				1CDBD5011D81790600E09B7B /* XYADItem.m in Sources */,
+				1CDBD5011D81790600E09B7B /* XYAdItem.m in Sources */,
 				1C7A84271D8523F600B6EC8E /* XYCommentItem.m in Sources */,
 				1CA5C2311D6AE92D00236253 /* XYTopicItem.m in Sources */,
 				1CA5C22F1D6AE92D00236253 /* XYUserItem.m in Sources */,

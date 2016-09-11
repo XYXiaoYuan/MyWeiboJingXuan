@@ -42,6 +42,9 @@
 #pragma mark - 2.配置第2组模型
 - (void)setupGroup2
 {
+    // 定义weakSelf
+    XYWeakSelf;
+    
     XYSettingGroupItem *group = [[XYSettingGroupItem alloc] init];
     group.headTitle = @"其他";
     
@@ -53,7 +56,7 @@
     item3.operation = ^(){
         XYWebViewController *webVc = [[XYWebViewController alloc] init];
         webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/help.html"];
-        [self.navigationController pushViewController:webVc animated:YES];
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     };
     
     XYSettingItem *item4 = [XYSettingItem initWithTitle:@"当前版本: 4.3"];
@@ -62,7 +65,7 @@
     item5.operation = ^(){
         XYWebViewController *webVc = [[XYWebViewController alloc] init];
         webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/aboutus.html?client=iphone&market=&ver=4.3&device=ios%20device&uid=&sex=m&udid=&mac=&openudid=0855398ed0cd64dd8ad14832ca16ccd1585ab719&asid=8E6ACD13-D8CC-42BC-B565-1640CAB44A06&jbk=1&appname=bs0315&1473404594"];
-        [self.navigationController pushViewController:webVc animated:YES];
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     };
 
     
@@ -70,7 +73,7 @@
     item6.operation = ^(){
         XYWebViewController *webVc = [[XYWebViewController alloc] init];
         webVc.url = [NSURL URLWithString:@"http://www.budejie.com/budejie/privacy.html?client=iphone&market=&ver=4.3&device=ios%20device&uid=&sex=m&udid=&mac=&openudid=0855398ed0cd64dd8ad14832ca16ccd1585ab719&asid=8E6ACD13-D8CC-42BC-B565-1640CAB44A06&jbk=1&appname=bs0315"];
-        [self.navigationController pushViewController:webVc animated:YES];
+        [weakSelf.navigationController pushViewController:webVc animated:YES];
     };
     
     XYSettingArrowItem *item7 = [XYSettingArrowItem initWithTitle:@"打分支持不得姐!"];

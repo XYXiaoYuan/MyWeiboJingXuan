@@ -6,10 +6,10 @@
 //  Copyright © 2015年 袁小荣. All rights reserved.
 //
 
-#import "XYRecommendCategory.h"
+#import "XYRecommendCategoryItem.h"
 #import <MJExtension.h>
 
-@implementation XYRecommendCategory
+@implementation XYRecommendCategoryItem
 
 - (NSMutableArray *)users
 {

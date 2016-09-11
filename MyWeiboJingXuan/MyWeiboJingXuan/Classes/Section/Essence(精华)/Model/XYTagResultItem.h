@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYTagItem : NSObject
+@interface XYTagResultItem : NSObject
 /** 图片 */
 @property(nonatomic,copy) NSString *image_list;
 /** theme_id */

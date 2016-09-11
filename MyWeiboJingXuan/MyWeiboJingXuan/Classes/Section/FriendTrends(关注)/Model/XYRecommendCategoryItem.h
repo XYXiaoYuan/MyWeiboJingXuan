@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYRecommendCategory : NSObject
+@interface XYRecommendCategoryItem : NSObject
 /** id */
 @property (nonatomic, assign) NSInteger ID;
 /** 描述 */

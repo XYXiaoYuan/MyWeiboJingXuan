@@ -6,8 +6,8 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYTagItem.h"
+#import "XYTagResultItem.h"
 
-@implementation XYTagItem
+@implementation XYTagResultItem
 
 @end

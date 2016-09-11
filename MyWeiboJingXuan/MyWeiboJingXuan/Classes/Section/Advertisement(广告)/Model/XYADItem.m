@@ -6,8 +6,8 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYADItem.h"
+#import "XYAdItem.h"
 
-@implementation XYADItem
+@implementation XYAdItem
 
 @end

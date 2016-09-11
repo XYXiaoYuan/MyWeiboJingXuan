@@ -7,7 +7,7 @@
 //
 
 #import "XYTagCell.h"
-#import "XYTagItem.h"
+#import "XYTagResultItem.h"
 
 // 万人阅读
 #define TenThousandReadCount 10000.0
@@ -22,7 +22,7 @@
 
 @implementation XYTagCell
 
-- (void)setTagModel:(XYTagItem *)tagModel
+- (void)setTagModel:(XYTagResultItem *)tagModel
 {
     _tagModel = tagModel;
     

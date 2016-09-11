@@ -15,14 +15,14 @@
 #import "XYRecommendUserTool.h"
 #import "XYRecommendCategoryCell.h"
 #import "XYRecommendUserCell.h"
-#import "XYRecommendCategory.h"
-#import "XYRecommendUser.h"
+#import "XYRecommendCategoryItem.h"
+#import "XYRecommendUserItem.h"
 
 #define XYSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
 @interface XYRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 /** 左边的类别数据 */
-@property (nonatomic, strong) NSArray<XYRecommendCategory *> *categories;
+@property (nonatomic, strong) NSArray<XYRecommendCategoryItem *> *categories;
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 右边的用户表格 */
@@ -77,7 +77,7 @@ static NSString * const XYUserId = @"user";
         [SVProgressHUD dismiss];
         
         // 服务器返回的JSON数据
-        self.categories = [XYRecommendCategory mj_objectArrayWithKeyValuesArray:result.list];
+        self.categories = [XYRecommendCategoryItem mj_objectArrayWithKeyValuesArray:result.list];
         
         // 刷新表格
         [self.categoryTableView reloadData];
@@ -104,7 +104,7 @@ static NSString * const XYUserId = @"user";
 #pragma mark - 3.1.加载最新用户数据
 - (void)loadNewUsers
 {
-    XYRecommendCategory *rc = XYSelectedCategory;
+    XYRecommendCategoryItem *rc = XYSelectedCategory;
 
     // 设置当前页码为1
     rc.currentPage = 1;
@@ -118,7 +118,7 @@ static NSString * const XYUserId = @"user";
     // 发送请求给服务器, 加载右侧的数据
     [XYRecommendUserTool recommendUserWithParam:params success:^(XYRecommendUserResult *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result.list];
+        NSArray *users = [XYRecommendUserItem mj_objectArrayWithKeyValuesArray:result.list];
         
         // 清除所有旧数据
         [rc.users removeAllObjects];
@@ -154,7 +154,7 @@ static NSString * const XYUserId = @"user";
 #pragma mark - 3.2.加载更多用户数据
 - (void)loadMoreUsers
 {
-    XYRecommendCategory *category = XYSelectedCategory;
+    XYRecommendCategoryItem *category = XYSelectedCategory;
 
     XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
     params.category_id = @(category.ID);
@@ -164,7 +164,7 @@ static NSString * const XYUserId = @"user";
     // 发送请求给服务器, 加载右侧的数据
     [XYRecommendUserTool recommendUserWithParam:params success:^(XYRecommendUserResult *result) {
         // 字典数组 -> 模型数组
-        NSArray *users = [XYRecommendUser mj_objectArrayWithKeyValuesArray:result.list];
+        NSArray *users = [XYRecommendUserItem mj_objectArrayWithKeyValuesArray:result.list];
         
         // 添加到当前类别对应的用户数组中
         [category.users addObjectsFromArray:users];
@@ -192,7 +192,7 @@ static NSString * const XYUserId = @"user";
 #pragma mark - 3.3.时刻监测footer的状态
 - (void)checkFooterState
 {
-    XYRecommendCategory *rc = XYSelectedCategory;
+    XYRecommendCategoryItem *rc = XYSelectedCategory;
     
     // 每次刷新右边数据时, 都控制footer显示或者隐藏
     self.userTableView.mj_footer.hidden = (rc.users.count == 0);
@@ -238,7 +238,7 @@ static NSString * const XYUserId = @"user";
     [self.userTableView.mj_header endRefreshing];
     [self.userTableView.mj_footer endRefreshing];
     
-    XYRecommendCategory *c = self.categories[indexPath.row];
+    XYRecommendCategoryItem *c = self.categories[indexPath.row];
     if (c.users.count) {
         // 显示推荐分类列表的数据
         [self.userTableView reloadData];

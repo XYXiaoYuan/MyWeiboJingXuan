@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class XYRecommendInfoItem,XYRecommendCategory;
+@class XYRecommendInfoItem,XYRecommendCategoryItem;
 
 @interface XYRecommendCategoryResult : NSObject
 /** info */
@@ -16,7 +16,7 @@
 /** total */
 @property(nonatomic,assign) NSInteger total;
 /** list */
-@property(nonatomic,strong) NSArray<XYRecommendCategory *> *list;
+@property(nonatomic,strong) NSArray<XYRecommendCategoryItem *> *list;
 /** size */
 @property(nonatomic,assign) NSInteger size;
 @end
