@@ -2,7 +2,7 @@
 //  NSString+XFTime.m
 //  MyWeiboJingXuan
 //
-//  Created by Fay on 16/3/15.
+//  Created by yuan on 16/3/15.
 //  Copyright © 2016年 袁小荣. All rights reserved.
 //
 
