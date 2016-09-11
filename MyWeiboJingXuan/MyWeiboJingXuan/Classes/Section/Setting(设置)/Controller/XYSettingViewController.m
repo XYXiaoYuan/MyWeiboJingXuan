@@ -7,10 +7,18 @@
 //
 
 #import "XYSettingViewController.h"
+#import <SVProgressHUD.h>
 #import "XYWebViewController.h"
+#import "XYCacheFileTool.h"
+
+#define CachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
 
 @interface XYSettingViewController ()
-
+/** 缓存总大小 */
+@property (nonatomic, assign) NSInteger totalSize;
+/** XYSettingArrowItem */
+@property(nonatomic,strong) XYSettingArrowItem *cacheItem;
 @end
 
 @implementation XYSettingViewController
@@ -23,8 +31,11 @@
     
     // 2.配置第1组模型
     [self setupGroup2];
-
+    
+    // 3.计算缓存大小
+    [self calculateFileCacheSize];
 }
+
 
 #pragma mark - 1.配置第1组模型
 - (void)setupGroup1
@@ -49,6 +60,21 @@
     group.headTitle = @"其他";
     
     XYSettingArrowItem *item1 = [XYSettingArrowItem initWithTitle:@"清除缓存"];
+    self.cacheItem = item1;
+
+    // 点击消除缓存
+    __weak __typeof(item1)weakCacheItem = item1;
+    item1.operation = ^(){
+        [XYCacheFileTool removeDirectoryPath:CachePath];
+        
+        NSString *showStr = [NSString stringWithFormat:@"清除缓存了%@",[weakSelf sizeStr]];
+        [SVProgressHUD showSuccessWithStatus:showStr];
+        
+        // 把缓存尺寸大小置为0
+        weakSelf.totalSize = 0;
+        weakCacheItem.subTitle = @"暂无缓存";
+        [weakSelf.tableView reloadData];
+    };
     
     XYSettingArrowItem *item2 = [XYSettingArrowItem initWithTitle:@"推荐给朋友"];
     
@@ -86,6 +112,55 @@
     
     group.items = @[item1,item2,item3,item4,item5,item6,item7];
     [self.groups addObject:group];
+}
+
+#pragma mark - 3.计算缓存大小
+- (void)calculateFileCacheSize
+{
+    [SVProgressHUD showWithStatus:@"正在计算缓存尺寸...."];
+    
+    // 获取文件夹尺寸
+    // 文件夹非常小,如果我的文件非常大
+    XYWeakSelf;
+    __weak __typeof(_cacheItem)weakCacheItem = _cacheItem;
+    [XYCacheFileTool getFileSize:CachePath completion:^(NSInteger totalSize) {
+        
+        weakSelf.totalSize = totalSize;
+        
+        weakCacheItem.subTitle = [weakSelf sizeStr];
+        [weakSelf.tableView reloadData];
+        
+        [SVProgressHUD dismiss];
+    }];
+}
+
+
+#pragma mark - 获取缓存尺寸大小字符串
+- (NSString *)sizeStr
+{
+    NSInteger totalSize = _totalSize;
+    NSString *sizeStr = @"";
+    // MB KB B
+    if (totalSize > 1000 * 1000) {
+        // MB
+        CGFloat sizeF = totalSize / 1000.0 / 1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@%.1fMB",sizeStr,sizeF];
+    } else if (totalSize > 1000) {
+        // KB
+        CGFloat sizeF = totalSize / 1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@%.1fKB",sizeStr,sizeF];
+    } else if (totalSize > 0) {
+        // B
+        sizeStr = [NSString stringWithFormat:@"%@%.ldB",sizeStr,totalSize];
+    }
+    
+    return sizeStr;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [SVProgressHUD dismiss];
 }
 
 @end

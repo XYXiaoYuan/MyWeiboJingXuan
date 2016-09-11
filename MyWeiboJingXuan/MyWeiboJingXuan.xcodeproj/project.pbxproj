@@ -69,6 +69,7 @@
 		1CA5C24B1D6AE9A600236253 /* XYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C2471D6AE9A600236253 /* XYCommentCell.xib */; };
 		1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */; };
 		1CA5C25B1D6B13BC00236253 /* XYModelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */; };
+		1CBE74511D854C4500E0FC4E /* XYCacheFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE74501D854C4500E0FC4E /* XYCacheFileTool.m */; };
 		1CD395DF1D6A97DC001CA85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD395DE1D6A97DC001CA85D /* Assets.xcassets */; };
 		1CD395ED1D6A97DC001CA85D /* MyWeiboJingXuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395EC1D6A97DC001CA85D /* MyWeiboJingXuanTests.m */; };
 		1CD395F81D6A97DC001CA85D /* MyWeiboJingXuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD395F71D6A97DC001CA85D /* MyWeiboJingXuanUITests.m */; };
@@ -271,6 +272,8 @@
 		1CA5C2491D6AE9A600236253 /* XYCommentSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommentSectionHeader.m; sourceTree = "<group>"; };
 		1CA5C2591D6B13BC00236253 /* XYModelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYModelConfig.h; sourceTree = "<group>"; };
 		1CA5C25A1D6B13BC00236253 /* XYModelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYModelConfig.m; sourceTree = "<group>"; };
+		1CBE744F1D854C4500E0FC4E /* XYCacheFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCacheFileTool.h; sourceTree = "<group>"; };
+		1CBE74501D854C4500E0FC4E /* XYCacheFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCacheFileTool.m; sourceTree = "<group>"; };
 		1CD395CF1D6A97DB001CA85D /* MyWeiboJingXuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiboJingXuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD395DE1D6A97DC001CA85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD395E31D6A97DC001CA85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -463,8 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				1CA5C20B1D6AD7BB00236253 /* Controller */,
-				1CA5C20C1D6AD7BB00236253 /* Model */,
-				1CA5C20D1D6AD7BB00236253 /* View */,
+				1CBE744D1D854C3700E0FC4E /* Tool */,
+				1CBE744E1D854C3700E0FC4E /* View */,
 			);
 			path = "Common(常用)";
 			sourceTree = "<group>";
@@ -481,14 +484,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1CA5C20C1D6AD7BB00236253 /* Model */ = {
+		1CBE744D1D854C3700E0FC4E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1CBE744F1D854C4500E0FC4E /* XYCacheFileTool.h */,
+				1CBE74501D854C4500E0FC4E /* XYCacheFileTool.m */,
 			);
-			path = Model;
+			path = Tool;
 			sourceTree = "<group>";
 		};
-		1CA5C20D1D6AD7BB00236253 /* View */ = {
+		1CBE744E1D854C3700E0FC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1338,6 +1343,7 @@
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
 				1CA5C2051D6AD05E00236253 /* XYBaseNetTool.m in Sources */,
 				1CDBD5BA1D828E8300E09B7B /* XYSettingCell.m in Sources */,
+				1CBE74511D854C4500E0FC4E /* XYCacheFileTool.m in Sources */,
 				1CDBD5531D81BA3700E09B7B /* XYSquareItem.m in Sources */,
 				1C7A84511D853C4200B6EC8E /* XYRecommendUserResult.m in Sources */,
 				1CA5C1D71D6AA86F00236253 /* NSCalendar+XYCalendarExtension.m in Sources */,
