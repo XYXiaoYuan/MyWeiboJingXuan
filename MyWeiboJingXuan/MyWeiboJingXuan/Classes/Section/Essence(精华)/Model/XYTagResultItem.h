@@ -11,11 +11,11 @@
 @interface XYTagResultItem : NSObject
 
 /** 图片 */
-@property(nonatomic,copy) NSString *image_list;
+@property(nonatomic,strong) NSString *image_list;
 /** theme_id */
 @property(nonatomic,strong) NSString *theme_id;
 /** 名字 */
-@property(nonatomic,copy) NSString *theme_name;
+@property(nonatomic,strong) NSString *theme_name;
 /** is_sub */
 @property(nonatomic,assign) BOOL is_sub;
 /** is_default */

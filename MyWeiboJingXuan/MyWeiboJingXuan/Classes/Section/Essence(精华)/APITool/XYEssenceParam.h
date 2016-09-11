@@ -13,6 +13,6 @@
 /** type */
 @property(nonatomic,strong) NSNumber *type;
 /** maxtime */
-@property(nonatomic,copy) NSString *maxtime;
+@property(nonatomic,strong) NSString *maxtime;
 
 @end

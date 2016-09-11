@@ -12,11 +12,11 @@
 /** id */
 @property (nonatomic, assign) NSInteger ID;
 /** 描述 */
-@property (nonatomic, copy) NSString *desc;
+@property (nonatomic, strong) NSString *desc;
 /** 总数 */
 @property (nonatomic, assign) NSInteger count;
 /** 名字 */
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSString *name;
 
 /** 这个类别对应的用户数据 */
 @property (nonatomic, strong) NSMutableArray *users;

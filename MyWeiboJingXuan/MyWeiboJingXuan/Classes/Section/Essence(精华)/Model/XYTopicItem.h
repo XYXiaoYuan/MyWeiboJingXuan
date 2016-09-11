@@ -29,15 +29,15 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 
 // 用户 -- 发帖者
 /** id */
-@property(nonatomic,copy) NSString *ID;
+@property(nonatomic,strong) NSString *ID;
 /** 用户的名字 */
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSString *name;
 /** 用户的头像 */
-@property (nonatomic, copy) NSString *profile_image;
+@property (nonatomic, strong) NSString *profile_image;
 /** 帖子的文字内容 */
-@property (nonatomic, copy) NSString *text;
+@property (nonatomic, strong) NSString *text;
 /** 帖子审核通过的时间 */
-@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, strong) NSString *created_at;
 /** 顶数量 */
 @property (nonatomic, assign) NSInteger ding;
 /** 踩数量 */
@@ -58,11 +58,11 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 
 /********  关于图片的大小   **********/
 /** 小图 */
-@property(nonatomic,copy) NSString *small_image;
+@property(nonatomic,strong) NSString *small_image;
 /** 中图 */
-@property(nonatomic,copy) NSString *middle_image;
+@property(nonatomic,strong) NSString *middle_image;
 /** 大图 */
-@property(nonatomic,copy) NSString *big_image;
+@property(nonatomic,strong) NSString *big_image;
 
 /********  关于音频   **********/
 /** 音频时长 */

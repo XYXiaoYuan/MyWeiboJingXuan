@@ -11,7 +11,7 @@
 @interface XYPlaceholderTextView : UITextView
 
 /** 占位文字 */
-@property (nonatomic, copy) NSString *placeholder;
+@property (nonatomic, strong) NSString *placeholder;
 /** 占位文字的颜色 */
 @property (nonatomic, strong) UIColor *placeholderColor;
 

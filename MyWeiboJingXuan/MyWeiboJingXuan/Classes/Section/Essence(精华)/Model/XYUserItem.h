@@ -11,10 +11,10 @@
 @interface XYUserItem : NSObject
 
 /** 用户名 */
-@property(nonatomic,copy) NSString *username;
+@property(nonatomic,strong) NSString *username;
 /** 头像 */
-@property (nonatomic, copy) NSString *profile_image;
+@property (nonatomic, strong) NSString *profile_image;
 /** 性别 m(male) f(female) */
-@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, strong) NSString *sex;
 
 @end

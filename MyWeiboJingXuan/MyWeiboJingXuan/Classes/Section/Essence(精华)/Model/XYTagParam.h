@@ -11,6 +11,6 @@
 @interface XYTagParam : XYBaseParam
 
 /** action */
-@property(nonatomic,copy) NSString *action;
+@property(nonatomic,strong) NSString *action;
 
 @end

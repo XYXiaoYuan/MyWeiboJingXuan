@@ -20,7 +20,7 @@
 
 @interface XYTopicViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** maxtime : 用来加载下一页数据 */
-@property (nonatomic, copy) NSString *maxtime;
+@property (nonatomic, strong) NSString *maxtime;
 /** topics模型数据 */
 @property(nonatomic,strong) NSMutableArray<XYTopicItem *> *topics;
 /** 声明这个方法的目的 : 为了能够使用点语法的智能提示 */
