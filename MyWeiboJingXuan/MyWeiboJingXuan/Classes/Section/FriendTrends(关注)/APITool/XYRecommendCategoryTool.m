@@ -71,7 +71,6 @@ static FMDatabase *_db;
             }
         }];
     }
-//    [self getWithUrl:XYRequestURL param:param resultClass:[XYRecommendCategoryResult class] success:success failure:failure];
 }
 
 #pragma mark - 取数据库表中的数据
