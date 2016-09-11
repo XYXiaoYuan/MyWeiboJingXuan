@@ -12,7 +12,8 @@
 
 @implementation XYMineResult
 
-+ (NSDictionary *)mj_objectClassInArray{
++ (NSDictionary *)mj_objectClassInArray
+{
     return @{@"list" : [XYSquareItem class]};
 }
 

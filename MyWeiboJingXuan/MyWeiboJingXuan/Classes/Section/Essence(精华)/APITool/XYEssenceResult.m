@@ -12,7 +12,8 @@
 
 @implementation XYEssenceResult
 
-+ (NSDictionary *)mj_objectClassInArray{
++ (NSDictionary *)mj_objectClassInArray
+{
     return @{@"list" : [XYTopicItem class]};
 }
 

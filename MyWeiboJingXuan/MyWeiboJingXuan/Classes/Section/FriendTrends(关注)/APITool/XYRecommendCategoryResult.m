@@ -12,7 +12,8 @@
 
 @implementation XYRecommendCategoryResult
 
-+ (NSDictionary *)mj_objectClassInArray{
++ (NSDictionary *)mj_objectClassInArray
+{
     return @{@"list" : [XYRecommendCategory class]};
 }
 

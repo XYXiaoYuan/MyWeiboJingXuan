@@ -928,12 +928,12 @@
 		1CDBD5381D81A1B200E09B7B /* APITool */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD5391D81A1B200E09B7B /* XYCommentTool.h */,
+				1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */,
 				1C7A84341D853BDC00B6EC8E /* XYCommentParam.h */,
 				1C7A84351D853BDC00B6EC8E /* XYCommentParam.m */,
 				1C7A84361D853BDC00B6EC8E /* XYCommentResult.h */,
 				1C7A84371D853BDC00B6EC8E /* XYCommentResult.m */,
-				1CDBD5391D81A1B200E09B7B /* XYCommentTool.h */,
-				1CDBD53A1D81A1B200E09B7B /* XYCommentTool.m */,
 			);
 			path = APITool;
 			sourceTree = "<group>";
@@ -1013,12 +1013,12 @@
 		1CDBD5841D81D06F00E09B7B /* APITool */ = {
 			isa = PBXGroup;
 			children = (
+				1CDBD5851D81D08400E09B7B /* XYMineTool.h */,
+				1CDBD5861D81D08400E09B7B /* XYMineTool.m */,
 				1C7A84521D853C5900B6EC8E /* XYMineParam.h */,
 				1C7A84531D853C5900B6EC8E /* XYMineParam.m */,
 				1C7A84541D853C5900B6EC8E /* XYMineResult.h */,
 				1C7A84551D853C5900B6EC8E /* XYMineResult.m */,
-				1CDBD5851D81D08400E09B7B /* XYMineTool.h */,
-				1CDBD5861D81D08400E09B7B /* XYMineTool.m */,
 			);
 			path = APITool;
 			sourceTree = "<group>";

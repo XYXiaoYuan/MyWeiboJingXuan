@@ -12,7 +12,8 @@
 
 @implementation XYCommentResult
 
-+ (NSDictionary *)mj_objectClassInArray{
++ (NSDictionary *)mj_objectClassInArray
+{
     return @{@"list" : [XYCommentItem class],
              @"hot"  : [XYCommentItem class]
              };
