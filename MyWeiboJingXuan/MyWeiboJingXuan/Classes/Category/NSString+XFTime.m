@@ -3,7 +3,7 @@
 //  MyWeiboJingXuan
 //
 //  Created by Fay on 16/3/15.
-//  Copyright © 2016年 谢飞. All rights reserved.
+//  Copyright © 2016年 袁小荣. All rights reserved.
 //
 
 #import "NSString+XFTime.h"
