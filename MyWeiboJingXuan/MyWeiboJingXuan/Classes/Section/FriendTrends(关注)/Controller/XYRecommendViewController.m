@@ -22,7 +22,7 @@
 
 @interface XYRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 /** 左边的类别数据 */
-@property (nonatomic, strong) NSArray *categories;
+@property (nonatomic, strong) NSArray<XYRecommendCategory *> *categories;
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 右边的用户表格 */

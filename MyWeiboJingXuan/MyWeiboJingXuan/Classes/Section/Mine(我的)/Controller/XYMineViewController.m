@@ -7,7 +7,7 @@
 //
 
 #import "XYMineViewController.h"
-#import <MJExtension/MJExtension.h>
+#import <MJExtension.h>
 #import "XYMineTool.h"
 #import "XYSquareItem.h"
 #import "XYSquareCell.h"
@@ -19,7 +19,7 @@ static NSInteger const cols = 4;
 static CGFloat const margin = 1;
 #define itemWH (XYSCREEN_W - (cols - 1) * margin) / cols
 @interface XYMineViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (nonatomic, strong) NSMutableArray *squareItems;
+@property (nonatomic, strong) NSMutableArray<XYSquareItem *> *squareItems;
 @property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
