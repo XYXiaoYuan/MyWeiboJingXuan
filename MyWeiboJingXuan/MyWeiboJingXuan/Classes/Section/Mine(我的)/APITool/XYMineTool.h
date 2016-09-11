@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYMineParam.h"
 #import "XYMineResult.h"
 
-@interface XYMineTool : XYBaseTool
+@interface XYMineTool : XYBaseNetTool
 
 /**
  *  加载推荐右侧的用户数据

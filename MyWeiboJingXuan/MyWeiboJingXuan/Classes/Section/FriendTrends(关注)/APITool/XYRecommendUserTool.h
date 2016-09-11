@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYRecommendUserParam.h"
 #import "XYRecommendUserResult.h"
 
-@interface XYRecommendUserTool : XYBaseTool
+@interface XYRecommendUserTool : XYBaseNetTool
 
 /**
  *  加载推荐右侧的用户数据

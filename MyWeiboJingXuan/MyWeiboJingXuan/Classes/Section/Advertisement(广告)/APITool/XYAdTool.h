@@ -6,9 +6,9 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 
-@interface XYAdTool : XYBaseTool
+@interface XYAdTool : XYBaseNetTool
 
 /**
  *  加载评论数据

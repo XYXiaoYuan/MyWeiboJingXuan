@@ -44,7 +44,7 @@
 		1CA5C1FE1D6ACF9400236253 /* XYTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C1FC1D6ACF9400236253 /* XYTagCell.m */; };
 		1CA5C1FF1D6ACF9400236253 /* XYTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5C1FD1D6ACF9400236253 /* XYTagCell.xib */; };
 		1CA5C2021D6AD00600236253 /* XYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2011D6AD00600236253 /* XYHttpTool.m */; };
-		1CA5C2051D6AD05E00236253 /* XYBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2041D6AD05E00236253 /* XYBaseTool.m */; };
+		1CA5C2051D6AD05E00236253 /* XYBaseNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2041D6AD05E00236253 /* XYBaseNetTool.m */; };
 		1CA5C2101D6AD7CB00236253 /* XYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C20F1D6AD7CB00236253 /* XYBaseViewController.m */; };
 		1CA5C2131D6AD80700236253 /* XYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2121D6AD80700236253 /* XYBaseTableViewController.m */; };
 		1CA5C2211D6AE92100236253 /* XYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5C2161D6AE92100236253 /* XYTopicCell.m */; };
@@ -226,8 +226,8 @@
 		1CA5C1FD1D6ACF9400236253 /* XYTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYTagCell.xib; sourceTree = "<group>"; };
 		1CA5C2001D6AD00600236253 /* XYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHttpTool.h; sourceTree = "<group>"; };
 		1CA5C2011D6AD00600236253 /* XYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHttpTool.m; sourceTree = "<group>"; };
-		1CA5C2031D6AD05E00236253 /* XYBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseTool.h; sourceTree = "<group>"; };
-		1CA5C2041D6AD05E00236253 /* XYBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseTool.m; sourceTree = "<group>"; };
+		1CA5C2031D6AD05E00236253 /* XYBaseNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseNetTool.h; sourceTree = "<group>"; };
+		1CA5C2041D6AD05E00236253 /* XYBaseNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseNetTool.m; sourceTree = "<group>"; };
 		1CA5C20E1D6AD7CB00236253 /* XYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseViewController.h; sourceTree = "<group>"; };
 		1CA5C20F1D6AD7CB00236253 /* XYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBaseViewController.m; sourceTree = "<group>"; };
 		1CA5C2111D6AD80700236253 /* XYBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseTableViewController.h; sourceTree = "<group>"; };
@@ -448,8 +448,8 @@
 				1CA5C23D1D6AE97C00236253 /* XYRefreshAutoFooter.m */,
 				1CA5C2001D6AD00600236253 /* XYHttpTool.h */,
 				1CA5C2011D6AD00600236253 /* XYHttpTool.m */,
-				1CA5C2031D6AD05E00236253 /* XYBaseTool.h */,
-				1CA5C2041D6AD05E00236253 /* XYBaseTool.m */,
+				1CA5C2031D6AD05E00236253 /* XYBaseNetTool.h */,
+				1CA5C2041D6AD05E00236253 /* XYBaseNetTool.m */,
 				1CDBD5491D81AE7A00E09B7B /* XYBaseParam.h */,
 				1CDBD54A1D81AE7A00E09B7B /* XYBaseParam.m */,
 			);
@@ -1331,7 +1331,7 @@
 				1CDBD5761D81C10300E09B7B /* XYAddTagToolbar.m in Sources */,
 				1C763C1D1D6B6B7E00CEF1E8 /* NSString+XFTime.m in Sources */,
 				1CA5C1D41D6AA86F00236253 /* UITextField+XYLoginTextField.m in Sources */,
-				1CA5C2051D6AD05E00236253 /* XYBaseTool.m in Sources */,
+				1CA5C2051D6AD05E00236253 /* XYBaseNetTool.m in Sources */,
 				1CDBD5BA1D828E8300E09B7B /* XYSettingCell.m in Sources */,
 				1CDBD5531D81BA3700E09B7B /* XYSquareItem.m in Sources */,
 				1CF7D59A1D6AA542006212D3 /* XYNavigationController.m in Sources */,

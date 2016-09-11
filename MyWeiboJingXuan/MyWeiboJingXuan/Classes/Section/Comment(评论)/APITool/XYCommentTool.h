@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYCommentParam.h"
 #import "XYCommentResult.h"
 
-@interface XYCommentTool : XYBaseTool
+@interface XYCommentTool : XYBaseNetTool
 
 /**
  *  加载评论数据

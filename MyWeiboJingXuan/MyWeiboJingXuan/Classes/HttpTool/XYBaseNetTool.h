@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XYHttpTool.h"
 
-@interface XYBaseTool : NSObject
+@interface XYBaseNetTool : NSObject
 
 + (void)getWithUrl:(NSString *)url param:(id)param resultClass:(Class)resultClass success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;;
 

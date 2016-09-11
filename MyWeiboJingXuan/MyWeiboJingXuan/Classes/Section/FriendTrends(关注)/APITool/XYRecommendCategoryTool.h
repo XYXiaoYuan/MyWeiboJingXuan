@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYRecommendCategoryParam.h"
 #import "XYRecommendCategoryResult.h"
 
-@interface XYRecommendCategoryTool : XYBaseTool
+@interface XYRecommendCategoryTool : XYBaseNetTool
 
 /**
  *  加载推荐左侧的分类数据

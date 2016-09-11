@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYEssenceParam.h"
 #import "XYEssenceResult.h"
 
-@interface XYEssenceTool : XYBaseTool
+@interface XYEssenceTool : XYBaseNetTool
 
 /**
  *  加载精华数据

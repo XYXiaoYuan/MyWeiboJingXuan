@@ -6,11 +6,11 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "XYBaseTool.h"
+#import "XYBaseNetTool.h"
 #import "XYTagResultItem.h"
 #import "XYTagParam.h"
 
-@interface XYTagTool : XYBaseTool
+@interface XYTagTool : XYBaseNetTool
 
 /**
  *  加载标签数据
