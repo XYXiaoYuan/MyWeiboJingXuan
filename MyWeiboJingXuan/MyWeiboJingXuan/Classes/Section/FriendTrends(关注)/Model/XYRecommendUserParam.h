@@ -10,7 +10,7 @@
 
 @interface XYRecommendUserParam : XYBaseParam
 /** category_id */
-@property(nonatomic,assign) NSInteger category_id;
+@property(nonatomic,strong) NSNumber *category_id;
 /** page */
-@property(nonatomic,assign) NSInteger page;
+@property(nonatomic,strong) NSNumber *page;
 @end

@@ -111,8 +111,8 @@ static NSString * const XYUserId = @"user";
     
     // 请求参数
     XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
-    params.category_id = rc.ID;
-    params.page = rc.currentPage;
+    params.category_id = @(rc.ID);
+    params.page = @(rc.currentPage);
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据
@@ -157,8 +157,8 @@ static NSString * const XYUserId = @"user";
     XYRecommendCategory *category = XYSelectedCategory;
 
     XYRecommendUserParam *params = [[XYRecommendUserParam alloc] init];
-    params.category_id = category.ID;
-    params.page = ++category.currentPage;
+    params.category_id = @(category.ID);
+    params.page = @(++category.currentPage);
     self.params = params;
     
     // 发送请求给服务器, 加载右侧的数据

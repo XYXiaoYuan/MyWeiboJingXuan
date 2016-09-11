@@ -88,7 +88,7 @@ static NSString * const XYTopicCellId = @"topic";
     // 参数
     XYEssenceParam *param = [[XYEssenceParam alloc] init];
     param.a = self.aParam;
-    param.type = self.type;
+    param.type = @(self.type);
     
     XYWeakSelf
     [XYEssenceTool essenceWithParam:param success:^(XYEssenceResult *result) {
@@ -123,7 +123,7 @@ static NSString * const XYTopicCellId = @"topic";
     // 参数
     XYEssenceParam *param = [[XYEssenceParam alloc] init];
     param.a = self.aParam;
-    param.type = self.type;
+    param.type = @(self.type);
     param.maxtime = self.maxtime;
     
     XYWeakSelf

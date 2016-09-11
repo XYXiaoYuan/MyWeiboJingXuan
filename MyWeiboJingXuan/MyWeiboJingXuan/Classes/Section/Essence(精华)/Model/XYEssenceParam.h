@@ -10,7 +10,7 @@
 
 @interface XYEssenceParam : XYBaseParam
 /** type */
-@property(nonatomic,assign) NSInteger type;
+@property(nonatomic,strong) NSNumber *type;
 /** maxtime */
 @property(nonatomic,copy) NSString *maxtime;
 @end
