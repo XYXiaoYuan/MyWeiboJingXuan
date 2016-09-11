@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface XYBaseParam : NSObject
+
 /** a */
 @property(nonatomic,strong) NSString *a;
 /** c */
 @property(nonatomic,strong) NSString *c;
+
 @end

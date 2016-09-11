@@ -11,6 +11,7 @@
 @class XYRecommendUserItem;
 
 @interface XYRecommendUserResult : NSObject
+
 /** count */
 @property(nonatomic,assign) NSInteger count;
 /** next_page */
@@ -21,4 +22,5 @@
 @property(nonatomic,assign) NSArray<XYRecommendUserItem *> *list;
 /** total_page */
 @property(nonatomic,assign) NSInteger total_page;
+
 @end

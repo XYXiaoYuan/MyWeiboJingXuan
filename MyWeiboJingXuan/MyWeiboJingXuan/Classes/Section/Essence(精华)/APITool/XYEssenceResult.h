@@ -11,8 +11,10 @@
 @class XYEssenceInfoItem,XYTopicItem;
 
 @interface XYEssenceResult : NSObject
+
 /** info */
 @property(nonatomic,strong) XYEssenceInfoItem *info;
 /** list */
 @property(nonatomic,strong) NSArray<XYTopicItem *> *list;
+
 @end

@@ -11,6 +11,7 @@
 @class XYCommentItem;
 
 @interface XYCommentResult : NSObject
+
 /** data */
 @property(nonatomic,strong) NSArray<XYCommentItem *> *data;
 /** author */
@@ -19,4 +20,5 @@
 @property(nonatomic,strong) NSString *total;
 /** hot */
 @property(nonatomic,strong) NSArray<XYCommentItem *> *hot;
+
 @end

@@ -89,4 +89,5 @@ typedef NS_ENUM(NSUInteger, XYTopicType)  {
 @property(nonatomic,assign,getter=isBigPicture) BOOL bigPicture;
 /** 是否为gif图 */
 @property(nonatomic,assign) BOOL is_gif;
+
 @end

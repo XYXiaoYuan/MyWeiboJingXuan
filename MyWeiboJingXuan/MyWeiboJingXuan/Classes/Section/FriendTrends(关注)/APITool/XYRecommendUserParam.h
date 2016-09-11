@@ -9,8 +9,10 @@
 #import "XYBaseParam.h"
 
 @interface XYRecommendUserParam : XYBaseParam
+
 /** category_id */
 @property(nonatomic,strong) NSNumber *category_id;
 /** page */
 @property(nonatomic,strong) NSNumber *page;
+
 @end

@@ -9,8 +9,10 @@
 #import "XYBaseParam.h"
 
 @interface XYEssenceParam : XYBaseParam
+
 /** type */
 @property(nonatomic,strong) NSNumber *type;
 /** maxtime */
 @property(nonatomic,copy) NSString *maxtime;
+
 @end

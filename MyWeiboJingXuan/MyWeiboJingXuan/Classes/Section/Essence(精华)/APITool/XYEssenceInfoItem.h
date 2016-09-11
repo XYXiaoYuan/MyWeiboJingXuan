@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface XYEssenceInfoItem : NSObject
+
 /** maxid */
 @property(nonatomic,strong) NSString *maxid;
 /** vendor */
@@ -19,4 +20,5 @@
 @property(nonatomic,strong) NSString *maxtime;
 /** page */
 @property(nonatomic,assign) NSInteger page;
+
 @end

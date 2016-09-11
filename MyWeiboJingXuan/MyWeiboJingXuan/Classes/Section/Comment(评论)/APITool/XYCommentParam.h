@@ -9,10 +9,12 @@
 #import "XYBaseParam.h"
 
 @interface XYCommentParam : XYBaseParam
+
 /** data_id */
 @property(nonatomic,strong) NSString *data_id;
 /** lastcid */
 @property(nonatomic,strong) NSString *lastcid;
 /** hot */
 @property(nonatomic,assign) NSUInteger hot;
+
 @end

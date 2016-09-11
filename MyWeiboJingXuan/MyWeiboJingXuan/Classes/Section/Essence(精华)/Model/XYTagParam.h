@@ -9,6 +9,8 @@
 #import "XYBaseParam.h"
 
 @interface XYTagParam : XYBaseParam
+
 /** action */
 @property(nonatomic,copy) NSString *action;
+
 @end

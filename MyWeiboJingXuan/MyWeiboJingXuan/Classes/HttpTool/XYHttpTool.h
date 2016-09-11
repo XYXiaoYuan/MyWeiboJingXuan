@@ -16,6 +16,7 @@ typedef void (^responseSuccessBlock)(id responseObj);
 typedef void (^requestFailureBlock)(NSError *error);
 
 @interface XYHttpTool : NSObject
+
 interfaceSingle(XYHttpTool);
 
 /**
@@ -32,4 +33,5 @@ interfaceSingle(XYHttpTool);
 
 /** manager */
 @property(nonatomic,weak,readonly) AFHTTPSessionManager *manager;
+
 @end

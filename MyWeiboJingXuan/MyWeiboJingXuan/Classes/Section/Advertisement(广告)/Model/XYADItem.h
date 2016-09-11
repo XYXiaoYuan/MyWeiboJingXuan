@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface XYAdItem : NSObject
+
 /** 广告地址 */
 @property (nonatomic, strong) NSString *w_picurl;
 /** 点击广告跳转的界面 */
@@ -17,4 +18,5 @@
 @property (nonatomic, assign) CGFloat w;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat h;
+
 @end

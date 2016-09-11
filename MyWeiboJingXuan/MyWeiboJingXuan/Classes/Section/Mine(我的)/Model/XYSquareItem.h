@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface XYSquareItem : NSObject
+
 /** 名字 */
 @property (nonatomic, strong) NSString *name;
 /** 图标 */
 @property (nonatomic, strong) NSString *icon;
 /** url */
 @property (nonatomic, strong) NSString *url;
+
 @end

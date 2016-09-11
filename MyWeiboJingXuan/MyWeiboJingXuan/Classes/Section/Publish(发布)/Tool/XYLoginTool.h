@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface XYLoginTool : NSObject
+
+/** 设置udid */
 + (void)setUid:(NSString *)uid;
 
 /** 
@@ -17,4 +19,5 @@
  */
 + (NSString *)getUid;
 + (NSString *)getUid:(BOOL)showLoginController;
+
 @end

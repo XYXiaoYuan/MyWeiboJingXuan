@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface XYRecommendInfoItem : NSObject
+
 /** count */
 @property(nonatomic,assign) NSInteger count;
 /** np */
 @property(nonatomic,assign) NSInteger np;
+
 @end

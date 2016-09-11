@@ -10,13 +10,11 @@
 
 @interface XYSettingGroupItem : NSObject
 
-// 头部标题
+/** 头部标题 */
 @property (nonatomic, strong) NSString *headTitle;
-
-// 尾部标题
+/** 尾部标题 */
 @property (nonatomic, strong) NSString *footTitle;
-
-// 行模型数组
+/** 行模型数组 */
 // 描述当前组有多少行,items:cell对应的模型(HSSettingItem)
 @property (nonatomic, strong) NSArray *items;
 

@@ -11,6 +11,7 @@
 @class XYRecommendInfoItem,XYRecommendCategoryItem;
 
 @interface XYRecommendCategoryResult : NSObject
+
 /** info */
 @property(nonatomic,strong) XYRecommendInfoItem *info;
 /** total */
@@ -19,4 +20,5 @@
 @property(nonatomic,strong) NSArray<XYRecommendCategoryItem *> *list;
 /** size */
 @property(nonatomic,assign) NSInteger size;
+
 @end

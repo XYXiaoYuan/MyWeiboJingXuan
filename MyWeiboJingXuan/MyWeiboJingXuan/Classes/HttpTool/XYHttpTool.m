@@ -9,6 +9,7 @@
 #import "XYHttpTool.h"
 
 @implementation XYHttpTool
+
 implementationSingle(XYHttpTool);
 
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure;

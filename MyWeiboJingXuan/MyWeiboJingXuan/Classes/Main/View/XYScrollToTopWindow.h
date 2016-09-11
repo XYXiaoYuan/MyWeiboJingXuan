@@ -10,6 +10,7 @@
 
 @interface XYScrollToTopWindow : NSObject
 
+/** 点击状态栏回到顶部功能 */
 + (void)show;
 
 @end
