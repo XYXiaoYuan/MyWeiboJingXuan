@@ -11,6 +11,8 @@
 @class XYRecommendUser;
 
 @interface XYRecommendUserCell : UITableViewCell
+
 /** 用户模型 */
 @property (nonatomic, strong) XYRecommendUser *user;
+
 @end

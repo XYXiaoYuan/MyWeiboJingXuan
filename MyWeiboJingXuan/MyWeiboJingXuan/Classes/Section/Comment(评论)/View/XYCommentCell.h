@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class XYCommentItem;
+
 @interface XYCommentCell : UITableViewCell
+
 /** 评论数据模型 */
 @property(nonatomic,strong) XYCommentItem *commentItem;
+
 @end

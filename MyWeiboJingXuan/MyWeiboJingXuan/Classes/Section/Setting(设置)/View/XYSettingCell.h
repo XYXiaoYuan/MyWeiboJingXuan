@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class XYSettingItem;
+
 @interface XYSettingCell : UITableViewCell
 
-// 快速的创建cell
+/** 快速的创建cell */
 + (instancetype)cellWithTableView:(UITableView *)tableView tableViewCellStyle:(UITableViewCellStyle)tableViewCellStyle;
-
-
+/** 设置模型 */
 @property (nonatomic, strong) XYSettingItem *item;
 
 @end

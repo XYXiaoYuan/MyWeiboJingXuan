@@ -11,6 +11,8 @@
 @class XYRecommendCategory;
 
 @interface XYRecommendCategoryCell : UITableViewCell
+
 /** 类别模型 */
 @property (nonatomic, strong) XYRecommendCategory *category;
+
 @end

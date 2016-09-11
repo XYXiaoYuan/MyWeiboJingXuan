@@ -11,6 +11,8 @@
 @class XYTopicItem;
 
 @interface XYTopicPictureView : UIView
+
 // 模型数据
 @property(nonatomic,strong) XYTopicItem *topic;
+
 @end

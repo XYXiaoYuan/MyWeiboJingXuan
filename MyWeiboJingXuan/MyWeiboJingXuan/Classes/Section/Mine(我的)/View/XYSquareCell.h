@@ -11,6 +11,8 @@
 @class XYSquareItem;
 
 @interface XYSquareCell : UICollectionViewCell
+
 /** XYSquareItem模型 */
 @property (nonatomic, strong) XYSquareItem *squareItem;
+
 @end

@@ -11,6 +11,8 @@
 @class XYTagItem;
 
 @interface XYTagCell : UITableViewCell
+
 /** tag模型 */
 @property(nonatomic,strong) XYTagItem *tagModel;
+
 @end
