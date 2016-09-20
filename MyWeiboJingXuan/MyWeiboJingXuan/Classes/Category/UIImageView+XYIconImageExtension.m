@@ -13,13 +13,23 @@
 @implementation UIImageView (XYIconImageExtension)
 - (void)setHeader:(NSString *)url
 {
-    [self setCircleHeader:url];
+    [self setRectHeader:url];
 }
 
 
 - (void)setRectHeader:(NSString *)url
 {
-    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];}
+    XYWeakSelf;
+    UIImage *placeholder = [[UIImage imageNamed:@"defaultUserIcon"] circleRectangleImage];
+    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder completed:
+     ^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+         // 如果图片下载失败，就不做任何处理，按照默认的做法：会显示占位图片
+         if (image == nil) return;
+         
+         weakSelf.image = [image circleRectangleImage];
+     }];
+    
+}
 
 - (void)setCircleHeader:(NSString *)url
 {

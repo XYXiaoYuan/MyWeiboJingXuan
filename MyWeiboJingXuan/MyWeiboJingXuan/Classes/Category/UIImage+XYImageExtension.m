@@ -42,4 +42,37 @@
 {
     return [[self imageNamed:name] circleImage];
 }
+
+
+- (instancetype)circleRectangleImage
+{
+    // 1.开启上下文
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
+   
+    // 2.描述正切于图片矩形的圆形
+    UIBezierPath *clipPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.size.width, self.size.height) cornerRadius:4];
+    
+    // 3.设置为裁剪区域
+    [clipPath addClip];
+    
+    // 4.绘制图片
+    [self drawAtPoint:CGPointZero];
+    
+    // 5.取出图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 6.关闭上下文
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
++ (instancetype)circleRectangleImageNamed:(NSString *)name
+{
+    return [[self imageNamed:name] circleRectangleImage];
+}
+
+
+
 @end
