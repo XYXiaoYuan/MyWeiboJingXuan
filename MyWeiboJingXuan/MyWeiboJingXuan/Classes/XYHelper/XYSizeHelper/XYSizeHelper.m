@@ -6,7 +6,7 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import "XMLYSizeHelper.h"
+#import "XYSizeHelper.h"
 
 static NSString *XMLYDiskSpaceFreeString(int64_t size) {
     
@@ -24,7 +24,7 @@ static NSString *XMLYDiskSpaceFreeString(int64_t size) {
     }
 }
 
-@implementation XMLYSizeHelper
+@implementation XYSizeHelper
 
 + (NSString *)sizeStringFromInt64:(int64_t)size {
     return XMLYDiskSpaceFreeString(size);

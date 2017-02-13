@@ -139,9 +139,9 @@
 		1CF7D5A91D6AA5B6006212D3 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5A81D6AA5B6006212D3 /* XYTabBar.m */; };
 		1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */; };
 		8869953BE5B68E7D5A6F2194 /* libPods-MyWeiboJingXuan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09116F71ED4491A0CC054CC9 /* libPods-MyWeiboJingXuan.a */; };
-		EA32FBB01E518F8300011842 /* XMLYCountHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBAF1E518F8300011842 /* XMLYCountHelper.m */; };
-		EA32FBB31E518F8C00011842 /* XMLYSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBB21E518F8C00011842 /* XMLYSizeHelper.m */; };
-		EA32FBB61E518F9F00011842 /* XMLYTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBB51E518F9F00011842 /* XMLYTimeHelper.m */; };
+		EA32FBB01E518F8300011842 /* XYCountHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBAF1E518F8300011842 /* XYCountHelper.m */; };
+		EA32FBB31E518F8C00011842 /* XYSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBB21E518F8C00011842 /* XYSizeHelper.m */; };
+		EA32FBB61E518F9F00011842 /* XYTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA32FBB51E518F9F00011842 /* XYTimeHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,12 +406,12 @@
 		1CF7D5AB1D6AA611006212D3 /* UIView+XYFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYFrameExtension.m"; sourceTree = "<group>"; };
 		1CF7D5AD1D6AA634006212D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4A708664E684576AA6816641 /* Pods-MyWeiboJingXuan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.release.xcconfig"; sourceTree = "<group>"; };
-		EA32FBAE1E518F8300011842 /* XMLYCountHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYCountHelper.h; sourceTree = "<group>"; };
-		EA32FBAF1E518F8300011842 /* XMLYCountHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYCountHelper.m; sourceTree = "<group>"; };
-		EA32FBB11E518F8C00011842 /* XMLYSizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSizeHelper.h; sourceTree = "<group>"; };
-		EA32FBB21E518F8C00011842 /* XMLYSizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSizeHelper.m; sourceTree = "<group>"; };
-		EA32FBB41E518F9F00011842 /* XMLYTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYTimeHelper.h; sourceTree = "<group>"; };
-		EA32FBB51E518F9F00011842 /* XMLYTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYTimeHelper.m; sourceTree = "<group>"; };
+		EA32FBAE1E518F8300011842 /* XYCountHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCountHelper.h; sourceTree = "<group>"; };
+		EA32FBAF1E518F8300011842 /* XYCountHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCountHelper.m; sourceTree = "<group>"; };
+		EA32FBB11E518F8C00011842 /* XYSizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSizeHelper.h; sourceTree = "<group>"; };
+		EA32FBB21E518F8C00011842 /* XYSizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSizeHelper.m; sourceTree = "<group>"; };
+		EA32FBB41E518F9F00011842 /* XYTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTimeHelper.h; sourceTree = "<group>"; };
+		EA32FBB51E518F9F00011842 /* XYTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTimeHelper.m; sourceTree = "<group>"; };
 		FF1CBAE2FC1719DF957EE960 /* Pods-MyWeiboJingXuan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeiboJingXuan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyWeiboJingXuan/Pods-MyWeiboJingXuan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1146,8 +1146,8 @@
 		EA32FBAB1E518F5100011842 /* XYCountHelper */ = {
 			isa = PBXGroup;
 			children = (
-				EA32FBAE1E518F8300011842 /* XMLYCountHelper.h */,
-				EA32FBAF1E518F8300011842 /* XMLYCountHelper.m */,
+				EA32FBAE1E518F8300011842 /* XYCountHelper.h */,
+				EA32FBAF1E518F8300011842 /* XYCountHelper.m */,
 			);
 			path = XYCountHelper;
 			sourceTree = "<group>";
@@ -1155,8 +1155,8 @@
 		EA32FBAC1E518F5100011842 /* XYSizeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				EA32FBB11E518F8C00011842 /* XMLYSizeHelper.h */,
-				EA32FBB21E518F8C00011842 /* XMLYSizeHelper.m */,
+				EA32FBB11E518F8C00011842 /* XYSizeHelper.h */,
+				EA32FBB21E518F8C00011842 /* XYSizeHelper.m */,
 			);
 			path = XYSizeHelper;
 			sourceTree = "<group>";
@@ -1164,8 +1164,8 @@
 		EA32FBAD1E518F5100011842 /* XYTimeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				EA32FBB41E518F9F00011842 /* XMLYTimeHelper.h */,
-				EA32FBB51E518F9F00011842 /* XMLYTimeHelper.m */,
+				EA32FBB41E518F9F00011842 /* XYTimeHelper.h */,
+				EA32FBB51E518F9F00011842 /* XYTimeHelper.m */,
 			);
 			path = XYTimeHelper;
 			sourceTree = "<group>";
@@ -1418,7 +1418,7 @@
 				1CDBD4FD1D8178FF00E09B7B /* XYAdViewController.m in Sources */,
 				1CA5C2351D6AE94100236253 /* XYSeeBigPictureViewController.m in Sources */,
 				1CF7D5AC1D6AA611006212D3 /* UIView+XYFrameExtension.m in Sources */,
-				EA32FBB31E518F8C00011842 /* XMLYSizeHelper.m in Sources */,
+				EA32FBB31E518F8C00011842 /* XYSizeHelper.m in Sources */,
 				1CDBD5B71D828E8300E09B7B /* XYSettingItem.m in Sources */,
 				1CDBD56A1D81C0F900E09B7B /* XYPostWordViewController.m in Sources */,
 				1CDBD5291D818BA900E09B7B /* XYRecommendUserCell.m in Sources */,
@@ -1461,7 +1461,7 @@
 				1C7A844F1D853C4200B6EC8E /* XYRecommendInfoItem.m in Sources */,
 				1C7A84421D853C2900B6EC8E /* XYEssenceResult.m in Sources */,
 				1CBE74551D855A4800E0FC4E /* XYPushGuide.m in Sources */,
-				EA32FBB01E518F8300011842 /* XMLYCountHelper.m in Sources */,
+				EA32FBB01E518F8300011842 /* XYCountHelper.m in Sources */,
 				1CDBD59C1D826FA900E09B7B /* XYAllViewController.m in Sources */,
 				1C763C121D6B64B800CEF1E8 /* KRVideoPlayerControlView.m in Sources */,
 				1CDBD54B1D81AE7A00E09B7B /* XYBaseParam.m in Sources */,
@@ -1473,7 +1473,7 @@
 				1CDBD5B51D828E8300E09B7B /* XYSettingArrowItem.m in Sources */,
 				1CA5C24C1D6AE9A600236253 /* XYCommentSectionHeader.m in Sources */,
 				1CDBD59E1D826FA900E09B7B /* XYTopicViewController.m in Sources */,
-				EA32FBB61E518F9F00011842 /* XMLYTimeHelper.m in Sources */,
+				EA32FBB61E518F9F00011842 /* XYTimeHelper.m in Sources */,
 				1CDBD5371D81A1A100E09B7B /* XYTagTool.m in Sources */,
 				1CA5C1E11D6AB9B800236253 /* XYTitleButton.m in Sources */,
 				1C7A84561D853C5900B6EC8E /* XYMineParam.m in Sources */,

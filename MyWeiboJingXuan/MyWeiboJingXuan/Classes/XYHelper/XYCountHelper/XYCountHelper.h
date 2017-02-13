@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XMLYCountHelper : NSObject
+@interface XYCountHelper : NSObject
 
 + (NSString *)countStringFromNSInter:(NSInteger)count;
 

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import "XMLYTimeHelper.h"
+#import "XYTimeHelper.h"
 
 static force_inline NSDateFormatter *XMLYDataCreateFormatter(NSString *string) {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -40,7 +40,7 @@ static force_inline NSDateFormatter *XMLYDateFormatter(NSString *string) {
     return formatter;
 }
 
-@implementation XMLYTimeHelper
+@implementation XYTimeHelper
 
 + (NSString *)getHelloStringByLocalTime {
     NSDateFormatter *formatter = XMLYDateFormatter(@"HH:mm:ss");

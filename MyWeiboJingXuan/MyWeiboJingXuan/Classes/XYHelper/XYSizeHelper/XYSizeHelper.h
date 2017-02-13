@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XMLYSizeHelper : NSObject
+@interface XYSizeHelper : NSObject
 
 + (NSString *)sizeStringFromInt64:(int64_t)size;
 

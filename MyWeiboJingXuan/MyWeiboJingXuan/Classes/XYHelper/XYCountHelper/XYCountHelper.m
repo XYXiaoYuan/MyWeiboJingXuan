@@ -6,7 +6,7 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import "XMLYCountHelper.h"
+#import "XYCountHelper.h"
 
 static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     if(num < 10000) {
@@ -17,7 +17,7 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     }
 }
 
-@implementation XMLYCountHelper
+@implementation XYCountHelper
 
 + (NSString *)countStringFromNSInter:(NSInteger)count {
     return XMLYGetPlyCount(count);

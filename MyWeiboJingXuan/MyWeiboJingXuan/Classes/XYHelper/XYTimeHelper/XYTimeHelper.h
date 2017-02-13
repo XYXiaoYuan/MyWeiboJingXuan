@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XMLYTimeHelper : NSObject
+@interface XYTimeHelper : NSObject
 
 /**
  *  返回早安、午安、晚安
