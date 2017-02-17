@@ -18,6 +18,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.backgroundColor = XYRGBColor(244, 244, 244);
     self.selectedIndicator.backgroundColor = XYRGBColor(219, 21, 26);
 }
