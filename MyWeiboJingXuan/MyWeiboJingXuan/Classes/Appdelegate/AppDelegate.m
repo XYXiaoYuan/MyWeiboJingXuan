@@ -4,7 +4,7 @@
 //
 //  Created by 袁小荣 on 16/8/22.
 //  Copyright © 2016年 bruceyuan. All rights reserved.
-//
+//  测试能不能只配置一个ssh就能提交所有仓库的资料
 
 #import "AppDelegate.h"
 #import "XYTabBarController.h"
