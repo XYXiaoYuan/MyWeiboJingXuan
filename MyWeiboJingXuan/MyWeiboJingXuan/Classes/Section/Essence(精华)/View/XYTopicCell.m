@@ -168,6 +168,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     // 设置背景图片,cell会模糊
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
     [self.commentButton addTarget:self action:@selector(jumpToCommentVc) forControlEvents:UIControlEventTouchUpInside];

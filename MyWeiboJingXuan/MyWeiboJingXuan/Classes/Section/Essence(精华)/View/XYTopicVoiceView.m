@@ -27,6 +27,8 @@
 #pragma mark - 从xib中加载出现就会调用的方法
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     self.autoresizingMask = UIViewAutoresizingNone;
     // 查看大图
     self.imageView.userInteractionEnabled = YES;

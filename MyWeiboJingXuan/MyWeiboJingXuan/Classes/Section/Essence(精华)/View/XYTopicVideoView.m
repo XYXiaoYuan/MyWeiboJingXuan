@@ -24,6 +24,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     self.autoresizingMask = UIViewAutoresizingNone;
     // 点击图片即为播放视频
     self.imageView.userInteractionEnabled = YES;

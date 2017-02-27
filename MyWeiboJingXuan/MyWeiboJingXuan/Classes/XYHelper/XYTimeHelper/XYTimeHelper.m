@@ -8,14 +8,14 @@
 
 #import "XYTimeHelper.h"
 
-static force_inline NSDateFormatter *XMLYDataCreateFormatter(NSString *string) {
+static  NSDateFormatter *XMLYDataCreateFormatter(NSString *string) {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     formatter.dateFormat = string;
     return formatter;
 }
 
-static force_inline NSDateFormatter *XMLYDateFormatter(NSString *string) {
+static  NSDateFormatter *XMLYDateFormatter(NSString *string) {
     if(!string || ![string isKindOfClass:[NSString class]] || string.length == 0) return nil;
     static CFMutableDictionaryRef cache;
     static dispatch_semaphore_t lock;

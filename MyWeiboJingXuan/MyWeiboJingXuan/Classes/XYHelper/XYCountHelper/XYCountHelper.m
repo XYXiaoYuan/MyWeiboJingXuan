@@ -8,7 +8,7 @@
 
 #import "XYCountHelper.h"
 
-static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
+static  NSString *XMLYGetPlyCount(NSInteger num) {
     if(num < 10000) {
         return [NSString stringWithFormat:@"%ld",(long)num];
     }else {

@@ -21,6 +21,8 @@
 // 通过xib/storyboard创建的控件初始化的时候就会调用这个方法
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     [self setup];
 }
 

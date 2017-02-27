@@ -25,6 +25,8 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+
     self.autoresizingMask = UIViewAutoresizingNone;
     
     // 设置进度条的值

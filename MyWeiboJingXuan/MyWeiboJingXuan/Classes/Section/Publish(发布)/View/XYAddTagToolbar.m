@@ -30,6 +30,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     // 添加一个加号按钮
     UIButton *addButton = [[UIButton alloc] init];
     [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
