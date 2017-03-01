@@ -22,4 +22,7 @@
 + (instancetype)viewFromXib;
 #pragma mark - 插入view
 - (BOOL)intersectWithView:(UIView *)view;
+#pragma mark - 切圆角
+- (void)lf_setUpAllCornerWithChildView:(UIView *)child;
+
 @end

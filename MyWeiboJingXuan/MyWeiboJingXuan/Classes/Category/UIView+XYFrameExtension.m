@@ -25,6 +25,20 @@
     return CGRectIntersectsRect(selfRect, viewRect);
 }
 
+- (void)lf_setUpAllCornerWithChildView:(UIView *)child
+{
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:child.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:child.bounds.size];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    
+    //设置大小
+    maskLayer.frame = child.bounds;
+    //设置图形样子
+    maskLayer.path = maskPath.CGPath;
+    child.layer.mask = maskLayer;
+    child.layer.shouldRasterize = YES; //圆角缓存
+    child.layer.rasterizationScale = [UIScreen mainScreen].scale;//提高流畅度
+}
+
 // 宽度
 - (CGFloat)xy_width
 {
