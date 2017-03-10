@@ -169,6 +169,9 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    self.layer.cornerRadius = 10;
+    self.layer.masksToBounds = YES;
 
     // 设置背景图片,cell会模糊
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
@@ -188,6 +191,10 @@
 {
     frame.size.height -= XYCommonMargin;
     frame.origin.y += XYCommonMargin;
+
+    // 让左右两边也有相应的间隙
+//    frame.origin.x += XYCommonMargin;
+//    frame.size.width -= 2 * XYCommonMargin;
     
     [super setFrame:frame];
 }
