@@ -39,6 +39,8 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] selectedImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(popToRootViewController)];
+    
     // 1.设置基本的数据
     [self setupBase];
     
@@ -50,6 +52,14 @@ static NSString * const XYCommentCellHeaderId = @"header";
     
     // 4.刷新数据
     [self setupRefresh];
+}
+
+/** 测试回到根控制器后,再选中tabBar中的第3个的子控制器 */
+- (void)popToRootViewController
+{
+    self.tabBarController.selectedIndex = 3;
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
 }
 
 #pragma mark - 1.设置基本的数据
