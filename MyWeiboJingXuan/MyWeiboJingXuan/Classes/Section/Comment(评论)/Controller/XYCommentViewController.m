@@ -59,6 +59,7 @@ static NSString * const XYCommentCellHeaderId = @"header";
 {
     self.tabBarController.selectedIndex = 3;
     [self.navigationController popToRootViewControllerAnimated:NO];
+// TODO:pop两次以上后,tabBar条不见了
     
 }
 
