@@ -208,6 +208,7 @@ static NSString * const XYTopicCellId = @"topic";
 #pragma mark - <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    NSLog(@"名字为%@cell 第%zd行的行高 = %f", self.topics[indexPath.row].name,indexPath.row, self.topics[indexPath.row].cellHeight);
     return self.topics[indexPath.row].cellHeight;
 }
 
