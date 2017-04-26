@@ -46,8 +46,7 @@ static FMDatabase *_db;
     NSMutableArray *cacheTags = [self cacheTopicTag];
     if (cacheTags.count != 0) {
         if (success) {
-            XYTagResultItem *result = [[XYTagResultItem alloc] init];
-            result = (XYTagResultItem *)cacheTags;
+            XYTagResultItem *result = (XYTagResultItem *)cacheTags;
             success(result);
         }
     } else {
