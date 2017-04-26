@@ -17,7 +17,6 @@ typedef void (^requestFailureBlock)(NSError *error);
 
 @interface XYHttpTool : NSObject
 
-interfaceSingle(XYHttpTool);
 
 /**
  *  发送一个GET请求
@@ -30,8 +29,5 @@ interfaceSingle(XYHttpTool);
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)successHandler failure:(requestFailureBlock)failure;
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure;
-
-/** manager */
-@property(nonatomic,weak,readonly) AFHTTPSessionManager *manager;
 
 @end

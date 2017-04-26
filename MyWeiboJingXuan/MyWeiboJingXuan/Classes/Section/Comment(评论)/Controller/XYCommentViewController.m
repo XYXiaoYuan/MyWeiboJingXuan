@@ -131,7 +131,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)loadNewComments
 {
     //取消任务,防止下拉加载和上拉刷新同时进行
-    [XYCommentTool cancel];
     
     // 参数
     XYCommentParam *param = [[XYCommentParam alloc] init];
@@ -171,7 +170,6 @@ static NSString * const XYCommentCellHeaderId = @"header";
 - (void)loadMoreComments
 {
     //取消任务
-    [XYCommentTool cancel];
 
     // 参数
     XYCommentParam *param = [[XYCommentParam alloc] init];

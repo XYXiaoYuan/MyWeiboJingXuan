@@ -82,8 +82,6 @@ static NSString * const XYTopicCellId = @"topic";
 // 下拉刷新,加载最新数据
 - (void)loadNewTopics
 {
-    //取消任务
-    [XYEssenceTool cancel];
     
     // 参数
     XYEssenceParam *param = [[XYEssenceParam alloc] init];
@@ -118,7 +116,6 @@ static NSString * const XYTopicCellId = @"topic";
 - (void)loadMoreTopics
 {
     //取消任务
-    [XYEssenceTool cancel];
     
     // 参数
     XYEssenceParam *param = [[XYEssenceParam alloc] init];

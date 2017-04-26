@@ -8,6 +8,34 @@
 
 #import "XYHttpTool.h"
 
+@interface XYHttpManager : AFHTTPSessionManager
+
+/** LFHttpManager单例 */
++ (instancetype)sharedManager;
+
+@end
+
+@implementation XYHttpManager
+
++ (instancetype)sharedManager {
+    static XYHttpManager *_sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedManager = [[XYHttpManager alloc] init];
+        // 设置请求超时设定
+        _sharedManager.requestSerializer.timeoutInterval = 5.0f;
+        // 设置json序列化
+        _sharedManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _sharedManager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        // 设置可接受类型
+        _sharedManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
+    });
+    return _sharedManager;
+}
+
+@end
+
 @implementation XYHttpTool
 
 implementationSingle(XYHttpTool);
@@ -15,13 +43,12 @@ implementationSingle(XYHttpTool);
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure;
 {
     // 1.获得请求管理者
-    AFHTTPSessionManager *mgr = [self manager];
-    
     // 2.发送GET请求
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [mgr GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    XYWeakSelf;
+    [[XYHttpManager sharedManager] GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        [self prettyPrintAboutHttpWithOperation:task withResponseObj:responseObject withManager:mgr];
+        [weakSelf prettyPrintAboutHttpWithOperation:task withResponseObj:responseObject withManager:[XYHttpManager sharedManager]];
         if (success) {
             success(responseObject);
         }
@@ -38,13 +65,12 @@ implementationSingle(XYHttpTool);
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(responseSuccessBlock)success failure:(requestFailureBlock)failure
 {
     // 1.获得请求管理者
-    AFHTTPSessionManager *mgr = [self manager];
-    
     // 2.发送POST请求
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [mgr POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    XYWeakSelf;
+    [[XYHttpManager sharedManager] POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        [self prettyPrintAboutHttpWithOperation:task withResponseObj:responseObject withManager:mgr];
+        [weakSelf prettyPrintAboutHttpWithOperation:task withResponseObj:responseObject withManager:[XYHttpManager sharedManager]];
         if (success) {
             success(responseObject);
         }
@@ -55,38 +81,6 @@ implementationSingle(XYHttpTool);
         }
     }];
 }
-
-#pragma mark- AFHTTPSessionManager 初始化 网络超时设置 请求头 BaseUrl
-+ (AFHTTPSessionManager *)manager
-{
-    static AFHTTPSessionManager *mgr = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        mgr = [AFHTTPSessionManager manager];
-        
-        // 设置BaseURL,可以抽成宏
-//        mgr = [mgr initWithBaseURL:[NSURL URLWithString:HSBaseRequestURL]];
-        
-        /**设置相应的缓存策略*/
-        //    mgr.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-        
-        // 设置token
-        //    [mgr.requestSerializer setValue:@"" forHTTPHeaderField:@"apikey"];
-        
-        // 设置请求超时设定
-        mgr.requestSerializer.timeoutInterval = 5.0f;
-        // 设置json序列化
-        mgr.requestSerializer = [AFHTTPRequestSerializer serializer];
-        mgr.responseSerializer = [AFJSONResponseSerializer serializer];
-        
-        // 设置可接受类型
-        mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
-    });
-    
-    return mgr;
-}
-
 
 #pragma mark- 打印url 和 json数据 httpHeader用于调试
 +(void)prettyPrintAboutHttpWithOperation:(NSURLSessionDataTask *)operation withResponseObj:(id)responseObj withManager:(AFHTTPSessionManager *)mgr

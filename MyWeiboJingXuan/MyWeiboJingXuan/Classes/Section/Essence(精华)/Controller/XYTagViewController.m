@@ -95,7 +95,6 @@ static NSString * const XYTagCellID = @"tag";
     [super viewWillDisappear:animated];
     
     // 停止请求
-    [XYTagTool invalidateSessionCancelingTasks];
     
     // 移除弹框
     [SVProgressHUD dismiss];

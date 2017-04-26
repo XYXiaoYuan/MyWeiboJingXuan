@@ -255,6 +255,5 @@ static NSString * const XYUserId = @"user";
 - (void)dealloc
 {
     // 停止所有操作
-    [XYRecommendUserTool invalidateSessionCancelingTasks];
 }
 @end
