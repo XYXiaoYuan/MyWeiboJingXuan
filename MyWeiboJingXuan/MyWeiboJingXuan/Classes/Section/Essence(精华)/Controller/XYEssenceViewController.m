@@ -229,7 +229,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     // 取出当前子控制对应的索引
-     NSInteger index = self.scrollView.contentOffset.x / self.scrollView.xy_width;
+    NSInteger index = self.scrollView.contentOffset.x / self.scrollView.xy_width;
     
     // 把当控制器的按钮索赋值给当前按钮
     XYTitleButton *titleButton = self.titlesView.subviews[index];
