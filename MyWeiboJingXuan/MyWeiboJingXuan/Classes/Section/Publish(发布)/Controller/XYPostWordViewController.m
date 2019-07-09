@@ -83,7 +83,7 @@
 
 - (void)post
 {
-    XYFuncLog;
+    NSLog(@"点击了发布");
 }
 
 - (void)viewDidAppear:(BOOL)animated

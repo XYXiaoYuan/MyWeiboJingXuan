@@ -20,7 +20,7 @@ static NSInteger const cols = 4;
 static CGFloat const margin = 1;
 #define itemWH (XYSCREEN_W - (cols - 1) * margin) / cols
 @interface XYMineViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (nonatomic, strong) NSMutableArray<XYSquareItem *> *squareItems;
+@property (nonatomic, strong) NSMutableArray <XYSquareItem *> *listItems;
 @property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
@@ -51,51 +51,32 @@ static CGFloat const margin = 1;
     XYMineParam *params = [[XYMineParam alloc] init];
     
     // 2.发送请求
+    XYWeakSelf;
     [XYMineTool mineDataWithParam:params success:^(XYMineResult *result) {
-        
         // 字典数组转换成模型数组
-        _squareItems = [XYSquareItem mj_objectArrayWithKeyValuesArray:result.square_list];
+        for (XYSquareItem *item in result.square_list) {
+            if ([item isKindOfClass:XYSquareItem.class]) {
+                [weakSelf.listItems addObject:item];
+            }
+        }
         
-        // 处理数据
-        [self resloveData];
-        
-        // 设置collectionView 计算collectionView高度 = rows * itemWH
-        // Rows = (count - 1) / cols + 1  3 cols4
-        NSInteger count = _squareItems.count;
-        NSInteger rows = (count - 1) / cols + 1;
+        NSUInteger count = weakSelf.listItems.count;
+        NSUInteger rows = (count - 1) / cols + 1;
         // 设置collectioView高度
-        self.collectionView.xy_height = rows * itemWH + 10;
+        weakSelf.collectionView.xy_height = rows * itemWH + 10;
         
         // 设置tableView滚动范围:自己计算
-        self.tableView.tableFooterView = self.collectionView;
+        weakSelf.tableView.tableFooterView = weakSelf.collectionView;
         
         // 刷新表格
-        [self.collectionView reloadData];
+        [weakSelf.collectionView reloadData];
     } failure:^(NSError *error) {
         
     }];
 }
 
-#pragma mark - 处理请求完成数据
-- (void)resloveData
-{
-    // 判断下缺几个
-    // 3 % 4 = 3 cols - 3 = 1
-    // 5 % 4 = 1 cols - 1 = 3
-    NSInteger count = self.squareItems.count;
-    NSInteger exter = count % cols;
-    if (exter) {
-        exter = cols - exter;
-        for (int i = 0; i < exter; i++) {
-            XYSquareItem *item = [[XYSquareItem alloc] init];
-            [self.squareItems addObject:item];
-        }
-    }
-    
-}
-
 #pragma mark - 设置tableView底部视图
-- (void)setupFootView{
+- (void)setupFootView {
     /*
         1.初始化要设置流水布局
         2.cell必须自定义
@@ -131,7 +112,7 @@ static CGFloat const margin = 1;
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    XYSquareItem *item = self.squareItems[indexPath.row];
+    XYSquareItem *item = self.listItems[indexPath.row];
     if (![item.url containsString:@"http"]) return;
     
     XYWebViewController *webVc = [[XYWebViewController alloc] init];
@@ -143,15 +124,16 @@ static CGFloat const margin = 1;
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.squareItems.count;
+    return self.listItems.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // 1.创建cell
     XYSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XYSquareCellID forIndexPath:indexPath];
+    
     // 2.设置模型数据
-    cell.squareItem = self.squareItems[indexPath.item];
+    cell.squareItem = self.listItems[indexPath.item];
     
     // 3.返回cell
     return cell;
@@ -187,6 +169,14 @@ static CGFloat const margin = 1;
     settingVc.title = @"设置";
     
     [self.navigationController pushViewController:settingVc animated:YES];
+}
+
+#pragma mark - 懒加载
+- (NSMutableArray<XYSquareItem *> *)listItems {
+    if (!_listItems) {
+        _listItems = [NSMutableArray array];
+    }
+    return _listItems;
 }
 
 @end

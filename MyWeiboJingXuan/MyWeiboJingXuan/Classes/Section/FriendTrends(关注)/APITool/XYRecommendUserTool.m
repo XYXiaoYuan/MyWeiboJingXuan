@@ -31,9 +31,9 @@ static FMDatabase *_db;
         // 4.创表
         BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_recommend_user (id integer PRIMARY KEY AUTOINCREMENT,category_id integer NOT NULL,page integer NOT NULL,total_page integer NOT NULL, count NOT NULL,total integer NOT NULL,next_page integer NOT NULL,recommend_user blob NOT NULL);"];
         if (result) {
-//            XYLog(@"成功创表t_recommend_user");
+//            NSLog(@"成功创表t_recommend_user");
         } else {
-//            XYLog(@"创表失败t_recommend_user");
+//            NSLog(@"创表失败t_recommend_user");
         }
     }
 }

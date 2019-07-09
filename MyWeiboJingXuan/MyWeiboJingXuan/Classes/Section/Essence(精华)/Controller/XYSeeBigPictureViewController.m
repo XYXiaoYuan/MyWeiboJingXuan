@@ -37,7 +37,7 @@ static NSString * XYAssetCollectionTitle = @"百思不得姐";
     if (status == PHAuthorizationStatusRestricted) { // 因为家长控制, 导致应用无法方法相册(跟用户的选择没有关系)
         [SVProgressHUD showErrorWithStatus:@"因为系统原因, 无法访问相册"];
     } else if (status == PHAuthorizationStatusDenied) { // 用户拒绝当前应用访问相册(用户当初点击了"不允许")
-        XYLog(@"提醒用户去[设置-隐私-照片-xxx]打开访问开关");
+        NSLog(@"提醒用户去[设置-隐私-照片-xxx]打开访问开关");
     } else if (status == PHAuthorizationStatusAuthorized) { // 用户允许当前应用访问相册(用户当初点击了"好")
         [self saveImage];
     } else if (status == PHAuthorizationStatusNotDetermined) { // 用户还没有做出选择

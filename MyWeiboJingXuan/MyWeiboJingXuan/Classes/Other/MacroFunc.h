@@ -2,13 +2,13 @@
 #define MacroFunc_h
 
 // 1.自定义NSLog
-#ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
-#define XYLog(...) NSLog(__VA_ARGS__)
+#ifdef DEBUG
+// 开发阶段-DEBUG阶段:使用NSLog(自定义NSLog比系统的NSLog优先级更高)
+//#define NSLog(format, ...) NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 #else // 发布阶段-上线阶段:移除Log
-#define XYLog(...)
+#define NSLog(format, ...)
 #endif
-
-#define XYFuncLog XYLog(@"方法名是%s 第%d行",__func__,__LINE__)
 
 // 2.适配
 // 适配屏幕宽高

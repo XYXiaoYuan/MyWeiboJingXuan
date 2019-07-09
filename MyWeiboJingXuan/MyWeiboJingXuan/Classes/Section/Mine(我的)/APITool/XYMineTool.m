@@ -31,9 +31,9 @@ static FMDatabase *_db;
         // 4.创表
         BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_mine_square (id integer PRIMARY KEY AUTOINCREMENT,square_dict blob NOT NULL);"];
         if (result) {
-//            XYLog(@"成功创表t_mine_square");
+//            NSLog(@"成功创表t_mine_square");
         } else {
-//            XYLog(@"创表失败t_mine_square");
+//            NSLog(@"创表失败t_mine_square");
         }
     }
 }
@@ -51,18 +51,19 @@ static FMDatabase *_db;
         }
     } else {
         NSDictionary *params = [param mj_keyValues];
+        XYWeakSelf;
         [XYHttpTool get:XYRequestURL params:params success:^(id responseObj) {
             if (success) {
                 XYMineResult *result = [XYMineResult mj_objectWithKeyValues:responseObj];
+                // 百思返回的字典数组
+                NSArray *squaresDictArray = responseObj[@"square_list"];
+                
+                // 缓存微博字典数组
+                [weakSelf saveMineSquaresDictArray:squaresDictArray];
+                
+                // 回调给外界
                 success(result);
             }
-            
-            // 百思返回的字典数组
-            NSArray *squaresDictArray = responseObj[@"square_list"];
-            
-            // 缓存微博字典数组
-            [self saveMineSquaresDictArray:squaresDictArray];
-
         } failure:^(NSError *error) {
             if (failure) {
                 failure(error);

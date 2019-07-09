@@ -87,16 +87,16 @@ implementationSingle(XYHttpTool);
 {
 #if DEBUG
     // 请求的url
-//         NSLog(@"最终请求路径: %@", operation.currentRequest.URL.absoluteString);
+    NSLog(@"最终请求路径: %@", operation.currentRequest.URL.absoluteString);
     
     // 请求的json数据打印
-//         NSData *dataJson = [NSJSONSerialization dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
-//         NSString *jsonStr = [[NSString alloc] initWithData:dataJson encoding:NSUTF8StringEncoding];
-//         NSLog(@"json字符串: %@", jsonStr);
+    NSData *dataJson = [NSJSONSerialization dataWithJSONObject:responseObj options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonStr = [[NSString alloc] initWithData:dataJson encoding:NSUTF8StringEncoding];
+    NSLog(@"json字符串: %@", jsonStr);
     
     // 请求的header信息
-//         NSDictionary *dict = mgr.requestSerializer.HTTPRequestHeaders;
-//         NSLog(@"请求头httpHeader: %@", dict);
+    NSDictionary *dict = mgr.requestSerializer.HTTPRequestHeaders;
+    NSLog(@"请求头httpHeader: %@", dict);
 #endif
 }
 

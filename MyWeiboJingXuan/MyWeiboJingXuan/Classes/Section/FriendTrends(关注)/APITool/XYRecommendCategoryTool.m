@@ -32,9 +32,9 @@ static FMDatabase *_db;
         // 4.创表
         BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_recommend_category (id integer PRIMARY KEY AUTOINCREMENT,size integer NOT NULL,total integer NOT NULL,recommend_category blob NOT NULL);"];
         if (result) {
-//            XYLog(@"成功创表t_recommend_category");
+//            NSLog(@"成功创表t_recommend_category");
         } else {
-//            XYLog(@"创表失败t_recommend_category");
+//            NSLog(@"创表失败t_recommend_category");
         }
     }
 }

@@ -14,7 +14,9 @@
 
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"square_list" : [XYSquareItem class]};
+    return @{
+             @"square_list" : XYSquareItem.class
+             };
 }
 
 @end

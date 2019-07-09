@@ -204,15 +204,15 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
-        XYLog(@"收藏");
+        NSLog(@"收藏");
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action){
-        XYLog(@"举报");
+        NSLog(@"举报");
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){
-        XYLog(@"取消");
+        NSLog(@"取消");
     }]];
     
     // 展示
