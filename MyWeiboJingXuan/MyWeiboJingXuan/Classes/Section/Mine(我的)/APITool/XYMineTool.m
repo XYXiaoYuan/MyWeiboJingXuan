@@ -42,7 +42,7 @@ static FMDatabase *_db;
 + (void)mineDataWithParam:(XYMineParam *)param success:(void (^)(XYMineResult *))success failure:(void (^)(NSError *))failure
 {
     // 从数据库中读取缓存数据
-    NSArray *cacheSquares = [self cacheMineSquares];
+    NSArray <XYSquareItem *> *cacheSquares = [self cacheMineSquares];
     if (cacheSquares.count != 0) {
         if (success) {
             XYMineResult *result = [[XYMineResult alloc] init];
@@ -72,10 +72,10 @@ static FMDatabase *_db;
 }
 
 #pragma mark - 取数据库表中的数据
-+ (NSArray *)cacheMineSquares
++ (NSArray <XYSquareItem *> *)cacheMineSquares
 {
     // 创建可变数组缓存square数据
-    NSMutableArray *squares = [NSMutableArray array];
+    NSMutableArray <XYSquareItem *> *squares = [NSMutableArray array];
     
     FMResultSet *resultSet = nil;
     resultSet = [_db executeQuery:@"SELECT * FROM t_mine_square"];
@@ -83,11 +83,13 @@ static FMDatabase *_db;
     // 遍历查询结果
     while (resultSet.next) {
         NSData *squaresDictData = [resultSet objectForColumnName:@"square_dict"];
-        NSDictionary *squaresDict = [NSKeyedUnarchiver unarchiveObjectWithData:squaresDictData];
+        NSArray *squaresDict = [NSKeyedUnarchiver unarchiveObjectWithData:squaresDictData];
         // 字典转模型
         XYSquareItem *square = [XYSquareItem mj_objectWithKeyValues:squaresDict];
         // 添加模型到数组中
-        [squares addObject:square];
+        if (square) {
+            [squares addObject:square];
+        }
     }
     
     return squares;

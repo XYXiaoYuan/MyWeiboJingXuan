@@ -19,12 +19,10 @@
 
 @implementation XYSquareCell
 
-- (void)setSquareItem:(XYSquareItem *)squareItem
-{
+- (void)setSquareItem:(XYSquareItem *)squareItem {
     _squareItem = squareItem;
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:squareItem.icon]];
-    _nameView.text = squareItem.name;
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:squareItem.icon]];
+    self.nameView.text = squareItem.name;
 }
-
 
 @end
