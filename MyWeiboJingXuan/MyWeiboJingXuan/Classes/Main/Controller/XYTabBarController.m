@@ -36,7 +36,6 @@
     
     // 3.自定义tabBar
     [self setupTabBar];
-    
 }
 
 #pragma mark - 自定义tabBar

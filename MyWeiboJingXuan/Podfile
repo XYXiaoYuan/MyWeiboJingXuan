@@ -11,5 +11,6 @@ pod "DACircularProgress"
 pod "Masonry"
 pod "FMDB"
 pod "pop"
+pod 'LookinServer', :configurations => ['Debug']
 
 end

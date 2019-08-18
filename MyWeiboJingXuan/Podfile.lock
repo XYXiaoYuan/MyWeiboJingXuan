@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - LookinServer (0.9.4)
   - Masonry (1.0.1)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - AFNetworking
   - DACircularProgress
   - FMDB
+  - LookinServer
   - Masonry
   - MJExtension
   - MJRefresh
@@ -38,10 +40,24 @@ DEPENDENCIES:
   - SDWebImage
   - SVProgressHUD
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - DACircularProgress
+    - FMDB
+    - LookinServer
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - pop
+    - SDWebImage
+    - SVProgressHUD
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  LookinServer: 54eb99921647bda4068ff8776d842285e2bf0adb
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -49,6 +65,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 15a51422e788a4db4a69d69159d395f1a1efc750
+PODFILE CHECKSUM: aba2b9f0b70f97972b9d35be0a3cb6548c05d1fd
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.5.3

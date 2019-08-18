@@ -46,6 +46,13 @@
     
     // 5.设置默认加载XYAllViewController
     [self addChildVc];
+    
+//    UIView *upView = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//    upView.backgroundColor = XYRandomColor;
+//    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+//    [keyWindow addSubview:upView];
+//    [upView bringSubviewToFront:self.view];
+
 }
 
 #pragma mark - 1.设置导航条
